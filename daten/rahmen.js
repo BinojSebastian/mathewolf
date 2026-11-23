@@ -1,0 +1,108 @@
+/* Mathewolf – Sätze von Professor Wolf, die nicht zu einer einzelnen Übung gehören.
+   Jeder Eintrag: Audio-Schlüssel → Text. Der Text ist zugleich die Vorlage für die Aufnahme
+   und das, was die iPad-Stimme liest, solange es noch keine Aufnahme gibt. */
+'use strict';
+MW.textListe({
+  // ---------- Rahmen
+  'rahmen/begruessung': 'Hallo! Ich bin Professor Wolf. Schön, dass du da bist!',
+  'rahmen/stufe_waehlen': 'Such dir eine Stufe aus.',
+  'rahmen/stufe_V': 'Vorschule.',
+  'rahmen/stufe_K1': 'Klasse eins.',
+  'rahmen/stufe_K2': 'Klasse zwei.',
+  'rahmen/stufe_K3': 'Klasse drei.',
+  'rahmen/stufe_K4': 'Klasse vier.',
+  'rahmen/uebung_waehlen': 'Such dir eine Übung aus.',
+  'rahmen/start_tippen': 'Tippe auf Start, dann geht es los!',
+  'rahmen/runde1': 'Runde eins von drei.',
+  'rahmen/runde2': 'Runde zwei von drei.',
+  'rahmen/runde3': 'Runde drei von drei. Die letzte Runde!',
+  'rahmen/punkte': 'Punkte:',
+  'rahmen/ende_alle': 'Alles richtig! Du bist ein echter Mathe-Profi!',
+  'rahmen/ende_gut': 'Gut gemacht! Mehr als die Hälfte hast du geschafft.',
+  'rahmen/ende_mut': 'Das war ganz schön schwer. Übung macht den Meister!',
+  'rahmen/geschafft': 'Super! Du hast alle drei Runden geschafft.',
+  'rahmen/zusammen': 'Zusammen sind das',
+  'rahmen/insgesamt': 'Jetzt hast du insgesamt',
+  'rahmen/aufhoeren': 'Willst du wirklich aufhören?',
+  'rahmen/reihe_waehlen': 'Welche Reihe möchtest du üben?',
+  'rahmen/loesung_zahl': 'Das war knifflig. Die Lösung ist',
+  'rahmen/loesung_bild': 'Das war knifflig. Schau, so ist es richtig.',
+  'rahmen/weiter': 'Tippe auf Weiter.',
+  'rahmen/fehler1': 'Fast! Ich helfe dir.',
+  'rahmen/fehler2': 'Noch nicht ganz. Schau mal:',
+  'rahmen/fehler3': 'Hmm, versuch es nochmal. Ein Tipp:',
+
+  // ---------- Lob (erster Versuch)
+  'lob/01': 'Super!',
+  'lob/02': 'Richtig!',
+  'lob/03': 'Prima gerechnet!',
+  'lob/04': 'Toll gemacht!',
+  'lob/05': 'Ganz genau!',
+  'lob/06': 'Klasse!',
+  'lob/07': 'Spitze!',
+  'lob/08': 'Sehr gut!',
+  'lob/09': 'Wunderbar!',
+  'lob/10': 'Das stimmt!',
+  'lob/11': 'Bravo!',
+  'lob/12': 'Du bist ein Rechenkünstler!',
+  'lob/13': 'Ausgezeichnet!',
+  'lob/14': 'Fantastisch!',
+  // ---------- Lob (zweiter Versuch)
+  'lob/zweiter1': 'Jetzt stimmt es!',
+  'lob/zweiter2': 'Richtig, gut nachgedacht!',
+  'lob/zweiter3': 'Ja, genau so ist es richtig!',
+
+  // ---------- Blitzrechnen
+  'blitz/name': 'Blitzrechnen!',
+  'blitz/start': 'Blitzrechnen! Zehn Aufgaben, so schnell du kannst. Bist du bereit?',
+  'blitz/los': 'Los!',
+  'blitz/fertig': 'Geschafft! Deine Zeit:',
+  'blitz/bestzeit': 'Neue Bestzeit! Wahnsinn!',
+  'blitz/bestzeit_ist': 'Deine Bestzeit ist',
+
+  // ---------- Rechenwörter
+  'woerter/plus': 'plus',
+  'woerter/minus': 'minus',
+  'woerter/mal': 'mal',
+  'woerter/geteilt_durch': 'geteilt durch',
+  'woerter/gleich': 'gleich',
+  'woerter/wie_viel': 'wie viel',
+  'woerter/rest': 'Rest',
+  'woerter/und': 'und',
+  'woerter/von': 'von',
+  'woerter/als': 'als',
+  'woerter/oder': 'oder',
+  'woerter/komma': 'Komma',
+  'woerter/auf': 'auf',
+  'woerter/die_haelfte_von': 'die Hälfte von',
+  'woerter/ist_kleiner_als': 'ist kleiner als',
+  'woerter/ist_groesser_als': 'ist größer als',
+  'woerter/ist_gleich': 'ist gleich',
+  'woerter/sind_wie_viel': 'sind wie viel',
+  'woerter/stell_ein': 'Stell die Zahl ein:',
+  'woerter/lege_genau': 'Lege genau',
+  'woerter/punkte': 'Punkte.',
+  // ---------- Größen
+  'woerter/euro': 'Euro',
+  'woerter/cent': 'Cent',
+  'woerter/meter': 'Meter',
+  'woerter/zentimeter': 'Zentimeter',
+  'woerter/millimeter': 'Millimeter',
+  'woerter/kilometer': 'Kilometer',
+  'woerter/gramm': 'Gramm',
+  'woerter/kilogramm': 'Kilogramm',
+  'woerter/minuten': 'Minuten',
+  'woerter/stunden': 'Stunden',
+  'woerter/sekunden': 'Sekunden.',
+  'woerter/uhr': 'Uhr',
+  'woerter/halb': 'halb',
+  'woerter/viertel_nach': 'Viertel nach',
+  'woerter/viertel_vor': 'Viertel vor',
+  // ---------- Stellenwerte
+  'woerter/zehner': 'Zehner',
+  'woerter/hunderter': 'Hunderter',
+  'woerter/tausender': 'Tausender'
+});
+MW.LOB = ['lob/01', 'lob/02', 'lob/03', 'lob/04', 'lob/05', 'lob/06', 'lob/07', 'lob/08', 'lob/09', 'lob/10', 'lob/11', 'lob/12', 'lob/13', 'lob/14'];
+MW.LOB2 = ['lob/zweiter1', 'lob/zweiter2', 'lob/zweiter3'];
+MW.FEHLER = ['rahmen/fehler1', 'rahmen/fehler2', 'rahmen/fehler3'];

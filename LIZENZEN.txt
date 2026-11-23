@@ -1,0 +1,30 @@
+Mathewolf – Lizenzen und Herkunft
+=================================
+
+App-Code
+  Für die private Nutzung der Familie geschrieben (HTML, CSS, JavaScript, ohne fremde Bibliotheken).
+
+Schrift: Fredoka (fonts/)
+  Copyright 2016 The Fredoka Project Authors, SIL Open Font License 1.1 – siehe fonts/OFL-Fredoka.txt.
+  Bezogen über das Paket @fontsource/fredoka, lokal eingebunden (keine Verbindung zu Google Fonts).
+
+Professor Wolf, Klassenzimmer und App-Icon (bilder/)
+  Illustrationen der Familie (November 2026). Posen vom weißen Hintergrund freigestellt,
+  Klassenzimmer verkleinert und für den Hintergrund weichgezeichnet; das App-Icon zeigt den Kopf aus „winkt“.
+
+Musik (audio/musik-start.mp3, audio/musik-auswahl.mp3)
+  „Running Late Again“ (Startbildschirm) und „Three Cups of Coffee“ (Übungsauswahl), von der Familie
+  bereitgestellt. Stille am Anfang und Ende entfernt, Lautstärke angeglichen, 96 kbit/s.
+  Herkunft und Lizenz: bitte eintragen (z. B. erzeugt mit … im Tarif …).
+
+Effekte
+  Werden in der App mit der Web Audio API erzeugt, keine Dateien.
+
+Stimme (audio/stimme-….mp3, audio/stimme.json)
+  Aufgenommen von der Familie mit ElevenLabs (bezahlter Tarif „Starter“ oder höher, laut ElevenLabs mit
+  kommerzieller Lizenz, keine Namensnennung nötig). Mit werkzeug/stimme-schneiden.py in Bausteine geschnitten.
+    Stimme: … (bitte eintragen)
+    Modell: Eleven Multilingual v2 (empfohlen in der Anleitung)
+
+Bildsymbole in Aufgaben
+  Emojis werden mit der Systemschrift des Geräts angezeigt und nicht mitgeliefert.

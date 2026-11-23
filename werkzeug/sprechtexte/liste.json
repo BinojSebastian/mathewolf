@@ -1,0 +1,4710 @@
+{
+ "erstellt": "2026-11-22",
+ "bloecke": 9,
+ "texte": [
+  {
+   "block": 1,
+   "nr": 1,
+   "text": "null.",
+   "keys": [
+    "zahlen/000"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 2,
+   "text": "eins.",
+   "keys": [
+    "zahlen/001"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 3,
+   "text": "zwei.",
+   "keys": [
+    "zahlen/002"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 4,
+   "text": "drei.",
+   "keys": [
+    "zahlen/003"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 5,
+   "text": "vier.",
+   "keys": [
+    "zahlen/004"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 6,
+   "text": "fünf.",
+   "keys": [
+    "zahlen/005"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 7,
+   "text": "sechs.",
+   "keys": [
+    "zahlen/006"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 8,
+   "text": "sieben.",
+   "keys": [
+    "zahlen/007"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 9,
+   "text": "acht.",
+   "keys": [
+    "zahlen/008"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 10,
+   "text": "neun.",
+   "keys": [
+    "zahlen/009"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 11,
+   "text": "zehn.",
+   "keys": [
+    "zahlen/010"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 12,
+   "text": "elf.",
+   "keys": [
+    "zahlen/011"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 13,
+   "text": "zwölf.",
+   "keys": [
+    "zahlen/012"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 14,
+   "text": "dreizehn.",
+   "keys": [
+    "zahlen/013"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 15,
+   "text": "vierzehn.",
+   "keys": [
+    "zahlen/014"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 16,
+   "text": "fünfzehn.",
+   "keys": [
+    "zahlen/015"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 17,
+   "text": "sechzehn.",
+   "keys": [
+    "zahlen/016"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 18,
+   "text": "siebzehn.",
+   "keys": [
+    "zahlen/017"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 19,
+   "text": "achtzehn.",
+   "keys": [
+    "zahlen/018"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 20,
+   "text": "neunzehn.",
+   "keys": [
+    "zahlen/019"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 21,
+   "text": "zwanzig.",
+   "keys": [
+    "zahlen/020"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 22,
+   "text": "einundzwanzig.",
+   "keys": [
+    "zahlen/021"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 23,
+   "text": "zweiundzwanzig.",
+   "keys": [
+    "zahlen/022"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 24,
+   "text": "dreiundzwanzig.",
+   "keys": [
+    "zahlen/023"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 25,
+   "text": "vierundzwanzig.",
+   "keys": [
+    "zahlen/024"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 26,
+   "text": "fünfundzwanzig.",
+   "keys": [
+    "zahlen/025"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 27,
+   "text": "sechsundzwanzig.",
+   "keys": [
+    "zahlen/026"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 28,
+   "text": "siebenundzwanzig.",
+   "keys": [
+    "zahlen/027"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 29,
+   "text": "achtundzwanzig.",
+   "keys": [
+    "zahlen/028"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 30,
+   "text": "neunundzwanzig.",
+   "keys": [
+    "zahlen/029"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 31,
+   "text": "dreißig.",
+   "keys": [
+    "zahlen/030"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 32,
+   "text": "einunddreißig.",
+   "keys": [
+    "zahlen/031"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 33,
+   "text": "zweiunddreißig.",
+   "keys": [
+    "zahlen/032"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 34,
+   "text": "dreiunddreißig.",
+   "keys": [
+    "zahlen/033"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 35,
+   "text": "vierunddreißig.",
+   "keys": [
+    "zahlen/034"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 36,
+   "text": "fünfunddreißig.",
+   "keys": [
+    "zahlen/035"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 37,
+   "text": "sechsunddreißig.",
+   "keys": [
+    "zahlen/036"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 38,
+   "text": "siebenunddreißig.",
+   "keys": [
+    "zahlen/037"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 39,
+   "text": "achtunddreißig.",
+   "keys": [
+    "zahlen/038"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 40,
+   "text": "neununddreißig.",
+   "keys": [
+    "zahlen/039"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 41,
+   "text": "vierzig.",
+   "keys": [
+    "zahlen/040"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 42,
+   "text": "einundvierzig.",
+   "keys": [
+    "zahlen/041"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 43,
+   "text": "zweiundvierzig.",
+   "keys": [
+    "zahlen/042"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 44,
+   "text": "dreiundvierzig.",
+   "keys": [
+    "zahlen/043"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 45,
+   "text": "vierundvierzig.",
+   "keys": [
+    "zahlen/044"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 46,
+   "text": "fünfundvierzig.",
+   "keys": [
+    "zahlen/045"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 47,
+   "text": "sechsundvierzig.",
+   "keys": [
+    "zahlen/046"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 48,
+   "text": "siebenundvierzig.",
+   "keys": [
+    "zahlen/047"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 49,
+   "text": "achtundvierzig.",
+   "keys": [
+    "zahlen/048"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 50,
+   "text": "neunundvierzig.",
+   "keys": [
+    "zahlen/049"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 51,
+   "text": "fünfzig.",
+   "keys": [
+    "zahlen/050"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 52,
+   "text": "einundfünfzig.",
+   "keys": [
+    "zahlen/051"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 53,
+   "text": "zweiundfünfzig.",
+   "keys": [
+    "zahlen/052"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 54,
+   "text": "dreiundfünfzig.",
+   "keys": [
+    "zahlen/053"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 55,
+   "text": "vierundfünfzig.",
+   "keys": [
+    "zahlen/054"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 56,
+   "text": "fünfundfünfzig.",
+   "keys": [
+    "zahlen/055"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 57,
+   "text": "sechsundfünfzig.",
+   "keys": [
+    "zahlen/056"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 58,
+   "text": "siebenundfünfzig.",
+   "keys": [
+    "zahlen/057"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 59,
+   "text": "achtundfünfzig.",
+   "keys": [
+    "zahlen/058"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 60,
+   "text": "neunundfünfzig.",
+   "keys": [
+    "zahlen/059"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 61,
+   "text": "sechzig.",
+   "keys": [
+    "zahlen/060"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 62,
+   "text": "einundsechzig.",
+   "keys": [
+    "zahlen/061"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 63,
+   "text": "zweiundsechzig.",
+   "keys": [
+    "zahlen/062"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 64,
+   "text": "dreiundsechzig.",
+   "keys": [
+    "zahlen/063"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 65,
+   "text": "vierundsechzig.",
+   "keys": [
+    "zahlen/064"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 66,
+   "text": "fünfundsechzig.",
+   "keys": [
+    "zahlen/065"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 67,
+   "text": "sechsundsechzig.",
+   "keys": [
+    "zahlen/066"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 68,
+   "text": "siebenundsechzig.",
+   "keys": [
+    "zahlen/067"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 69,
+   "text": "achtundsechzig.",
+   "keys": [
+    "zahlen/068"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 70,
+   "text": "neunundsechzig.",
+   "keys": [
+    "zahlen/069"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 71,
+   "text": "siebzig.",
+   "keys": [
+    "zahlen/070"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 72,
+   "text": "einundsiebzig.",
+   "keys": [
+    "zahlen/071"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 73,
+   "text": "zweiundsiebzig.",
+   "keys": [
+    "zahlen/072"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 74,
+   "text": "dreiundsiebzig.",
+   "keys": [
+    "zahlen/073"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 75,
+   "text": "vierundsiebzig.",
+   "keys": [
+    "zahlen/074"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 76,
+   "text": "fünfundsiebzig.",
+   "keys": [
+    "zahlen/075"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 77,
+   "text": "sechsundsiebzig.",
+   "keys": [
+    "zahlen/076"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 78,
+   "text": "siebenundsiebzig.",
+   "keys": [
+    "zahlen/077"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 79,
+   "text": "achtundsiebzig.",
+   "keys": [
+    "zahlen/078"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 80,
+   "text": "neunundsiebzig.",
+   "keys": [
+    "zahlen/079"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 81,
+   "text": "achtzig.",
+   "keys": [
+    "zahlen/080"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 82,
+   "text": "einundachtzig.",
+   "keys": [
+    "zahlen/081"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 83,
+   "text": "zweiundachtzig.",
+   "keys": [
+    "zahlen/082"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 84,
+   "text": "dreiundachtzig.",
+   "keys": [
+    "zahlen/083"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 85,
+   "text": "vierundachtzig.",
+   "keys": [
+    "zahlen/084"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 86,
+   "text": "fünfundachtzig.",
+   "keys": [
+    "zahlen/085"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 87,
+   "text": "sechsundachtzig.",
+   "keys": [
+    "zahlen/086"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 88,
+   "text": "siebenundachtzig.",
+   "keys": [
+    "zahlen/087"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 89,
+   "text": "achtundachtzig.",
+   "keys": [
+    "zahlen/088"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 90,
+   "text": "neunundachtzig.",
+   "keys": [
+    "zahlen/089"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 91,
+   "text": "neunzig.",
+   "keys": [
+    "zahlen/090"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 92,
+   "text": "einundneunzig.",
+   "keys": [
+    "zahlen/091"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 93,
+   "text": "zweiundneunzig.",
+   "keys": [
+    "zahlen/092"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 94,
+   "text": "dreiundneunzig.",
+   "keys": [
+    "zahlen/093"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 95,
+   "text": "vierundneunzig.",
+   "keys": [
+    "zahlen/094"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 96,
+   "text": "fünfundneunzig.",
+   "keys": [
+    "zahlen/095"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 97,
+   "text": "sechsundneunzig.",
+   "keys": [
+    "zahlen/096"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 98,
+   "text": "siebenundneunzig.",
+   "keys": [
+    "zahlen/097"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 99,
+   "text": "achtundneunzig.",
+   "keys": [
+    "zahlen/098"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 100,
+   "text": "neunundneunzig.",
+   "keys": [
+    "zahlen/099"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 101,
+   "text": "hundert.",
+   "keys": [
+    "zahlen/100"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 102,
+   "text": "einhundert.",
+   "keys": [
+    "zahlen/h1"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 103,
+   "text": "zweihundert.",
+   "keys": [
+    "zahlen/h2"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 104,
+   "text": "dreihundert.",
+   "keys": [
+    "zahlen/h3"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 105,
+   "text": "vierhundert.",
+   "keys": [
+    "zahlen/h4"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 106,
+   "text": "fünfhundert.",
+   "keys": [
+    "zahlen/h5"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 107,
+   "text": "sechshundert.",
+   "keys": [
+    "zahlen/h6"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 108,
+   "text": "siebenhundert.",
+   "keys": [
+    "zahlen/h7"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 109,
+   "text": "achthundert.",
+   "keys": [
+    "zahlen/h8"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 110,
+   "text": "neunhundert.",
+   "keys": [
+    "zahlen/h9"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 111,
+   "text": "tausend.",
+   "keys": [
+    "zahlen/tausend"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 112,
+   "text": "ein.",
+   "keys": [
+    "zahlen/ein"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 113,
+   "text": "eine Million.",
+   "keys": [
+    "zahlen/million"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 114,
+   "text": "plus.",
+   "keys": [
+    "woerter/plus"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 115,
+   "text": "minus.",
+   "keys": [
+    "woerter/minus"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 116,
+   "text": "mal.",
+   "keys": [
+    "woerter/mal"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 117,
+   "text": "geteilt durch.",
+   "keys": [
+    "woerter/geteilt_durch"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 118,
+   "text": "gleich.",
+   "keys": [
+    "woerter/gleich"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 119,
+   "text": "wie viel.",
+   "keys": [
+    "woerter/wie_viel"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 120,
+   "text": "Rest.",
+   "keys": [
+    "woerter/rest"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 121,
+   "text": "und.",
+   "keys": [
+    "woerter/und"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 122,
+   "text": "von.",
+   "keys": [
+    "woerter/von"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 123,
+   "text": "als.",
+   "keys": [
+    "woerter/als"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 124,
+   "text": "oder.",
+   "keys": [
+    "woerter/oder"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 125,
+   "text": "Komma.",
+   "keys": [
+    "woerter/komma"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 126,
+   "text": "auf.",
+   "keys": [
+    "woerter/auf"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 127,
+   "text": "die Hälfte von.",
+   "keys": [
+    "woerter/die_haelfte_von"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 128,
+   "text": "ist kleiner als.",
+   "keys": [
+    "woerter/ist_kleiner_als"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 129,
+   "text": "ist größer als.",
+   "keys": [
+    "woerter/ist_groesser_als"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 130,
+   "text": "ist gleich.",
+   "keys": [
+    "woerter/ist_gleich"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 131,
+   "text": "sind wie viel.",
+   "keys": [
+    "woerter/sind_wie_viel"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 132,
+   "text": "Stell die Zahl ein:",
+   "keys": [
+    "woerter/stell_ein"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 133,
+   "text": "Lege genau.",
+   "keys": [
+    "woerter/lege_genau"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 134,
+   "text": "Punkte.",
+   "keys": [
+    "woerter/punkte"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 135,
+   "text": "Euro.",
+   "keys": [
+    "woerter/euro"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 136,
+   "text": "Cent.",
+   "keys": [
+    "woerter/cent"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 137,
+   "text": "Meter.",
+   "keys": [
+    "woerter/meter"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 138,
+   "text": "Zentimeter.",
+   "keys": [
+    "woerter/zentimeter"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 139,
+   "text": "Millimeter.",
+   "keys": [
+    "woerter/millimeter"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 140,
+   "text": "Kilometer.",
+   "keys": [
+    "woerter/kilometer"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 141,
+   "text": "Gramm.",
+   "keys": [
+    "woerter/gramm"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 142,
+   "text": "Kilogramm.",
+   "keys": [
+    "woerter/kilogramm"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 143,
+   "text": "Minuten.",
+   "keys": [
+    "woerter/minuten"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 144,
+   "text": "Stunden.",
+   "keys": [
+    "woerter/stunden"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 145,
+   "text": "Sekunden.",
+   "keys": [
+    "woerter/sekunden"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 146,
+   "text": "Uhr.",
+   "keys": [
+    "woerter/uhr"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 147,
+   "text": "halb.",
+   "keys": [
+    "woerter/halb"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 148,
+   "text": "Viertel nach.",
+   "keys": [
+    "woerter/viertel_nach"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 149,
+   "text": "Viertel vor.",
+   "keys": [
+    "woerter/viertel_vor"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 150,
+   "text": "Zehner.",
+   "keys": [
+    "woerter/zehner"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 151,
+   "text": "Hunderter.",
+   "keys": [
+    "woerter/hunderter"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 152,
+   "text": "Tausender.",
+   "keys": [
+    "woerter/tausender"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 153,
+   "text": "Hallo! Ich bin Professor Wolf. Schön, dass du da bist!",
+   "keys": [
+    "rahmen/begruessung"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 154,
+   "text": "Such dir eine Stufe aus.",
+   "keys": [
+    "rahmen/stufe_waehlen"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 155,
+   "text": "Vorschule.",
+   "keys": [
+    "rahmen/stufe_V"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 156,
+   "text": "Klasse eins.",
+   "keys": [
+    "rahmen/stufe_K1"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 157,
+   "text": "Klasse zwei.",
+   "keys": [
+    "rahmen/stufe_K2"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 158,
+   "text": "Klasse drei.",
+   "keys": [
+    "rahmen/stufe_K3"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 159,
+   "text": "Klasse vier.",
+   "keys": [
+    "rahmen/stufe_K4"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 160,
+   "text": "Such dir eine Übung aus.",
+   "keys": [
+    "rahmen/uebung_waehlen"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 161,
+   "text": "Tippe auf Start, dann geht es los!",
+   "keys": [
+    "rahmen/start_tippen"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 162,
+   "text": "Runde eins von drei.",
+   "keys": [
+    "rahmen/runde1"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 163,
+   "text": "Runde zwei von drei.",
+   "keys": [
+    "rahmen/runde2"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 164,
+   "text": "Runde drei von drei. Die letzte Runde!",
+   "keys": [
+    "rahmen/runde3"
+   ]
+  },
+  {
+   "block": 1,
+   "nr": 165,
+   "text": "Punkte:",
+   "keys": [
+    "rahmen/punkte"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 1,
+   "text": "Alles richtig! Du bist ein echter Mathe-Profi!",
+   "keys": [
+    "rahmen/ende_alle"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 2,
+   "text": "Gut gemacht! Mehr als die Hälfte hast du geschafft.",
+   "keys": [
+    "rahmen/ende_gut"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 3,
+   "text": "Das war ganz schön schwer. Übung macht den Meister!",
+   "keys": [
+    "rahmen/ende_mut"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 4,
+   "text": "Super! Du hast alle drei Runden geschafft.",
+   "keys": [
+    "rahmen/geschafft"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 5,
+   "text": "Zusammen sind das.",
+   "keys": [
+    "rahmen/zusammen"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 6,
+   "text": "Jetzt hast du insgesamt.",
+   "keys": [
+    "rahmen/insgesamt"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 7,
+   "text": "Willst du wirklich aufhören?",
+   "keys": [
+    "rahmen/aufhoeren"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 8,
+   "text": "Welche Reihe möchtest du üben?",
+   "keys": [
+    "rahmen/reihe_waehlen"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 9,
+   "text": "Das war knifflig. Die Lösung ist.",
+   "keys": [
+    "rahmen/loesung_zahl"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 10,
+   "text": "Das war knifflig. Schau, so ist es richtig.",
+   "keys": [
+    "rahmen/loesung_bild"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 11,
+   "text": "Tippe auf Weiter.",
+   "keys": [
+    "rahmen/weiter"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 12,
+   "text": "Fast! Ich helfe dir.",
+   "keys": [
+    "rahmen/fehler1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 13,
+   "text": "Noch nicht ganz. Schau mal:",
+   "keys": [
+    "rahmen/fehler2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 14,
+   "text": "Hmm, versuch es nochmal. Ein Tipp:",
+   "keys": [
+    "rahmen/fehler3"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 15,
+   "text": "Super!",
+   "keys": [
+    "lob/01"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 16,
+   "text": "Richtig!",
+   "keys": [
+    "lob/02"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 17,
+   "text": "Prima gerechnet!",
+   "keys": [
+    "lob/03"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 18,
+   "text": "Toll gemacht!",
+   "keys": [
+    "lob/04"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 19,
+   "text": "Ganz genau!",
+   "keys": [
+    "lob/05"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 20,
+   "text": "Klasse!",
+   "keys": [
+    "lob/06"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 21,
+   "text": "Spitze!",
+   "keys": [
+    "lob/07"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 22,
+   "text": "Sehr gut!",
+   "keys": [
+    "lob/08"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 23,
+   "text": "Wunderbar!",
+   "keys": [
+    "lob/09"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 24,
+   "text": "Das stimmt!",
+   "keys": [
+    "lob/10"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 25,
+   "text": "Bravo!",
+   "keys": [
+    "lob/11"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 26,
+   "text": "Du bist ein Rechenkünstler!",
+   "keys": [
+    "lob/12"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 27,
+   "text": "Ausgezeichnet!",
+   "keys": [
+    "lob/13"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 28,
+   "text": "Fantastisch!",
+   "keys": [
+    "lob/14"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 29,
+   "text": "Jetzt stimmt es!",
+   "keys": [
+    "lob/zweiter1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 30,
+   "text": "Richtig, gut nachgedacht!",
+   "keys": [
+    "lob/zweiter2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 31,
+   "text": "Ja, genau so ist es richtig!",
+   "keys": [
+    "lob/zweiter3"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 32,
+   "text": "Blitzrechnen!",
+   "keys": [
+    "blitz/name"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 33,
+   "text": "Blitzrechnen! Zehn Aufgaben, so schnell du kannst. Bist du bereit?",
+   "keys": [
+    "blitz/start"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 34,
+   "text": "Los!",
+   "keys": [
+    "blitz/los"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 35,
+   "text": "Geschafft! Deine Zeit:",
+   "keys": [
+    "blitz/fertig"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 36,
+   "text": "Neue Bestzeit! Wahnsinn!",
+   "keys": [
+    "blitz/bestzeit"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 37,
+   "text": "Deine Bestzeit ist.",
+   "keys": [
+    "blitz/bestzeit_ist"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 38,
+   "text": "Wie viele?",
+   "keys": [
+    "uebungen/v_01_name",
+    "uebungen/b_v_wieviele"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 39,
+   "text": "Zähle genau und tippe die richtige Zahl an. Du kannst die Dinge antippen, dann zähle ich mit.",
+   "keys": [
+    "uebungen/v_01_aufgabe"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 40,
+   "text": "Tippe jedes Ding einmal an. Ich zähle mit!",
+   "keys": [
+    "uebungen/v_01_tipp1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 41,
+   "text": "Zähle langsam, eins nach dem anderen.",
+   "keys": [
+    "uebungen/v_01_tipp2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 42,
+   "text": "Schau aufs Bild: Eine volle Reihe sind fünf Plättchen.",
+   "keys": [
+    "uebungen/v_01_tipp3",
+    "uebungen/v_04_tipp2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 43,
+   "text": "Wie viele Äpfel siehst du?",
+   "keys": [
+    "uebungen/v_01_aepfel"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 44,
+   "text": "Wie viele Sterne siehst du?",
+   "keys": [
+    "uebungen/v_01_sterne"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 45,
+   "text": "Wie viele Fische siehst du?",
+   "keys": [
+    "uebungen/v_01_fische"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 46,
+   "text": "Wie viele Blumen siehst du?",
+   "keys": [
+    "uebungen/v_01_blumen"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 47,
+   "text": "Wie viele Marienkäfer siehst du?",
+   "keys": [
+    "uebungen/v_01_kaefer"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 48,
+   "text": "Wie viele Autos siehst du?",
+   "keys": [
+    "uebungen/v_01_autos"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 49,
+   "text": "Wie viele Bälle siehst du?",
+   "keys": [
+    "uebungen/v_01_baelle"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 50,
+   "text": "Wie viele Enten siehst du?",
+   "keys": [
+    "uebungen/v_01_enten"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 51,
+   "text": "Wie viele Erdbeeren siehst du?",
+   "keys": [
+    "uebungen/v_01_erdbeeren"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 52,
+   "text": "Wie viele Luftballons siehst du?",
+   "keys": [
+    "uebungen/v_01_ballons"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 53,
+   "text": "Blitzblick.",
+   "keys": [
+    "uebungen/v_02_name"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 54,
+   "text": "Schau genau hin! Das Bild ist nur ganz kurz zu sehen.",
+   "keys": [
+    "uebungen/v_02_aufgabe"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 55,
+   "text": "Du kannst das Bild nochmal anschauen. Tippe auf das Auge.",
+   "keys": [
+    "uebungen/v_02_tipp1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 56,
+   "text": "Beim Würfel helfen dir die Muster: Die Fünf sieht aus wie ein Kreuz mit einem Punkt in der Mitte.",
+   "keys": [
+    "uebungen/v_02_tipp2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 57,
+   "text": "Eine ganze Hand hat fünf Finger.",
+   "keys": [
+    "uebungen/v_02_tipp3"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 58,
+   "text": "Wie viele Punkte hat der Würfel?",
+   "keys": [
+    "uebungen/v_02_wuerfel"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 59,
+   "text": "Wie viele Finger siehst du?",
+   "keys": [
+    "uebungen/v_02_finger"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 60,
+   "text": "Mehr oder weniger?",
+   "keys": [
+    "uebungen/v_03_name"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 61,
+   "text": "Vergleiche die beiden Gruppen. Tippe die richtige Gruppe an. Sind es gleich viele, tippe auf das Gleich-Zeichen.",
+   "keys": [
+    "uebungen/v_03_aufgabe"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 62,
+   "text": "Verbinde immer eins von links mit eins von rechts. Wo bleibt etwas übrig?",
+   "keys": [
+    "uebungen/v_03_tipp1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 63,
+   "text": "Zähle beide Gruppen und vergleiche die Zahlen.",
+   "keys": [
+    "uebungen/v_03_tipp2"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 64,
+   "text": "Wo sind mehr? Oder sind es gleich viele?",
+   "keys": [
+    "uebungen/v_03_mehr"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 65,
+   "text": "Wo sind weniger? Oder sind es gleich viele?",
+   "keys": [
+    "uebungen/v_03_weniger"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 66,
+   "text": "Zahl und Menge.",
+   "keys": [
+    "uebungen/v_04_name"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 67,
+   "text": "Finde das Bild, das zur Zahl passt.",
+   "keys": [
+    "uebungen/v_04_aufgabe"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 68,
+   "text": "Zähle in jedem Bild nach.",
+   "keys": [
+    "uebungen/v_04_tipp1"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 69,
+   "text": "Welches Bild passt zu dieser Zahl:",
+   "keys": [
+    "uebungen/v_04_frage"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 70,
+   "text": "Zahlenreihe.",
+   "keys": [
+    "uebungen/v_05_name"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 71,
+   "text": "Welche Zahl fehlt in der Reihe?",
+   "keys": [
+    "uebungen/v_05_aufgabe"
+   ]
+  },
+  {
+   "block": 2,
+   "nr": 72,
+   "text": "Zähle von vorne. Welche Zahl kommt als Nächstes?",
+   "keys": [
+    "uebungen/v_05_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 1,
+   "text": "Schau auf den Zahlenstrahl. Da stehen alle Zahlen der Reihe nach.",
+   "keys": [
+    "uebungen/v_05_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 2,
+   "text": "Formen finden.",
+   "keys": [
+    "uebungen/v_06_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 3,
+   "text": "Tippe alle passenden Formen an. Dann tippe auf OK.",
+   "keys": [
+    "uebungen/v_06_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 4,
+   "text": "Tippe alle Kreise an!",
+   "keys": [
+    "uebungen/v_06_kreis"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 5,
+   "text": "Tippe alle Dreiecke an!",
+   "keys": [
+    "uebungen/v_06_dreieck"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 6,
+   "text": "Tippe alle Vierecke an!",
+   "keys": [
+    "uebungen/v_06_viereck"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 7,
+   "text": "Ein Kreis ist ganz rund und hat keine Ecken.",
+   "keys": [
+    "uebungen/v_06_tipp_kreis"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 8,
+   "text": "Ein Dreieck hat drei Ecken. Zähle die Ecken!",
+   "keys": [
+    "uebungen/v_06_tipp_dreieck"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 9,
+   "text": "Ein Viereck hat vier Ecken. Auch lange Rechtecke sind Vierecke.",
+   "keys": [
+    "uebungen/v_06_tipp_viereck"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 10,
+   "text": "Muster fortsetzen.",
+   "keys": [
+    "uebungen/v_07_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 11,
+   "text": "Wie geht das Muster weiter? Zieh das passende Teil in die Lücke.",
+   "keys": [
+    "uebungen/v_07_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 12,
+   "text": "Sprich das Muster leise mit: rot, blau, rot, blau. Was kommt dann?",
+   "keys": [
+    "uebungen/v_07_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 13,
+   "text": "Suche das Stück, das sich immer wiederholt.",
+   "keys": [
+    "uebungen/v_07_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 14,
+   "text": "Was kommt als Nächstes?",
+   "keys": [
+    "uebungen/v_07_frage"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 15,
+   "text": "Wo ist was?",
+   "keys": [
+    "uebungen/v_08_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 16,
+   "text": "Hör genau zu und tippe das richtige Ding an. Dann tippe auf OK.",
+   "keys": [
+    "uebungen/v_08_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 17,
+   "text": "Schau auf den gelben Bereich. Dort ist das Ding, das ich suche.",
+   "keys": [
+    "uebungen/v_08_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 18,
+   "text": "Links und rechts: Halte deine Hände hoch. Die linke Hand macht mit Daumen und Zeigefinger ein L.",
+   "keys": [
+    "uebungen/v_08_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 19,
+   "text": "Was liegt auf dem Tisch?",
+   "keys": [
+    "uebungen/v_08_auf"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 20,
+   "text": "Was liegt unter dem Tisch?",
+   "keys": [
+    "uebungen/v_08_unter"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 21,
+   "text": "Was ist links neben dem Tisch?",
+   "keys": [
+    "uebungen/v_08_links"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 22,
+   "text": "Was ist rechts neben dem Tisch?",
+   "keys": [
+    "uebungen/v_08_rechts"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 23,
+   "text": "Was schwebt über dem Tisch?",
+   "keys": [
+    "uebungen/v_08_ueber"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 24,
+   "text": "Was liegt auf der Kiste?",
+   "keys": [
+    "uebungen/v_08_kiste_auf"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 25,
+   "text": "Was steht vor der Kiste?",
+   "keys": [
+    "uebungen/v_08_kiste_vor"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 26,
+   "text": "Was versteckt sich hinter der Kiste?",
+   "keys": [
+    "uebungen/v_08_kiste_hinter"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 27,
+   "text": "Was ist links neben der Kiste?",
+   "keys": [
+    "uebungen/v_08_kiste_links"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 28,
+   "text": "Was ist rechts neben der Kiste?",
+   "keys": [
+    "uebungen/v_08_kiste_rechts"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 29,
+   "text": "Was liegt zwischen den beiden Kisten?",
+   "keys": [
+    "uebungen/v_08_zwischen"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 30,
+   "text": "Der Größe nach.",
+   "keys": [
+    "uebungen/v_09_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 31,
+   "text": "Ordne der Größe nach. Zieh ein Teil auf ein anderes, dann tauschen sie die Plätze. Zum Schluss tippe auf OK.",
+   "keys": [
+    "uebungen/v_09_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 32,
+   "text": "Such zuerst den kleinsten und stell ihn an den Anfang.",
+   "keys": [
+    "uebungen/v_09_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 33,
+   "text": "Vergleiche immer zwei nebeneinander: Welcher ist größer?",
+   "keys": [
+    "uebungen/v_09_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 34,
+   "text": "Ordne die Stifte. Der kürzeste kommt nach oben, der längste nach unten.",
+   "keys": [
+    "uebungen/v_09_stifte"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 35,
+   "text": "Ordne die Türme. Der kleinste kommt nach links, der größte nach rechts.",
+   "keys": [
+    "uebungen/v_09_tuerme"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 36,
+   "text": "Dazu und weg.",
+   "keys": [
+    "uebungen/v_10_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 37,
+   "text": "Hör gut zu und schau genau hin. Wie viele sind es am Ende?",
+   "keys": [
+    "uebungen/v_10_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 38,
+   "text": "Dazu heißt: Es werden mehr. Weg heißt: Es werden weniger.",
+   "keys": [
+    "uebungen/v_10_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 39,
+   "text": "Zähle am Ende alle, die noch da sind.",
+   "keys": [
+    "uebungen/v_10_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 40,
+   "text": "Vögel sitzen auf dem Ast.",
+   "keys": [
+    "uebungen/v_10_voegel_sitzen"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 41,
+   "text": "Ein Vogel sitzt auf dem Ast.",
+   "keys": [
+    "uebungen/v_10_ein_vogel"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 42,
+   "text": "fliegen dazu.",
+   "keys": [
+    "uebungen/v_10_fliegen_dazu"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 43,
+   "text": "Einer fliegt dazu.",
+   "keys": [
+    "uebungen/v_10_einer_dazu"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 44,
+   "text": "fliegen weg.",
+   "keys": [
+    "uebungen/v_10_fliegen_weg"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 45,
+   "text": "Einer fliegt weg.",
+   "keys": [
+    "uebungen/v_10_einer_weg"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 46,
+   "text": "Wie viele Vögel sitzen jetzt auf dem Ast?",
+   "keys": [
+    "uebungen/v_10_frage_voegel"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 47,
+   "text": "Äpfel liegen im Korb.",
+   "keys": [
+    "uebungen/v_10_aepfel_liegen"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 48,
+   "text": "Ein Apfel liegt im Korb.",
+   "keys": [
+    "uebungen/v_10_ein_apfel"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 49,
+   "text": "kommen dazu.",
+   "keys": [
+    "uebungen/v_10_kommen_dazu"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 50,
+   "text": "Einer kommt dazu.",
+   "keys": [
+    "uebungen/v_10_einer_kommt"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 51,
+   "text": "nehme ich heraus.",
+   "keys": [
+    "uebungen/v_10_nehme_heraus"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 52,
+   "text": "Einen nehme ich heraus.",
+   "keys": [
+    "uebungen/v_10_einen_heraus"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 53,
+   "text": "Wie viele Äpfel liegen jetzt im Korb?",
+   "keys": [
+    "uebungen/v_10_frage_aepfel"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 54,
+   "text": "Zahlenhaus.",
+   "keys": [
+    "uebungen/k1_01_name"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 55,
+   "text": "Im Zahlenhaus ergeben die zwei Zahlen in jedem Stockwerk zusammen die Zahl im Dach. Tippe auf ein leeres Feld und rechne.",
+   "keys": [
+    "uebungen/k1_01_aufgabe"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 56,
+   "text": "Beide Zahlen im Stockwerk zusammen ergeben die Zahl im Dach.",
+   "keys": [
+    "uebungen/k1_01_tipp1"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 57,
+   "text": "Wie viel fehlt noch bis zur Dachzahl?",
+   "keys": [
+    "uebungen/k1_01_tipp2"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 58,
+   "text": "Schau aufs Bild und zähle die blauen Plättchen.",
+   "keys": [
+    "uebungen/k1_01_tipp3"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 59,
+   "text": "Im Dach steht die Zahl.",
+   "keys": [
+    "uebungen/k1_01_dach"
+   ]
+  },
+  {
+   "block": 3,
+   "nr": 60,
+   "text": "Zahlenstrahl-Schieber.",
+   "keys": [
+    "uebungen/k1_02_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 1,
+   "text": "Schieb den gelben Regler auf die Zahl, die ich sage. Mit Minus und Plus kannst du genau einstellen. Dann tippe auf OK.",
+   "keys": [
+    "uebungen/k1_02_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 2,
+   "text": "Die Zehn steht genau in der Mitte.",
+   "keys": [
+    "uebungen/k1_02_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 3,
+   "text": "Lange Striche zeigen die Fünfer und Zehner. Zähle von dort aus weiter.",
+   "keys": [
+    "uebungen/k1_02_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 4,
+   "text": "Mit Minus und Plus geht der Regler immer einen Strich weiter.",
+   "keys": [
+    "uebungen/k1_02_tipp3",
+    "uebungen/k2_01_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 5,
+   "text": "Blitzblick Zwanzigerfeld.",
+   "keys": [
+    "uebungen/k1_03_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 6,
+   "text": "Die Plättchen sind nur kurz zu sehen. Wie viele sind es? Achte auf die Fünfer.",
+   "keys": [
+    "uebungen/k1_03_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 7,
+   "text": "Eine volle Reihe sind zehn. Eine halbe Reihe sind fünf.",
+   "keys": [
+    "uebungen/k1_03_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 8,
+   "text": "Schau auf die Fünfer: fünf und noch zwei sind sieben.",
+   "keys": [
+    "uebungen/k1_03_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 9,
+   "text": "Wie viele Plättchen siehst du?",
+   "keys": [
+    "uebungen/k1_03_frage"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 10,
+   "text": "Größer, kleiner, gleich.",
+   "keys": [
+    "uebungen/k1_04_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 11,
+   "text": "Welches Zeichen gehört in die Mitte? Kleiner, größer oder gleich?",
+   "keys": [
+    "uebungen/k1_04_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 12,
+   "text": "Das Krokodil frisst immer die größere Zahl. Sein offenes Maul zeigt zur größeren Zahl.",
+   "keys": [
+    "uebungen/k1_04_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 13,
+   "text": "Die Spitze zeigt immer zur kleineren Zahl.",
+   "keys": [
+    "uebungen/k1_04_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 14,
+   "text": "Schau auf den Zahlenstrahl: Weiter rechts ist größer.",
+   "keys": [
+    "uebungen/k1_04_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 15,
+   "text": "Immer zehn.",
+   "keys": [
+    "uebungen/k1_05_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 16,
+   "text": "Ergänze bis zehn.",
+   "keys": [
+    "uebungen/k1_05_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 17,
+   "text": "Schau aufs Zehnerfeld: Wie viele Felder sind noch frei?",
+   "keys": [
+    "uebungen/k1_05_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 18,
+   "text": "Denk an die Zehnerfreunde: Drei und sieben gehören zusammen.",
+   "keys": [
+    "uebungen/k1_05_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 19,
+   "text": "Plus und Minus bis zehn.",
+   "keys": [
+    "uebungen/k1_06_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 20,
+   "text": "Rechne plus und minus bis zehn.",
+   "keys": [
+    "uebungen/k1_06_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 21,
+   "text": "Bei Plus wird es mehr, bei Minus wird es weniger.",
+   "keys": [
+    "uebungen/k1_06_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 22,
+   "text": "Schau aufs Bild und zähle die Plättchen.",
+   "keys": [
+    "uebungen/k1_06_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 23,
+   "text": "Bei Minus zählst du nur die Plättchen, die nicht durchgestrichen sind.",
+   "keys": [
+    "uebungen/k1_06_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 24,
+   "text": "Plus und Minus bis zwanzig.",
+   "keys": [
+    "uebungen/k1_07_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 25,
+   "text": "Rechne über die Zehn.",
+   "keys": [
+    "uebungen/k1_07_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 26,
+   "text": "Rechne erst bis zur Zehn, dann weiter.",
+   "keys": [
+    "uebungen/k1_07_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 27,
+   "text": "Zerlege die zweite Zahl: Acht plus fünf ist acht plus zwei plus drei.",
+   "keys": [
+    "uebungen/k1_07_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 28,
+   "text": "Schau aufs Zwanzigerfeld: Erst die obere Reihe voll machen.",
+   "keys": [
+    "uebungen/k1_07_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 29,
+   "text": "Verdoppeln und Halbieren.",
+   "keys": [
+    "uebungen/k1_08_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 30,
+   "text": "Verdopple oder halbiere die Zahl.",
+   "keys": [
+    "uebungen/k1_08_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 31,
+   "text": "Verdoppeln heißt: die gleiche Zahl noch einmal dazu.",
+   "keys": [
+    "uebungen/k1_08_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 32,
+   "text": "Halbieren heißt: gerecht in zwei gleiche Teile teilen.",
+   "keys": [
+    "uebungen/k1_08_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 33,
+   "text": "Schau aufs Bild: Beide Teile sind gleich groß.",
+   "keys": [
+    "uebungen/k1_08_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 34,
+   "text": "Zahlenmauer.",
+   "keys": [
+    "uebungen/k1_09_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 35,
+   "text": "In der Zahlenmauer ergeben zwei Nachbarsteine zusammen den Stein darüber. Tippe auf ein leeres Feld.",
+   "keys": [
+    "uebungen/k1_09_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 36,
+   "text": "Zwei Nachbarsteine zusammen ergeben den Stein darüber.",
+   "keys": [
+    "uebungen/k1_09_tipp1",
+    "uebungen/k3_08_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 37,
+   "text": "Fehlt unten ein Stein? Dann rechne minus: oben minus den anderen Stein.",
+   "keys": [
+    "uebungen/k1_09_tipp2",
+    "uebungen/k3_08_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 38,
+   "text": "Fang dort an, wo du schon zwei Zahlen kennst.",
+   "keys": [
+    "uebungen/k1_09_tipp3",
+    "uebungen/k3_08_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 39,
+   "text": "Hier ist eine neue Zahlenmauer.",
+   "keys": [
+    "uebungen/k1_09_los",
+    "uebungen/k3_08_los"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 40,
+   "text": "Geld bis zwanzig Euro.",
+   "keys": [
+    "uebungen/k1_10_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 41,
+   "text": "Rechne mit Euro. Lege genau den Betrag oder zähle das Geld zusammen.",
+   "keys": [
+    "uebungen/k1_10_aufgabe"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 42,
+   "text": "Fang mit dem größten Schein an.",
+   "keys": [
+    "uebungen/k1_10_tipp1"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 43,
+   "text": "Zähle das Geld zusammen: erst die Scheine, dann die Münzen.",
+   "keys": [
+    "uebungen/k1_10_tipp2"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 44,
+   "text": "Ein Fünf-Euro-Schein ist so viel wie fünf Ein-Euro-Münzen.",
+   "keys": [
+    "uebungen/k1_10_tipp3"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 45,
+   "text": "Wie viel Geld ist das?",
+   "keys": [
+    "uebungen/k1_10_wieviel"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 46,
+   "text": "Zahlenstrahl bis hundert.",
+   "keys": [
+    "uebungen/k2_01_name"
+   ]
+  },
+  {
+   "block": 4,
+   "nr": 47,
+   "text": "Schieb den gelben Regler auf die Zahl, die ich sage. Mit Minus und Plus kannst du genau einstellen.",
+   "keys": [
+    "uebungen/k2_01_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 1,
+   "text": "Such zuerst den richtigen Zehner. Dann zähle die kleinen Striche weiter.",
+   "keys": [
+    "uebungen/k2_01_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 2,
+   "text": "Der mittlere Strich zwischen zwei Zehnern ist die Fünf.",
+   "keys": [
+    "uebungen/k2_01_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 3,
+   "text": "Zehner und Einer.",
+   "keys": [
+    "uebungen/k2_02_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 4,
+   "text": "Ein Zehnerstab hat zehn Würfel. Lies die Zahl ab oder lege sie selbst.",
+   "keys": [
+    "uebungen/k2_02_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 5,
+   "text": "Zähle zuerst die Zehnerstäbe, dann die Einerwürfel.",
+   "keys": [
+    "uebungen/k2_02_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 6,
+   "text": "Die Zehner stehen vorne, die Einer hinten: vier Zehner und sieben Einer sind siebenundvierzig.",
+   "keys": [
+    "uebungen/k2_02_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 7,
+   "text": "Zehn Einerwürfel kannst du gegen einen Zehnerstab tauschen.",
+   "keys": [
+    "uebungen/k2_02_tipp3"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 8,
+   "text": "Welche Zahl ist das?",
+   "keys": [
+    "uebungen/k2_02_lies",
+    "uebungen/k3_02_zahl"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 9,
+   "text": "Lege die Zahl.",
+   "keys": [
+    "uebungen/k2_02_lege"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 10,
+   "text": "Immer hundert.",
+   "keys": [
+    "uebungen/k2_03_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 11,
+   "text": "Ergänze bis hundert.",
+   "keys": [
+    "uebungen/k2_03_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 12,
+   "text": "Ergänze erst bis zum nächsten Zehner, dann bis hundert.",
+   "keys": [
+    "uebungen/k2_03_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 13,
+   "text": "Zähle die freien Felder im Hunderterfeld: erst die einzelnen, dann die ganzen Zehnerreihen.",
+   "keys": [
+    "uebungen/k2_03_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 14,
+   "text": "Plus und Minus bis hundert.",
+   "keys": [
+    "uebungen/k2_04_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 15,
+   "text": "Rechne plus und minus bis hundert.",
+   "keys": [
+    "uebungen/k2_04_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 16,
+   "text": "Rechne in Schritten: erst die Zehner, dann die Einer.",
+   "keys": [
+    "uebungen/k2_04_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 17,
+   "text": "Schau auf den Rechenstrich: erst der große Sprung, dann der kleine.",
+   "keys": [
+    "uebungen/k2_04_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 18,
+   "text": "Bei Minus springst du auf dem Rechenstrich nach links.",
+   "keys": [
+    "uebungen/k2_04_tipp3"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 19,
+   "text": "Einmaleins.",
+   "keys": [
+    "uebungen/k2_05_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 20,
+   "text": "Rechne die Malaufgaben.",
+   "keys": [
+    "uebungen/k2_05_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 21,
+   "text": "Mal heißt: die gleiche Zahl immer wieder dazu.",
+   "keys": [
+    "uebungen/k2_05_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 22,
+   "text": "Nutze eine leichte Aufgabe: Zweimal, fünfmal oder zehnmal kennst du sicher.",
+   "keys": [
+    "uebungen/k2_05_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 23,
+   "text": "Schau aufs Punktefeld und zähle die Reihen.",
+   "keys": [
+    "uebungen/k2_05_tipp3"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 24,
+   "text": "Geteilt durch.",
+   "keys": [
+    "uebungen/k2_06_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 25,
+   "text": "Rechne die Geteiltaufgaben. Die Malaufgabe hilft dir.",
+   "keys": [
+    "uebungen/k2_06_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 26,
+   "text": "Denk an die Umkehraufgabe: Wie viel mal die zweite Zahl ergibt die erste Zahl?",
+   "keys": [
+    "uebungen/k2_06_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 27,
+   "text": "Teile die Punkte gerecht in Reihen auf. Wie viele Reihen sind es?",
+   "keys": [
+    "uebungen/k2_06_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 28,
+   "text": "Rechendreieck.",
+   "keys": [
+    "uebungen/k2_07_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 29,
+   "text": "Im Rechendreieck ergeben zwei Innenfelder zusammen die Zahl außen daneben. Tippe auf ein leeres Feld.",
+   "keys": [
+    "uebungen/k2_07_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 30,
+   "text": "Die Zahl außen ist die Summe der beiden Innenfelder daneben.",
+   "keys": [
+    "uebungen/k2_07_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 31,
+   "text": "Fehlt innen eine Zahl? Dann rechne: außen minus das andere Innenfeld.",
+   "keys": [
+    "uebungen/k2_07_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 32,
+   "text": "Hier ist ein neues Rechendreieck.",
+   "keys": [
+    "uebungen/k2_07_los"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 33,
+   "text": "Uhrzeit.",
+   "keys": [
+    "uebungen/k2_08_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 34,
+   "text": "Lies die Uhr. Der kurze Zeiger zeigt die Stunde, der lange Zeiger die Minuten.",
+   "keys": [
+    "uebungen/k2_08_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 35,
+   "text": "Der kurze Zeiger zeigt die Stunde, der lange Zeiger die Minuten.",
+   "keys": [
+    "uebungen/k2_08_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 36,
+   "text": "Zeigt der lange Zeiger nach unten auf die Sechs, ist es halb.",
+   "keys": [
+    "uebungen/k2_08_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 37,
+   "text": "Halb vier heißt: eine halbe Stunde vor vier Uhr.",
+   "keys": [
+    "uebungen/k2_08_tipp3"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 38,
+   "text": "Wie spät ist es?",
+   "keys": [
+    "uebungen/k2_08_frage"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 39,
+   "text": "Geld bis hundert Euro.",
+   "keys": [
+    "uebungen/k2_09_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 40,
+   "text": "Rechne mit Euro: Geld legen, Preise zusammenrechnen und Wechselgeld.",
+   "keys": [
+    "uebungen/k2_09_aufgabe"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 41,
+   "text": "Rechne erst die Zehner zusammen, dann die Einer.",
+   "keys": [
+    "uebungen/k2_09_tipp1"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 42,
+   "text": "Beim Wechselgeld rechnest du: bezahlt minus Preis. Oder du ergänzt vom Preis bis zum bezahlten Geld.",
+   "keys": [
+    "uebungen/k2_09_tipp2"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 43,
+   "text": "Fang beim Legen mit dem größten Schein an.",
+   "keys": [
+    "uebungen/k2_09_tipp3"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 44,
+   "text": "Wie viel kostet beides zusammen?",
+   "keys": [
+    "uebungen/k2_09_zusammen"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 45,
+   "text": "Du bezahlst mit.",
+   "keys": [
+    "uebungen/k2_09_bezahlt"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 46,
+   "text": "Wie viel Geld bekommst du zurück?",
+   "keys": [
+    "uebungen/k2_09_zurueck"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 47,
+   "text": "Spiegelbilder.",
+   "keys": [
+    "uebungen/k2_10_name"
+   ]
+  },
+  {
+   "block": 5,
+   "nr": 48,
+   "text": "Ergänze die Figur. Die rote Linie ist der Spiegel. Tippe die Kästchen an und dann auf OK.",
+   "keys": [
+    "uebungen/k2_10_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 1,
+   "text": "Zähle die Kästchen vom Spiegel aus: Links zwei weg heißt rechts auch zwei weg.",
+   "keys": [
+    "uebungen/k2_10_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 2,
+   "text": "Jedes Kästchen hat einen Zwilling auf der anderen Seite, gleich weit vom Spiegel entfernt.",
+   "keys": [
+    "uebungen/k2_10_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 3,
+   "text": "Ergänze das Spiegelbild.",
+   "keys": [
+    "uebungen/k2_10_los"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 4,
+   "text": "Zahlenstrahl bis tausend.",
+   "keys": [
+    "uebungen/k3_01_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 5,
+   "text": "Schieb den gelben Regler auf die Zahl, die ich sage. Jeder kleine Strich ist zehn mehr.",
+   "keys": [
+    "uebungen/k3_01_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 6,
+   "text": "Such zuerst den richtigen Hunderter. Die langen Striche zeigen die Hunderter.",
+   "keys": [
+    "uebungen/k3_01_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 7,
+   "text": "Jeder kleine Strich ist zehn mehr.",
+   "keys": [
+    "uebungen/k3_01_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 8,
+   "text": "Der mittlere Strich zwischen zwei Hundertern ist die Fünfzig.",
+   "keys": [
+    "uebungen/k3_01_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 9,
+   "text": "Stellenwerttafel.",
+   "keys": [
+    "uebungen/k3_02_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 10,
+   "text": "Hunderter, Zehner und Einer: Jede Ziffer hat ihren Platz.",
+   "keys": [
+    "uebungen/k3_02_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 11,
+   "text": "Die erste Ziffer sagt dir, wie viele Hunderter es sind.",
+   "keys": [
+    "uebungen/k3_02_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 12,
+   "text": "Fehlt eine Stelle? Dann schreibst du eine Null.",
+   "keys": [
+    "uebungen/k3_02_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 13,
+   "text": "Schau in die Stellenwerttafel: H heißt Hunderter, Z Zehner und E Einer.",
+   "keys": [
+    "uebungen/k3_02_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 14,
+   "text": "Zerlege die Zahl.",
+   "keys": [
+    "uebungen/k3_02_zerlege"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 15,
+   "text": "Einer.",
+   "keys": [
+    "uebungen/k3_02_einer"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 16,
+   "text": "Plus und Minus bis tausend.",
+   "keys": [
+    "uebungen/k3_03_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 17,
+   "text": "Rechne im Kopf oder in Schritten.",
+   "keys": [
+    "uebungen/k3_03_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 18,
+   "text": "Rechne in Schritten: erst die Hunderter, dann die Zehner, dann die Einer.",
+   "keys": [
+    "uebungen/k3_03_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 19,
+   "text": "Schau auf den Rechenstrich: ein Sprung für jede Stelle.",
+   "keys": [
+    "uebungen/k3_03_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 20,
+   "text": "Bei glatten Zehnern hilft dir das kleine Einspluseins: vierhundertfünfzig plus zweihundertachtzig ist wie fünfundvierzig plus achtundzwanzig Zehner.",
+   "keys": [
+    "uebungen/k3_03_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 21,
+   "text": "Schriftlich addieren.",
+   "keys": [
+    "uebungen/k3_04_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 22,
+   "text": "Rechne schriftlich. Fang ganz rechts bei den Einern an. Die kleinen Kästchen sind für den Übertrag.",
+   "keys": [
+    "uebungen/k3_04_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 23,
+   "text": "Rechne Stelle für Stelle von rechts: erst Einer, dann Zehner, dann Hunderter.",
+   "keys": [
+    "uebungen/k3_04_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 24,
+   "text": "Ist eine Stelle zehn oder mehr? Schreib die Einer hin und den Übertrag klein in die nächste Spalte.",
+   "keys": [
+    "uebungen/k3_04_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 25,
+   "text": "Vergiss nicht, den Übertrag mitzurechnen.",
+   "keys": [
+    "uebungen/k3_04_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 26,
+   "text": "Schriftlich subtrahieren.",
+   "keys": [
+    "uebungen/k3_05_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 27,
+   "text": "Rechne schriftlich minus. Fang ganz rechts bei den Einern an.",
+   "keys": [
+    "uebungen/k3_05_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 28,
+   "text": "Rechne von oben nach unten: obere Ziffer minus untere Ziffer.",
+   "keys": [
+    "uebungen/k3_05_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 29,
+   "text": "Geht es nicht? Dann entbündle: Nimm einen Zehner und mach daraus zehn Einer. Oben wird die Ziffer eins kleiner.",
+   "keys": [
+    "uebungen/k3_05_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 30,
+   "text": "Hast du entbündelt? Dann rechnest du in der nächsten Spalte mit der kleineren Ziffer.",
+   "keys": [
+    "uebungen/k3_05_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 31,
+   "text": "Rechne von unten nach oben: Wie viel fehlt von der unteren bis zur oberen Ziffer?",
+   "keys": [
+    "uebungen/k3_05_ergaenzen_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 32,
+   "text": "Ist die obere Ziffer kleiner? Dann ergänze bis zur Zahl mit einer Zehn davor und schreib den Übertrag klein unter die nächste Spalte.",
+   "keys": [
+    "uebungen/k3_05_ergaenzen_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 33,
+   "text": "Rechne den Übertrag in der nächsten Spalte unten dazu.",
+   "keys": [
+    "uebungen/k3_05_ergaenzen_tipp3"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 34,
+   "text": "Mal und geteilt mit Zehnerzahlen.",
+   "keys": [
+    "uebungen/k3_06_name"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 35,
+   "text": "Rechne mit Zehnerzahlen. Das Einmaleins hilft dir.",
+   "keys": [
+    "uebungen/k3_06_aufgabe"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 36,
+   "text": "Rechne erst die Aufgabe ohne die Null. Dann hängst du die Null wieder an.",
+   "keys": [
+    "uebungen/k3_06_tipp1"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 37,
+   "text": "Denk in Zehnern: Vierzig sind vier Zehner.",
+   "keys": [
+    "uebungen/k3_06_tipp2"
+   ]
+  },
+  {
+   "block": 6,
+   "nr": 38,
+   "text": "Teilen mit Rest.",
+   "keys": [
+    "uebungen/k3_07_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 1,
+   "text": "Teile und schreibe den Rest auf. Der Rest ist immer kleiner als die Zahl, durch die du teilst.",
+   "keys": [
+    "uebungen/k3_07_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 2,
+   "text": "Such die größte Malaufgabe mit der zweiten Zahl, die noch hineinpasst.",
+   "keys": [
+    "uebungen/k3_07_tipp1"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 3,
+   "text": "Der Rest ist das, was übrig bleibt. Er muss kleiner sein als die Zahl, durch die du teilst.",
+   "keys": [
+    "uebungen/k3_07_tipp2"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 4,
+   "text": "Zahlenmauer bis tausend.",
+   "keys": [
+    "uebungen/k3_08_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 5,
+   "text": "Zwei Nachbarsteine ergeben zusammen den Stein darüber. Tippe auf ein leeres Feld.",
+   "keys": [
+    "uebungen/k3_08_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 6,
+   "text": "Längen und Gewichte.",
+   "keys": [
+    "uebungen/k3_09_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 7,
+   "text": "Rechne Längen und Gewichte um.",
+   "keys": [
+    "uebungen/k3_09_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 8,
+   "text": "Ein Meter hat hundert Zentimeter. Ein Zentimeter hat zehn Millimeter.",
+   "keys": [
+    "uebungen/k3_09_tipp1"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 9,
+   "text": "Ein Kilometer hat tausend Meter. Ein Kilogramm hat tausend Gramm.",
+   "keys": [
+    "uebungen/k3_09_tipp2"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 10,
+   "text": "Rechne beide Angaben in die gleiche Einheit um, dann kannst du vergleichen.",
+   "keys": [
+    "uebungen/k3_09_tipp3"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 11,
+   "text": "Was ist länger:",
+   "keys": [
+    "uebungen/k3_09_laenger"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 12,
+   "text": "Was ist schwerer:",
+   "keys": [
+    "uebungen/k3_09_schwerer"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 13,
+   "text": "Wie heißt dieser Körper?",
+   "keys": [
+    "uebungen/k3_10_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 14,
+   "text": "Schau dir den Körper genau an.",
+   "keys": [
+    "uebungen/k3_10_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 15,
+   "text": "Wie viele Ecken hat der Würfel?",
+   "keys": [
+    "uebungen/k3_10_ecken_wuerfel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 16,
+   "text": "Wie viele Ecken hat der Quader?",
+   "keys": [
+    "uebungen/k3_10_ecken_quader"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 17,
+   "text": "Wie viele Ecken hat die Pyramide?",
+   "keys": [
+    "uebungen/k3_10_ecken_pyramide"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 18,
+   "text": "Wie viele Flächen hat der Würfel?",
+   "keys": [
+    "uebungen/k3_10_flaechen_wuerfel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 19,
+   "text": "Wie viele Flächen hat der Quader?",
+   "keys": [
+    "uebungen/k3_10_flaechen_quader"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 20,
+   "text": "Wie viele Flächen hat die Pyramide?",
+   "keys": [
+    "uebungen/k3_10_flaechen_pyramide"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 21,
+   "text": "Das ist ein Würfel.",
+   "keys": [
+    "uebungen/k3_10_ist_wuerfel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 22,
+   "text": "Das ist ein Quader.",
+   "keys": [
+    "uebungen/k3_10_ist_quader"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 23,
+   "text": "Das ist eine Pyramide.",
+   "keys": [
+    "uebungen/k3_10_ist_pyramide"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 24,
+   "text": "Das ist eine Kugel.",
+   "keys": [
+    "uebungen/k3_10_ist_kugel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 25,
+   "text": "Das ist ein Zylinder.",
+   "keys": [
+    "uebungen/k3_10_ist_zylinder"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 26,
+   "text": "Das ist ein Kegel.",
+   "keys": [
+    "uebungen/k3_10_ist_kegel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 27,
+   "text": "Ein Würfel hat sechs gleich große Quadrate als Flächen.",
+   "keys": [
+    "uebungen/k3_10_tipp_wuerfel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 28,
+   "text": "Ein Quader sieht aus wie ein Schuhkarton.",
+   "keys": [
+    "uebungen/k3_10_tipp_quader"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 29,
+   "text": "Eine Pyramide hat unten ein Viereck und läuft oben spitz zu.",
+   "keys": [
+    "uebungen/k3_10_tipp_pyramide"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 30,
+   "text": "Eine Kugel ist rund wie ein Ball.",
+   "keys": [
+    "uebungen/k3_10_tipp_kugel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 31,
+   "text": "Ein Zylinder sieht aus wie eine Dose.",
+   "keys": [
+    "uebungen/k3_10_tipp_zylinder"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 32,
+   "text": "Ein Kegel sieht aus wie eine Eistüte: unten rund, oben spitz.",
+   "keys": [
+    "uebungen/k3_10_tipp_kegel"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 33,
+   "text": "Zähle die Ecken oben und unten getrennt und rechne dann zusammen.",
+   "keys": [
+    "uebungen/k3_10_tipp_ecken"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 34,
+   "text": "Zähle so: oben, unten, vorne, hinten, links und rechts.",
+   "keys": [
+    "uebungen/k3_10_tipp_flaechen"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 35,
+   "text": "Zahlenstrahl bis eine Million.",
+   "keys": [
+    "uebungen/k4_01_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 36,
+   "text": "Schieb den gelben Regler auf die Zahl, die ich sage. Jeder kleine Strich ist zehntausend mehr.",
+   "keys": [
+    "uebungen/k4_01_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 37,
+   "text": "Such zuerst den richtigen Hunderttausender. Die langen Striche zeigen die Hunderttausender.",
+   "keys": [
+    "uebungen/k4_01_tipp1"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 38,
+   "text": "Jeder kleine Strich ist zehntausend mehr.",
+   "keys": [
+    "uebungen/k4_01_tipp2"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 39,
+   "text": "Fünfhunderttausend steht genau in der Mitte.",
+   "keys": [
+    "uebungen/k4_01_tipp3"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 40,
+   "text": "Große Zahlen.",
+   "keys": [
+    "uebungen/k4_02_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 41,
+   "text": "Große Zahlen in der Stellenwerttafel: HT heißt Hunderttausender, ZT Zehntausender und T Tausender.",
+   "keys": [
+    "uebungen/k4_02_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 42,
+   "text": "Lies die Zahl in Dreiergruppen: erst die Tausender, dann der Rest.",
+   "keys": [
+    "uebungen/k4_02_tipp1"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 43,
+   "text": "Fehlt eine Stelle? Dann trägst du eine Null ein.",
+   "keys": [
+    "uebungen/k4_02_tipp2"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 44,
+   "text": "Trage die Zahl in die Stellenwerttafel ein:",
+   "keys": [
+    "uebungen/k4_02_trage"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 45,
+   "text": "Welche Zahl steht in der Stellenwerttafel?",
+   "keys": [
+    "uebungen/k4_02_welche"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 46,
+   "text": "Runden und Überschlagen.",
+   "keys": [
+    "uebungen/k4_03_name"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 47,
+   "text": "Runde die Zahlen und überschlage.",
+   "keys": [
+    "uebungen/k4_03_aufgabe"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 48,
+   "text": "Schau auf die Ziffer rechts neben der Rundungsstelle. Ist sie fünf oder mehr, rundest du auf. Sonst rundest du ab.",
+   "keys": [
+    "uebungen/k4_03_tipp1"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 49,
+   "text": "Beim Überschlag rundest du beide Zahlen auf glatte Hunderter und rechnest dann.",
+   "keys": [
+    "uebungen/k4_03_tipp2"
+   ]
+  },
+  {
+   "block": 7,
+   "nr": 50,
+   "text": "Runde.",
+   "keys": [
+    "uebungen/k4_03_runde"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 1,
+   "text": "Welcher Überschlag passt zu.",
+   "keys": [
+    "uebungen/k4_03_ueberschlag"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 2,
+   "text": "Schriftlich multiplizieren.",
+   "keys": [
+    "uebungen/k4_04_name"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 3,
+   "text": "Rechne schriftlich mal. Fang rechts an und denk an den Übertrag.",
+   "keys": [
+    "uebungen/k4_04_aufgabe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 4,
+   "text": "Multipliziere jede Ziffer der oberen Zahl mit dem Faktor, von rechts nach links.",
+   "keys": [
+    "uebungen/k4_04_tipp1"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 5,
+   "text": "Merke dir den Übertrag und rechne ihn bei der nächsten Stelle dazu.",
+   "keys": [
+    "uebungen/k4_04_tipp2"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 6,
+   "text": "Bei zwei Ziffern rechnest du mit jeder Ziffer eine Zeile. Die Zeile endet genau unter dieser Ziffer. Dann addierst du die Zeilen.",
+   "keys": [
+    "uebungen/k4_04_tipp3"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 7,
+   "text": "Schriftlich dividieren.",
+   "keys": [
+    "uebungen/k4_05_name"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 8,
+   "text": "Rechne schriftlich geteilt. Fang links an.",
+   "keys": [
+    "uebungen/k4_05_aufgabe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 9,
+   "text": "Wie oft passt die Zahl in die ersten Ziffern? Schreib das Ergebnis hinter das Gleichheitszeichen.",
+   "keys": [
+    "uebungen/k4_05_tipp1"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 10,
+   "text": "Rechne dann mal, zieh ab und hol die nächste Ziffer herunter.",
+   "keys": [
+    "uebungen/k4_05_tipp2"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 11,
+   "text": "Der Rest beim Abziehen muss immer kleiner sein als die Zahl, durch die du teilst.",
+   "keys": [
+    "uebungen/k4_05_tipp3"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 12,
+   "text": "Größen mit Komma.",
+   "keys": [
+    "uebungen/k4_06_name"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 13,
+   "text": "Rechne die Größen in die kleinere Einheit um. Das Komma trennt die große von der kleinen Einheit.",
+   "keys": [
+    "uebungen/k4_06_aufgabe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 14,
+   "text": "Ein Euro hat hundert Cent.",
+   "keys": [
+    "uebungen/k4_06_tipp1"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 15,
+   "text": "Ein Kilometer hat tausend Meter, ein Kilogramm hat tausend Gramm.",
+   "keys": [
+    "uebungen/k4_06_tipp2"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 16,
+   "text": "Eine Stunde hat sechzig Minuten. Eine halbe Stunde sind dreißig Minuten.",
+   "keys": [
+    "uebungen/k4_06_tipp3"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 17,
+   "text": "Eine halbe Stunde sind wie viele Minuten?",
+   "keys": [
+    "uebungen/k4_06_halbe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 18,
+   "text": "Eine Viertelstunde sind wie viele Minuten?",
+   "keys": [
+    "uebungen/k4_06_viertel"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 19,
+   "text": "Eine Dreiviertelstunde sind wie viele Minuten?",
+   "keys": [
+    "uebungen/k4_06_dreiviertel"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 20,
+   "text": "Eineinhalb Stunden sind wie viele Minuten?",
+   "keys": [
+    "uebungen/k4_06_eineinhalb"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 21,
+   "text": "Sachaufgaben.",
+   "keys": [
+    "uebungen/k4_07_name"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 22,
+   "text": "Hör gut zu. Was weißt du schon, was ist gefragt?",
+   "keys": [
+    "uebungen/k4_07_aufgabe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 23,
+   "text": "Überlege: Was weißt du schon? Was wird gefragt?",
+   "keys": [
+    "uebungen/k4_07_tipp1"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 24,
+   "text": "Welche Rechenart passt: plus, minus, mal oder geteilt?",
+   "keys": [
+    "uebungen/k4_07_tipp2"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 25,
+   "text": "Mach einen Überschlag: Kann dein Ergebnis stimmen?",
+   "keys": [
+    "uebungen/k4_07_tipp3"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 26,
+   "text": "Lena kauft ein Buch für.",
+   "keys": [
+    "uebungen/k4_07_t1a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 27,
+   "text": "und ein Spiel für.",
+   "keys": [
+    "uebungen/k4_07_t1b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 28,
+   "text": "Wie viel bezahlt sie zusammen?",
+   "keys": [
+    "uebungen/k4_07_t1c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 29,
+   "text": "Tom bezahlt mit.",
+   "keys": [
+    "uebungen/k4_07_t2a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 30,
+   "text": "Sein Einkauf kostet.",
+   "keys": [
+    "uebungen/k4_07_t2b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 31,
+   "text": "Wie viel Geld bekommt er zurück?",
+   "keys": [
+    "uebungen/k4_07_t2c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 32,
+   "text": "Ein Heft kostet.",
+   "keys": [
+    "uebungen/k4_07_t3a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 33,
+   "text": "Mia kauft.",
+   "keys": [
+    "uebungen/k4_07_t3b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 34,
+   "text": "Hefte.",
+   "keys": [
+    "uebungen/k4_07_t3c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 35,
+   "text": "Wie viel muss sie bezahlen?",
+   "keys": [
+    "uebungen/k4_07_t3d"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 36,
+   "text": "Ein Zug fährt.",
+   "keys": [
+    "uebungen/k4_07_t4a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 37,
+   "text": "Dann fährt er noch.",
+   "keys": [
+    "uebungen/k4_07_t4b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 38,
+   "text": "Wie viele Kilometer fährt er insgesamt?",
+   "keys": [
+    "uebungen/k4_07_t4c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 39,
+   "text": "Bonbons werden gerecht verteilt.",
+   "keys": [
+    "uebungen/k4_07_t5a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 40,
+   "text": "Es sind.",
+   "keys": [
+    "uebungen/k4_07_t5b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 41,
+   "text": "Kinder.",
+   "keys": [
+    "uebungen/k4_07_t5c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 42,
+   "text": "Wie viele Bonbons bekommt jedes Kind?",
+   "keys": [
+    "uebungen/k4_07_t5d"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 43,
+   "text": "Ein Bus hat.",
+   "keys": [
+    "uebungen/k4_07_t6a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 44,
+   "text": "Plätze.",
+   "keys": [
+    "uebungen/k4_07_t6b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 45,
+   "text": "Kinder sitzen schon darin.",
+   "keys": [
+    "uebungen/k4_07_t6c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 46,
+   "text": "Wie viele Plätze sind noch frei?",
+   "keys": [
+    "uebungen/k4_07_t6d"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 47,
+   "text": "Eine Fahrt dauert.",
+   "keys": [
+    "uebungen/k4_07_t7a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 48,
+   "text": "Wie viele Minuten sind das?",
+   "keys": [
+    "uebungen/k4_07_t7b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 49,
+   "text": "Die Pause dauert.",
+   "keys": [
+    "uebungen/k4_07_t8a"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 50,
+   "text": "Danach haben die Kinder.",
+   "keys": [
+    "uebungen/k4_07_t8b"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 51,
+   "text": "Minuten Sport.",
+   "keys": [
+    "uebungen/k4_07_t8c"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 52,
+   "text": "Wie viele Minuten sind das zusammen?",
+   "keys": [
+    "uebungen/k4_07_t8d"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 53,
+   "text": "Umfang und Fläche.",
+   "keys": [
+    "uebungen/k4_08_name"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 54,
+   "text": "Der Umfang ist der Weg einmal um die Figur herum. Die Fläche sind alle Kästchen innen.",
+   "keys": [
+    "uebungen/k4_08_aufgabe"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 55,
+   "text": "Für den Umfang gehst du einmal ganz um die Figur herum und zählst jede Kästchenseite.",
+   "keys": [
+    "uebungen/k4_08_tipp1"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 56,
+   "text": "Für die Fläche zählst du alle Kästchen. Bei einem Rechteck rechnest du Länge mal Breite.",
+   "keys": [
+    "uebungen/k4_08_tipp2"
+   ]
+  },
+  {
+   "block": 8,
+   "nr": 57,
+   "text": "Wie groß ist der Umfang? Zähle die Kästchenlängen am Rand.",
+   "keys": [
+    "uebungen/k4_08_umfang"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 1,
+   "text": "Wie groß ist die Fläche? Zähle die Kästchen.",
+   "keys": [
+    "uebungen/k4_08_flaeche"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 2,
+   "text": "Diagramme lesen.",
+   "keys": [
+    "uebungen/k4_09_name"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 3,
+   "text": "Lies das Diagramm genau ab.",
+   "keys": [
+    "uebungen/k4_09_aufgabe"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 4,
+   "text": "Fahre mit dem Finger von der Säule nach links zur Zahl.",
+   "keys": [
+    "uebungen/k4_09_tipp1"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 5,
+   "text": "Bei der Strichliste ist jedes Bündel fünf.",
+   "keys": [
+    "uebungen/k4_09_tipp2"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 6,
+   "text": "Für den Unterschied rechnest du die größere Zahl minus die kleinere.",
+   "keys": [
+    "uebungen/k4_09_tipp3"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 7,
+   "text": "Wie viele Kinder mögen am liebsten.",
+   "keys": [
+    "uebungen/k4_09_obst_wert"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 8,
+   "text": "Wie viele Kinder wünschen sich.",
+   "keys": [
+    "uebungen/k4_09_tier_wert"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 9,
+   "text": "Wie viele Kinder mehr mögen am liebsten.",
+   "keys": [
+    "uebungen/k4_09_obst_mehr"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 10,
+   "text": "Wie viele Kinder mehr wünschen sich.",
+   "keys": [
+    "uebungen/k4_09_tier_mehr"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 11,
+   "text": "Welches Obst mögen die meisten Kinder?",
+   "keys": [
+    "uebungen/k4_09_obst_meiste"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 12,
+   "text": "Welches Haustier wünschen sich die meisten Kinder?",
+   "keys": [
+    "uebungen/k4_09_tier_meiste"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 13,
+   "text": "Wie viele Kinder wurden insgesamt gefragt?",
+   "keys": [
+    "uebungen/k4_09_summe"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 14,
+   "text": "Äpfel.",
+   "keys": [
+    "uebungen/k4_09_n_aepfel"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 15,
+   "text": "Bananen.",
+   "keys": [
+    "uebungen/k4_09_n_bananen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 16,
+   "text": "Birnen.",
+   "keys": [
+    "uebungen/k4_09_n_birnen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 17,
+   "text": "Kirschen.",
+   "keys": [
+    "uebungen/k4_09_n_kirschen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 18,
+   "text": "Trauben.",
+   "keys": [
+    "uebungen/k4_09_n_trauben"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 19,
+   "text": "Hunde.",
+   "keys": [
+    "uebungen/k4_09_n_hunde"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 20,
+   "text": "Katzen.",
+   "keys": [
+    "uebungen/k4_09_n_katzen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 21,
+   "text": "Kaninchen.",
+   "keys": [
+    "uebungen/k4_09_n_kaninchen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 22,
+   "text": "Fische.",
+   "keys": [
+    "uebungen/k4_09_n_fische"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 23,
+   "text": "Vögel.",
+   "keys": [
+    "uebungen/k4_09_n_voegel"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 24,
+   "text": "Zufall.",
+   "keys": [
+    "uebungen/k4_10_name"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 25,
+   "text": "Sicher, möglich oder unmöglich? Überlege genau.",
+   "keys": [
+    "uebungen/k4_10_aufgabe"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 26,
+   "text": "Sicher heißt: Es passiert auf jeden Fall. Unmöglich heißt: Es kann nie passieren.",
+   "keys": [
+    "uebungen/k4_10_tipp1"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 27,
+   "text": "Möglich heißt: Es kann passieren, muss aber nicht.",
+   "keys": [
+    "uebungen/k4_10_tipp2"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 28,
+   "text": "Ist es sicher, möglich oder unmöglich,",
+   "keys": [
+    "uebungen/k4_10_frage"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 29,
+   "text": "dass das Glücksrad auf Rot stehen bleibt?",
+   "keys": [
+    "uebungen/k4_10_rad_rot"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 30,
+   "text": "dass das Glücksrad auf Blau stehen bleibt?",
+   "keys": [
+    "uebungen/k4_10_rad_blau"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 31,
+   "text": "dass das Glücksrad auf Gelb stehen bleibt?",
+   "keys": [
+    "uebungen/k4_10_rad_gelb"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 32,
+   "text": "dass das Glücksrad auf Grün stehen bleibt?",
+   "keys": [
+    "uebungen/k4_10_rad_gruen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 33,
+   "text": "eine rote Kugel zu ziehen?",
+   "keys": [
+    "uebungen/k4_10_kugel_rot"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 34,
+   "text": "eine blaue Kugel zu ziehen?",
+   "keys": [
+    "uebungen/k4_10_kugel_blau"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 35,
+   "text": "eine gelbe Kugel zu ziehen?",
+   "keys": [
+    "uebungen/k4_10_kugel_gelb"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 36,
+   "text": "eine grüne Kugel zu ziehen?",
+   "keys": [
+    "uebungen/k4_10_kugel_gruen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 37,
+   "text": "eine Zahl kleiner als sieben zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_klein"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 38,
+   "text": "eine Sechs zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_sechs"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 39,
+   "text": "eine gerade Zahl zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_gerade"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 40,
+   "text": "eine Eins zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_eins"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 41,
+   "text": "eine Sieben zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_sieben"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 42,
+   "text": "eine Null zu würfeln?",
+   "keys": [
+    "uebungen/k4_10_wuerfel_null"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 43,
+   "text": "Bei welchem Glücksrad ist die Chance größer, auf Rot zu landen?",
+   "keys": [
+    "uebungen/k4_10_vergleich_rot"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 44,
+   "text": "Bei welchem Glücksrad ist die Chance größer, auf Blau zu landen?",
+   "keys": [
+    "uebungen/k4_10_vergleich_blau"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 45,
+   "text": "Bei welchem Glücksrad ist die Chance größer, auf Gelb zu landen?",
+   "keys": [
+    "uebungen/k4_10_vergleich_gelb"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 46,
+   "text": "Bei welchem Glücksrad ist die Chance größer, auf Grün zu landen?",
+   "keys": [
+    "uebungen/k4_10_vergleich_gruen"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 47,
+   "text": "Das ist sicher.",
+   "keys": [
+    "uebungen/k4_10_ist_sicher"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 48,
+   "text": "Das ist möglich.",
+   "keys": [
+    "uebungen/k4_10_ist_moeglich"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 49,
+   "text": "Das ist unmöglich.",
+   "keys": [
+    "uebungen/k4_10_ist_unmoeglich"
+   ]
+  },
+  {
+   "block": 9,
+   "nr": 50,
+   "text": "Vergleiche, welcher Teil des Rades diese Farbe hat. Je größer der Teil, desto größer die Chance.",
+   "keys": [
+    "uebungen/k4_10_tipp_vergleich"
+   ]
+  }
+ ]
+}

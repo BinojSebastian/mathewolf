@@ -1,0 +1,99 @@
+Wie groß ist die Fläche? Zähle die Kästchen.
+
+Diagramme lesen.
+
+Lies das Diagramm genau ab.
+
+Fahre mit dem Finger von der Säule nach links zur Zahl.
+
+Bei der Strichliste ist jedes Bündel fünf.
+
+Für den Unterschied rechnest du die größere Zahl minus die kleinere.
+
+Wie viele Kinder mögen am liebsten.
+
+Wie viele Kinder wünschen sich.
+
+Wie viele Kinder mehr mögen am liebsten.
+
+Wie viele Kinder mehr wünschen sich.
+
+Welches Obst mögen die meisten Kinder?
+
+Welches Haustier wünschen sich die meisten Kinder?
+
+Wie viele Kinder wurden insgesamt gefragt?
+
+Äpfel.
+
+Bananen.
+
+Birnen.
+
+Kirschen.
+
+Trauben.
+
+Hunde.
+
+Katzen.
+
+Kaninchen.
+
+Fische.
+
+Vögel.
+
+Zufall.
+
+Sicher, möglich oder unmöglich? Überlege genau.
+
+Sicher heißt: Es passiert auf jeden Fall. Unmöglich heißt: Es kann nie passieren.
+
+Möglich heißt: Es kann passieren, muss aber nicht.
+
+Ist es sicher, möglich oder unmöglich,
+
+dass das Glücksrad auf Rot stehen bleibt?
+
+dass das Glücksrad auf Blau stehen bleibt?
+
+dass das Glücksrad auf Gelb stehen bleibt?
+
+dass das Glücksrad auf Grün stehen bleibt?
+
+eine rote Kugel zu ziehen?
+
+eine blaue Kugel zu ziehen?
+
+eine gelbe Kugel zu ziehen?
+
+eine grüne Kugel zu ziehen?
+
+eine Zahl kleiner als sieben zu würfeln?
+
+eine Sechs zu würfeln?
+
+eine gerade Zahl zu würfeln?
+
+eine Eins zu würfeln?
+
+eine Sieben zu würfeln?
+
+eine Null zu würfeln?
+
+Bei welchem Glücksrad ist die Chance größer, auf Rot zu landen?
+
+Bei welchem Glücksrad ist die Chance größer, auf Blau zu landen?
+
+Bei welchem Glücksrad ist die Chance größer, auf Gelb zu landen?
+
+Bei welchem Glücksrad ist die Chance größer, auf Grün zu landen?
+
+Das ist sicher.
+
+Das ist möglich.
+
+Das ist unmöglich.
+
+Vergleiche, welcher Teil des Rades diese Farbe hat. Je größer der Teil, desto größer die Chance.

@@ -1,0 +1,99 @@
+Teile und schreibe den Rest auf. Der Rest ist immer kleiner als die Zahl, durch die du teilst.
+
+Such die größte Malaufgabe mit der zweiten Zahl, die noch hineinpasst.
+
+Der Rest ist das, was übrig bleibt. Er muss kleiner sein als die Zahl, durch die du teilst.
+
+Zahlenmauer bis tausend.
+
+Zwei Nachbarsteine ergeben zusammen den Stein darüber. Tippe auf ein leeres Feld.
+
+Längen und Gewichte.
+
+Rechne Längen und Gewichte um.
+
+Ein Meter hat hundert Zentimeter. Ein Zentimeter hat zehn Millimeter.
+
+Ein Kilometer hat tausend Meter. Ein Kilogramm hat tausend Gramm.
+
+Rechne beide Angaben in die gleiche Einheit um, dann kannst du vergleichen.
+
+Was ist länger:
+
+Was ist schwerer:
+
+Wie heißt dieser Körper?
+
+Schau dir den Körper genau an.
+
+Wie viele Ecken hat der Würfel?
+
+Wie viele Ecken hat der Quader?
+
+Wie viele Ecken hat die Pyramide?
+
+Wie viele Flächen hat der Würfel?
+
+Wie viele Flächen hat der Quader?
+
+Wie viele Flächen hat die Pyramide?
+
+Das ist ein Würfel.
+
+Das ist ein Quader.
+
+Das ist eine Pyramide.
+
+Das ist eine Kugel.
+
+Das ist ein Zylinder.
+
+Das ist ein Kegel.
+
+Ein Würfel hat sechs gleich große Quadrate als Flächen.
+
+Ein Quader sieht aus wie ein Schuhkarton.
+
+Eine Pyramide hat unten ein Viereck und läuft oben spitz zu.
+
+Eine Kugel ist rund wie ein Ball.
+
+Ein Zylinder sieht aus wie eine Dose.
+
+Ein Kegel sieht aus wie eine Eistüte: unten rund, oben spitz.
+
+Zähle die Ecken oben und unten getrennt und rechne dann zusammen.
+
+Zähle so: oben, unten, vorne, hinten, links und rechts.
+
+Zahlenstrahl bis eine Million.
+
+Schieb den gelben Regler auf die Zahl, die ich sage. Jeder kleine Strich ist zehntausend mehr.
+
+Such zuerst den richtigen Hunderttausender. Die langen Striche zeigen die Hunderttausender.
+
+Jeder kleine Strich ist zehntausend mehr.
+
+Fünfhunderttausend steht genau in der Mitte.
+
+Große Zahlen.
+
+Große Zahlen in der Stellenwerttafel: HT heißt Hunderttausender, ZT Zehntausender und T Tausender.
+
+Lies die Zahl in Dreiergruppen: erst die Tausender, dann der Rest.
+
+Fehlt eine Stelle? Dann trägst du eine Null ein.
+
+Trage die Zahl in die Stellenwerttafel ein:
+
+Welche Zahl steht in der Stellenwerttafel?
+
+Runden und Überschlagen.
+
+Runde die Zahlen und überschlage.
+
+Schau auf die Ziffer rechts neben der Rundungsstelle. Ist sie fünf oder mehr, rundest du auf. Sonst rundest du ab.
+
+Beim Überschlag rundest du beide Zahlen auf glatte Hunderter und rechnest dann.
+
+Runde.

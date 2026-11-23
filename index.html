@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Mathewolf">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#F3EADF">
+<meta name="format-detection" content="telephone=no">
+<title>Mathewolf</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="bilder/icons/icon-180.png">
+<link rel="icon" type="image/png" href="bilder/icons/icon-192.png">
+<link rel="preload" as="image" href="bilder/klasse/szene.webp">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app" data-seite="splash">
+  <div class="raum" aria-hidden="true"></div>
+  <!-- Professor Wolf am Pult: Startbild und Stufenwahl -->
+  <div class="pult" aria-hidden="true">
+    <img src="bilder/klasse/szene.webp" alt="">
+    <div class="sprechblase" data-blase="start" hidden></div>
+  </div>
+
+  <!-- Startbild: „Los geht's" schaltet den Ton frei -->
+  <section id="s-splash" class="screen aktiv">
+    <div class="splash-karte glas">
+      <h1 class="logo"><span class="l-mathe">Mathe</span><span class="l-wolf">wolf</span></h1>
+      <p class="unterzeile">Rechnen üben mit Professor Wolf</p>
+      <button id="los" class="knopf gross blau" type="button">Los geht's</button>
+    </div>
+  </section>
+
+  <!-- Stufen -->
+  <section id="s-start" class="screen">
+    <div class="start-karte glas">
+      <div class="start-kopf">
+        <div class="logo-block">
+          <h1 class="logo klein"><span class="l-mathe">Mathe</span><span class="l-wolf">wolf</span></h1>
+          <div class="punkte-chip"><span class="stern">★</span><span id="gesamt">0</span><span class="einheit">Punkte</span></div>
+        </div>
+        <div class="schalter-gruppe">
+          <button class="rund schalter" id="t-musik" type="button" aria-label="Musik an oder aus"></button>
+          <button class="rund schalter" id="t-effekte" type="button" aria-label="Effekte an oder aus"></button>
+        </div>
+      </div>
+      <div class="start-frage">Welche Stufe möchtest du üben?</div>
+      <div id="stufen" class="stufen"></div>
+    </div>
+  </section>
+
+  <!-- Übungsauswahl -->
+  <section id="s-auswahl" class="screen">
+    <header class="kopf glas">
+      <button class="rund zurueck" data-zurueck="start" type="button" aria-label="Zurück zu den Stufen"></button>
+      <div class="kopf-titel">
+        <span id="auswahl-titel" class="titel-haupt"></span>
+        <span id="auswahl-raum" class="titel-neben"></span>
+      </div>
+      <div class="kopf-rechts"><div class="punkte-chip"><span class="stern">★</span><span id="gesamt2">0</span></div></div>
+    </header>
+    <div class="auswahl-wolf" aria-hidden="true">
+      <img class="wolf-bild" data-wolf="auswahl" src="bilder/wolf/zeigt.webp" alt="">
+      <div class="sprechblase" data-blase="auswahl" hidden></div>
+    </div>
+    <main class="auswahl-main">
+      <div id="kacheln" class="kacheln"></div>
+    </main>
+  </section>
+
+  <!-- Übung -->
+  <section id="s-uebung" class="screen">
+    <header class="kopf glas">
+      <button class="rund haus" id="u-haus" type="button" aria-label="Aufhören"></button>
+      <div class="kopf-titel">
+        <span id="u-titel" class="u-titel"></span>
+        <div id="u-fortschritt" class="fortschritt"></div>
+      </div>
+      <div class="kopf-rechts">
+        <span id="u-uhr" class="stoppuhr" hidden>0,0</span>
+        <button class="rund laut" id="u-laut" type="button" aria-label="Ansage wiederholen"></button>
+        <button class="rund pfote" id="u-hilfe" type="button" aria-label="Hilfe"></button>
+      </div>
+    </header>
+    <main class="u-main">
+      <div class="u-wolf">
+        <img class="wolf-bild" data-wolf="uebung" src="bilder/wolf/winkt.webp" alt="Professor Wolf">
+      </div>
+      <div class="sprechblase" data-blase="uebung" hidden></div>
+      <div class="tafel-rahmen">
+        <div class="tafel" id="tafel">
+          <div class="tafel-runde" id="t-runde"></div>
+          <div class="tafel-punkte"><span class="stern">★</span><span id="t-punkte">0</span></div>
+          <div id="tafel-inhalt" class="tafel-inhalt"></div>
+          <div id="rechenbild" class="rechenbild" hidden></div>
+        </div>
+      </div>
+      <div id="eingabe" class="eingabe"></div>
+    </main>
+    <div id="overlay" class="overlay" hidden></div>
+  </section>
+
+  <div id="dialog" class="dialog" hidden></div>
+</div>
+
+<script src="js/kern.js"></script>
+<script src="js/audio.js"></script>
+<script src="daten/rahmen.js"></script>
+<script src="js/bilder.js"></script>
+<script src="js/eingaben.js"></script>
+<script src="js/typen/basis.js"></script>
+<script src="js/typen/vorschule.js"></script>
+<script src="js/typen/strukturen.js"></script>
+<script src="js/typen/groessen.js"></script>
+<script src="js/typen/raum-daten.js"></script>
+<script src="js/typen/schriftlich.js"></script>
+<script src="js/generatoren/rechnen.js"></script>
+<script src="js/generatoren/vorschule.js"></script>
+<script src="js/generatoren/strukturen.js"></script>
+<script src="js/generatoren/groessen.js"></script>
+<script src="js/generatoren/raum-daten.js"></script>
+<script src="js/generatoren/schriftlich.js"></script>
+<script src="daten/uebungen-vorschule.js"></script>
+<script src="daten/uebungen-klasse1.js"></script>
+<script src="daten/uebungen-klasse2.js"></script>
+<script src="daten/uebungen-klasse3.js"></script>
+<script src="daten/uebungen-klasse4.js"></script>
+<script src="daten/blitzrechnen.js"></script>
+<script src="js/runde.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

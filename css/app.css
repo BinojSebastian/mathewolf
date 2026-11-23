@@ -1,0 +1,473 @@
+/* Mathewolf 2 – helle Karten über dem Klassenzimmer, Farben aus dem Brand Style Guide */
+@font-face { font-family: 'Fredoka'; font-weight: 400; font-display: block; src: url('../fonts/fredoka-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 500; font-display: block; src: url('../fonts/fredoka-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 600; font-display: block; src: url('../fonts/fredoka-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-weight: 700; font-display: block; src: url('../fonts/fredoka-latin-700-normal.woff2') format('woff2'); }
+
+:root {
+  /* Marke */
+  --braun: #9B6437; --braun-d: #6F4424; --braun-h: #C08A5A;
+  --blau: #5691B7; --blau-d: #3B6F93; --blau-h: #8DB8D4; --blau-z: #EDF5FB;
+  --gelb: #F5BC48; --gelb-d: #D6971E; --gelb-h: #FAD98E; --gelb-z: #FFF5DC;
+  --grau: #C6BEBC; --grau-d: #9E9592; --grau-h: #E7E2E0;
+  --tinte: #351A12; --tinte-2: #7A6860;
+  /* Ergänzungsfarben für die Stufen */
+  --gruen: #6FA67F; --lila: #8C72B8;
+  /* Flächen */
+  --karte: #FFFFFF; --papier: #FBF8F4; --feld: #F6F1EB; --linie: #EAE1D7;
+  --ok: #3F8F5B; --ok-z: #E7F4EB; --rot: #C8553D; --rot-z: #FCECE8;
+  --schatten: 0 14px 40px rgba(53,26,18,.14), 0 2px 8px rgba(53,26,18,.06);
+  --schatten-k: 0 6px 18px rgba(53,26,18,.10), 0 1px 3px rgba(53,26,18,.06);
+  /* Inhalt auf der Karte (früher Kreide auf der Tafel) */
+  --kreide: var(--tinte); --kreide-gelb: #B8770B; --kreide-blau: var(--blau-d); --kreide-rot: var(--rot); --kreide-gruen: var(--ok);
+  --sicher-oben: env(safe-area-inset-top, 0px);
+  --sicher-unten: env(safe-area-inset-bottom, 0px);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body {
+  margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none;
+  font-family: 'Fredoka', 'Avenir Next', 'Helvetica Neue', sans-serif; font-weight: 500; color: var(--tinte);
+  background: #EADFD3;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+}
+button { font: inherit; color: inherit; touch-action: manipulation; }
+img { -webkit-user-drag: none; user-select: none; }
+[hidden] { display: none !important; }
+
+#app { position: fixed; inset: 0; overflow: hidden; }
+.raum {
+  position: absolute; inset: -20px;
+  background: #E9DED2 url('../bilder/klasse/raum-weich.webp') center 30% / cover no-repeat;
+}
+.raum::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(251,247,241,.30), rgba(251,247,241,.55)); }
+.screen { position: absolute; inset: 0; display: none; flex-direction: column; z-index: 2; }
+.screen.aktiv { display: flex; animation: einblenden .28s ease-out; }
+
+.glas {
+  background: rgba(255,255,255,.86);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25); backdrop-filter: blur(18px) saturate(1.25);
+  border: 1px solid rgba(255,255,255,.75); box-shadow: var(--schatten);
+}
+
+/* ---------------------------------------------------------------- Logo, Knöpfe, Chips */
+.logo { font-weight: 700; margin: 0; font-size: clamp(48px, 7.4vmin, 86px); line-height: 1; letter-spacing: -.01em; white-space: nowrap; }
+.logo.klein { font-size: clamp(34px, 4.6vmin, 46px); }
+.l-mathe { color: var(--braun); }
+.l-wolf { color: var(--blau); }
+.unterzeile { margin: 0; font-size: clamp(20px, 2.6vmin, 26px); color: var(--tinte-2); }
+
+.knopf {
+  border: none; border-radius: 24px; padding: 0 34px; min-height: 72px; min-width: 120px;
+  font-size: 30px; font-weight: 600; color: #fff; cursor: pointer; background: var(--blau);
+  box-shadow: 0 5px 0 var(--blau-d), 0 10px 22px rgba(59,111,147,.28);
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+.knopf:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--blau-d), 0 4px 10px rgba(59,111,147,.2); }
+.knopf.gross { min-height: 86px; font-size: 36px; padding: 0 48px; border-radius: 28px; }
+.knopf.blau { background: var(--blau); }
+.knopf.gelb { background: var(--gelb); color: var(--tinte); box-shadow: 0 5px 0 var(--gelb-d), 0 10px 22px rgba(214,151,30,.28); }
+.knopf.gelb:active { box-shadow: 0 1px 0 var(--gelb-d); }
+.knopf.braun { background: var(--braun); box-shadow: 0 5px 0 var(--braun-d), 0 10px 22px rgba(111,68,36,.25); }
+.knopf.grau { background: #fff; color: var(--tinte); box-shadow: 0 5px 0 #DDD2C7, 0 10px 22px rgba(53,26,18,.10); }
+.knopf:disabled { opacity: .4; box-shadow: none; transform: none; }
+
+.rund {
+  width: 58px; height: 58px; border-radius: 50%; border: 1px solid #EFE6DC; cursor: pointer; flex: 0 0 auto;
+  background: #fff center / 56% no-repeat; box-shadow: 0 3px 0 #E6DCD1, 0 6px 14px rgba(53,26,18,.10);
+  transition: transform .08s ease;
+}
+.rund:active { transform: translateY(3px); box-shadow: 0 0 0 #E6DCD1; }
+.rund.aus { opacity: .5; }
+.rund.aus::after { content: ''; display: block; width: 66%; height: 4px; background: var(--rot); transform: rotate(-45deg); margin: 0 auto; border-radius: 2px; }
+.haus { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M6 23 24 8l18 15' fill='none' stroke='%23351A12' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11 21v19h10V29h6v11h10V21' fill='%23F5BC48' stroke='%23351A12' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.zurueck { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M28 10 14 24l14 14' fill='none' stroke='%23351A12' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.laut { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M8 18h8l11-9v30l-11-9H8z' fill='%235691B7' stroke='%23351A12' stroke-width='3.5' stroke-linejoin='round'/%3E%3Cpath d='M32 17c3 4 3 10 0 14M37 12c6 7 6 17 0 24' fill='none' stroke='%23351A12' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.pfote { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='%239B6437' stroke='%23351A12' stroke-width='2.5'%3E%3Cellipse cx='24' cy='32' rx='10' ry='8.5'/%3E%3Cellipse cx='11' cy='22' rx='4.2' ry='5.5' transform='rotate(-20 11 22)'/%3E%3Cellipse cx='19' cy='14' rx='4.2' ry='5.8'/%3E%3Cellipse cx='29' cy='14' rx='4.2' ry='5.8'/%3E%3Cellipse cx='37' cy='22' rx='4.2' ry='5.5' transform='rotate(20 37 22)'/%3E%3C/g%3E%3C/svg%3E"); }
+#t-musik { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M18 34V12l20-4v22' fill='none' stroke='%23351A12' stroke-width='3.5' stroke-linejoin='round'/%3E%3Cellipse cx='13' cy='35' rx='6' ry='5' fill='%235691B7' stroke='%23351A12' stroke-width='3'/%3E%3Cellipse cx='33' cy='31' rx='6' ry='5' fill='%235691B7' stroke='%23351A12' stroke-width='3'/%3E%3C/svg%3E"); }
+#t-effekte { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 7c-7 0-11 5-11 12v8l-4 6h30l-4-6v-8c0-7-4-12-11-12z' fill='%23F5BC48' stroke='%23351A12' stroke-width='3.2' stroke-linejoin='round'/%3E%3Cpath d='M19 37a5 5 0 0 0 10 0' fill='none' stroke='%23351A12' stroke-width='3.2'/%3E%3C/svg%3E"); }
+
+.punkte-chip {
+  display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px; border-radius: 999px;
+  background: var(--gelb-z); color: #8A5A08; font-size: 24px; font-weight: 600; white-space: nowrap;
+  box-shadow: inset 0 0 0 2px #F8E2A8; font-variant-numeric: tabular-nums;
+}
+.punkte-chip .stern, .tafel-punkte .stern { color: var(--gelb); font-size: 1.15em; text-shadow: 0 1px 0 #C98F17; }
+.punkte-chip .einheit { font-size: .75em; font-weight: 500; opacity: .85; }
+
+/* ---------------------------------------------------------------- Kopfzeile (Glas) */
+.kopf {
+  margin: calc(12px + var(--sicher-oben)) 14px 0; height: 76px; border-radius: 26px; padding: 0 10px;
+  display: flex; align-items: center; gap: 14px; flex: 0 0 auto; position: relative; z-index: 5;
+}
+.kopf-titel { flex: 1; min-width: 0; display: flex; align-items: center; gap: 18px; font-size: 26px; font-weight: 600; }
+.kopf-titel > span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.titel-neben { font-size: 20px; font-weight: 500; color: var(--tinte-2); }
+.kopf-rechts { display: flex; align-items: center; gap: 12px; }
+.u-titel { flex: 0 1 auto; }
+.fortschritt { display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; }
+.fortschritt .punkt { width: 14px; height: 14px; border-radius: 50%; background: #ECE4DA; flex: 0 0 auto; transition: transform .2s; }
+.fortschritt .punkt.zwei { background: var(--gelb); }
+.fortschritt .punkt.eins { background: var(--gelb-h); }
+.fortschritt .punkt.null { background: #CFC5BC; }
+.fortschritt .punkt.jetzt { background: #fff; box-shadow: 0 0 0 3px var(--blau); transform: scale(1.1); }
+.fortschritt .text { font-size: 18px; margin-left: 8px; color: var(--tinte-2); white-space: nowrap; font-weight: 500; }
+.stoppuhr { background: var(--blau-z); color: var(--blau-d); font-size: 28px; font-weight: 600; padding: 6px 16px; border-radius: 16px; min-width: 104px; text-align: center; font-variant-numeric: tabular-nums; box-shadow: inset 0 0 0 2px #D3E5F2; }
+
+/* ---------------------------------------------------------------- Szene: Professor Wolf am Pult (Start und Stufen) */
+.pult { position: absolute; z-index: 1; display: none; pointer-events: none; }
+#app[data-seite="splash"] .pult, #app[data-seite="start"] .pult { display: block; }
+.pult img { display: block; }
+
+/* Sprechblase */
+.sprechblase {
+  position: absolute; z-index: 8; max-width: 330px; padding: 14px 20px; border-radius: 24px;
+  background: #fff; color: var(--tinte); font-size: 22px; line-height: 1.3; font-weight: 500;
+  box-shadow: var(--schatten); animation: blase-auf .22s ease-out; pointer-events: none;
+}
+.sprechblase::after { content: ''; position: absolute; width: 26px; height: 26px; background: #fff; border-radius: 4px; transform: rotate(45deg); }
+@keyframes blase-auf { from { opacity: 0; transform: translateY(8px) scale(.96); } to { opacity: 1; transform: none; } }
+
+/* Splash */
+#s-splash { align-items: flex-start; justify-content: center; }
+.splash-karte { border-radius: 36px; padding: 40px 38px 38px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+.splash-karte .knopf { margin-top: 14px; min-width: 280px; }
+
+/* Stufenwahl */
+.start-karte { border-radius: 36px; padding: 24px 24px 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+.start-kopf { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.logo-block { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.schalter-gruppe { display: flex; gap: 10px; }
+.start-frage { font-size: 22px; color: var(--tinte-2); margin-top: 2px; }
+.stufen { display: grid; grid-template-columns: 1fr; gap: 12px; min-height: 0; overflow-y: auto; padding: 2px 2px 6px; }
+.stufe {
+  --farbe: var(--blau);
+  display: grid; grid-template-columns: 66px minmax(0, 1fr) auto; align-items: center; gap: 16px;
+  min-height: 86px; padding: 10px 16px 10px 10px; border: 2px solid #F0E8DF; border-radius: 24px; background: #fff;
+  text-align: left; cursor: pointer; box-shadow: 0 3px 0 #EDE3D8; transition: transform .08s, border-color .15s;
+}
+.stufe:active { transform: translateY(3px); box-shadow: none; }
+.stufe.zuletzt { border-color: var(--farbe); box-shadow: 0 3px 0 var(--farbe); }
+.stufe.f-gelb { --farbe: var(--gelb); }
+.stufe.f-blau { --farbe: var(--blau); }
+.stufe.f-gruen { --farbe: var(--gruen); }
+.stufe.f-braun { --farbe: var(--braun); }
+.stufe.f-lila { --farbe: var(--lila); }
+.s-abzeichen {
+  width: 66px; height: 66px; border-radius: 20px; background: var(--farbe); color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1; font-weight: 700;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,.14);
+}
+.stufe.f-gelb .s-abzeichen { color: var(--tinte); }
+.s-abzeichen .bis { font-size: 13px; font-weight: 500; opacity: .9; }
+.s-abzeichen .zahl { font-size: 24px; }
+.s-abzeichen .zahl.lang { font-size: 18px; }
+.s-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.s-name { font-size: 27px; font-weight: 700; }
+.s-raum { font-size: 18px; color: var(--tinte-2); }
+.s-stand { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; font-size: 17px; color: var(--tinte-2); white-space: nowrap; }
+.s-balken { width: 86px; height: 10px; border-radius: 5px; background: #F0E9E1; overflow: hidden; }
+.s-balken i { display: block; height: 100%; background: var(--farbe); border-radius: 5px; }
+
+/* Querformat: Szene rechts, Karte links */
+@media (min-aspect-ratio: 1/1) {
+  .pult { top: 0; right: 0; bottom: 0; }
+  .pult img { height: 100%; width: auto; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%); mask-image: linear-gradient(90deg, transparent 0, #000 16%); }
+  .pult .sprechblase { right: 3%; top: 5%; max-width: 37%; font-size: 21px; }
+  .pult .sprechblase::after { left: -9px; top: 46px; }
+  .splash-karte { margin: auto 0 auto 5vw; width: min(42vw, 480px); }
+  .start-karte { position: absolute; left: 3vw; top: 50%; transform: translateY(-50%); max-height: calc(100% - 36px - var(--sicher-oben) - var(--sicher-unten)); width: min(47vw, 580px); }
+}
+/* Hochformat: Szene oben, Karte unten */
+@media (max-aspect-ratio: 1/1) {
+  .pult { top: 0; left: 0; right: 0; height: 64%; }
+  .pult img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 6%; -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%); mask-image: linear-gradient(180deg, #000 78%, transparent 100%); }
+  .pult .sprechblase { right: 3%; top: calc(5% + var(--sicher-oben)); max-width: 36%; }
+  .pult .sprechblase::after { left: -9px; top: 46px; }
+  #s-splash { justify-content: flex-end; align-items: center; }
+  .splash-karte { margin: 0 auto calc(5vh + var(--sicher-unten)); width: min(88vw, 560px); }
+  .start-karte { position: absolute; left: 16px; right: 16px; bottom: calc(16px + var(--sicher-unten)); max-height: 62%; }
+  .stufen { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .stufe { gap: 12px; padding-right: 12px; }
+  .s-name { font-size: 24px; }
+  .s-raum { font-size: 16px; }
+  .s-balken { width: 58px; }
+}
+
+/* ---------------------------------------------------------------- Übungsauswahl */
+.auswahl-wolf { position: absolute; right: 1vw; bottom: calc(0px + var(--sicher-unten)); width: clamp(190px, 27vmin, 290px); z-index: 0; pointer-events: none; }
+.auswahl-wolf img { width: 100%; display: block; transform: scaleX(-1); }   /* gespiegelt: zeigt nach links auf die Kacheln */
+.auswahl-wolf img.spricht, .auswahl-wolf img.neu { animation: none; }
+.auswahl-wolf .sprechblase { right: 64%; bottom: 74%; width: max-content; max-width: 320px; }
+.auswahl-wolf .sprechblase::after { right: -9px; bottom: 22px; }
+#s-auswahl .kopf, #s-auswahl .auswahl-main { position: relative; z-index: 1; }
+.auswahl-main { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 20px 20px calc(30px + var(--sicher-unten)); }
+.kacheln { display: grid; grid-template-columns: repeat(auto-fill, minmax(206px, 1fr)); gap: 18px; max-width: 1240px; margin: 0 auto; }
+.kachel {
+  --tint: #E6F0F8; --ton: var(--blau);
+  position: relative; border: none; border-radius: 28px; background: #fff; cursor: pointer;
+  min-height: 186px; padding: 18px 14px 16px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 12px;
+  box-shadow: var(--schatten-k); text-align: center; transition: transform .1s ease, box-shadow .15s ease;
+}
+.kachel:active { transform: scale(.98); }
+.kachel.f-ZO { --tint: #E6F0F8; --ton: var(--blau); }
+.kachel.f-MS { --tint: #FFF1D2; --ton: var(--gelb-d); }
+.kachel.f-GM { --tint: #F4E7DB; --ton: var(--braun); }
+.kachel.f-RF { --tint: #E4F1E7; --ton: var(--gruen); }
+.kachel.f-DZ { --tint: #EEE8F6; --ton: var(--lila); }
+.kachel .k-symbol { width: 84px; height: 84px; border-radius: 26px; background: var(--tint); font-size: 48px; line-height: 1; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.kachel .k-name { font-size: 22px; font-weight: 600; line-height: 1.18; }
+.kachel .k-nr { position: absolute; left: 14px; top: 12px; font-size: 15px; font-weight: 600; color: #B5A89E; }
+.kachel .k-haken { position: absolute; right: 12px; top: 12px; width: 34px; height: 34px; border-radius: 50%; background: var(--ok); color: #fff; font-size: 21px; display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 8px rgba(63,143,91,.35); }
+.kachel.blitz { background: linear-gradient(150deg, #FFE7A6, #F5BC48); }
+.kachel.blitz .k-symbol { background: rgba(255,255,255,.6); }
+.kachel.blitz .k-best { font-size: 17px; color: #7A4F06; }
+.kachel.gewaehlt { box-shadow: 0 0 0 5px var(--blau), var(--schatten); transform: translateY(-3px); }
+.kachel .k-start {
+  position: absolute; inset: auto 12px 12px 12px; height: 62px; border-radius: 20px; border: none;
+  background: var(--blau); color: #fff; font-size: 27px; font-weight: 700; display: none; box-shadow: 0 4px 0 var(--blau-d);
+}
+.kachel.gewaehlt .k-start { display: block; animation: blase-auf .18s ease-out; }
+.kachel.gewaehlt .k-name, .kachel.gewaehlt .k-best { visibility: hidden; }
+
+/* ---------------------------------------------------------------- Übung: Aufteilung */
+.u-main {
+  --wolf-b: clamp(190px, 20vw, 270px);
+  flex: 1; min-height: 0; position: relative;
+  display: grid; gap: 16px; padding: 16px 16px calc(16px + var(--sicher-unten));
+  grid-template-columns: var(--wolf-b) minmax(0, 1fr) fit-content(40%);
+  grid-template-areas: "wolf tafel eingabe";
+}
+.u-wolf { grid-area: wolf; min-height: 0; position: relative; z-index: 1; pointer-events: none; }
+.u-wolf .wolf-bild { position: absolute; bottom: 0; left: 0; width: 100%; height: auto; max-height: 100%; object-fit: contain; object-position: 42% 100%; transform-origin: 42% 100%; }
+.tafel-rahmen { grid-area: tafel; min-height: 0; min-width: 0; display: flex; position: relative; z-index: 2; }
+.eingabe {
+  grid-area: eingabe; align-self: center; max-height: 100%; min-height: 0; min-width: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  padding: 20px; border-radius: 32px; background: rgba(255,255,255,.58);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.7); box-shadow: var(--schatten-k);
+}
+.eingabe:empty { visibility: hidden; }
+.u-main > .sprechblase { left: 20px; bottom: calc(26px + var(--sicher-unten) + var(--wolf-b) * 1.24); width: max-content; max-width: 330px; z-index: 9; }
+.u-main > .sprechblase::after { left: 52px; bottom: -9px; }
+
+@media (max-aspect-ratio: 1/1) {
+  .u-main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-areas: "tafel" "eingabe";
+  }
+  .u-wolf { position: absolute; left: 4px; bottom: calc(8px + var(--sicher-unten)); width: 200px; height: 248px; z-index: 3; }
+  .u-main > .sprechblase { bottom: calc(262px + var(--sicher-unten)); left: 14px; max-width: 380px; }
+  .eingabe { margin-left: 180px; min-height: 290px; align-self: stretch; }
+  .eingabe.breit { margin-left: 0; }
+}
+
+/* Professor Wolf: Wippen beim Sprechen, Auftauchen beim Posenwechsel */
+.wolf-bild { filter: drop-shadow(0 10px 14px rgba(53,26,18,.20)); }
+.wolf-bild.spricht { animation: wippen .45s ease-in-out infinite alternate; }
+.wolf-bild.neu { animation: auftauchen .32s ease-out; }
+.wolf-bild.jubelt { animation: huepfen .45s ease-out 2; }
+@keyframes wippen { from { transform: rotate(-1.2deg); } to { transform: rotate(1.2deg) scaleY(1.015); } }
+@keyframes auftauchen { from { transform: scale(.94); opacity: .5; } to { transform: scale(1); opacity: 1; } }
+@keyframes huepfen { 0% { transform: translateY(0); } 40% { transform: translateY(-26px); } 100% { transform: translateY(0); } }
+
+/* ---------------------------------------------------------------- Karte (früher Tafel) */
+.tafel {
+  position: relative; flex: 1; min-width: 0; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column;
+  background: var(--karte); border-radius: 34px; box-shadow: var(--schatten);
+  color: var(--tinte); container-type: size;
+}
+.tafel-runde { position: absolute; left: 18px; top: 16px; z-index: 2; height: 36px; padding: 0 14px; border-radius: 999px; background: var(--feld); color: var(--tinte-2); font-size: 18px; font-weight: 600; display: flex; align-items: center; }
+.tafel-runde:empty { display: none; }
+.tafel-punkte { position: absolute; right: 18px; top: 14px; z-index: 2; height: 40px; padding: 0 16px; border-radius: 999px; background: var(--gelb-z); color: #8A5A08; font-size: 24px; font-weight: 600; display: flex; gap: 6px; align-items: center; box-shadow: inset 0 0 0 2px #F8E2A8; font-variant-numeric: tabular-nums; }
+.tafel-punkte.neu { animation: punkt-plopp .45s ease-out; }
+@keyframes punkt-plopp { 0% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.tafel-inhalt { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 64px 22px 20px; position: relative; container-type: size; }
+.rechenbild {
+  flex: 0 0 auto; height: 38%; min-height: 130px; margin: 0 14px 14px; border-radius: 24px;
+  background: #FFF8EA; box-shadow: inset 0 0 0 2px #F7E6C3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px 14px; position: relative;
+  animation: einblenden .3s ease-out;
+}
+.rb-bild { flex: 1 1 auto; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; }
+.rb-bild > * { max-width: 100%; max-height: 100%; }
+.rechenbild svg { max-width: 100%; max-height: 100%; }
+.rechenbild .rb-titel { position: absolute; left: 14px; top: 8px; font-size: 17px; color: var(--tinte-2); }
+.rechenbild .rb-tipp { flex: 0 0 auto; align-self: stretch; display: flex; gap: 8px; align-items: flex-start; font-size: 19px; line-height: 1.25; color: #7A4F06; font-weight: 500; }
+.rechenbild .rb-tipp::before { content: 'Tipp'; flex: 0 0 auto; background: var(--gelb); color: var(--tinte); font-size: 14px; font-weight: 700; padding: 3px 9px; border-radius: 999px; margin-top: 1px; }
+@keyframes einblenden { from { opacity: 0; } to { opacity: 1; } }
+
+.kreide { color: var(--kreide); }
+.kreide-g { color: var(--kreide-gelb); }
+.kreide-b { color: var(--kreide-blau); }
+
+/* Rechnungen auf der Karte */
+.term { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .25em .3em; font-size: clamp(44px, 14cqmin, 112px); font-weight: 600; line-height: 1.15; text-align: center; max-width: 100%; color: var(--tinte); }
+.term.mittel { font-size: clamp(40px, 11cqmin, 88px); }
+.term.klein { font-size: clamp(34px, 8.5cqmin, 70px); }
+.term .op { color: var(--blau); }
+.term .text { font-size: .6em; font-weight: 500; }
+.luecke {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 1.5em; height: 1.25em; padding: 0 .15em;
+  border: 3px dashed #CDBFB2; background: var(--papier); border-radius: 16px; color: var(--tinte); cursor: pointer;
+  font-variant-numeric: tabular-nums; position: relative; vertical-align: middle; transition: box-shadow .15s, border-color .15s;
+}
+.luecke.aktiv { border: 3px solid var(--blau); background: var(--blau-z); box-shadow: 0 0 0 6px rgba(86,145,183,.18); }
+.luecke.richtig { border: 3px solid var(--ok); color: var(--ok); background: var(--ok-z); cursor: default; }
+.luecke.richtig::after, .fertig-haken::after { content: '✓'; position: absolute; right: -.55em; top: -.45em; font-size: .45em; background: var(--ok); color: #fff; border-radius: 50%; width: 1.3em; height: 1.3em; display: flex; align-items: center; justify-content: center; }
+.luecke.loesung { border: 3px solid var(--rot); color: var(--rot); background: var(--rot-z); cursor: default; }
+.luecke.falsch, .wackeln { animation: wackeln .4s ease; }
+@keyframes wackeln { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-10px); } 40% { transform: translateX(9px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(4px); } }
+.frage-text { font-size: clamp(24px, 5.5cqmin, 40px); text-align: center; max-width: 92%; line-height: 1.25; margin-bottom: .4em; font-weight: 600; }
+.geschichte { font-size: clamp(22px, 5cqmin, 36px); line-height: 1.4; text-align: left; max-width: 94%; }
+.frage-text, .geschichte { hyphens: manual; -webkit-hyphens: manual; overflow-wrap: anywhere; }
+.geschichte b { color: var(--blau-d); font-weight: 600; }
+.szene { width: 100%; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.szene svg { width: 100%; height: 100%; max-height: 100%; }
+
+/* ---------------------------------------------------------------- Eingaben */
+.ziffernblock { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: min(100%, 300px); }
+.ziffernblock button {
+  height: 72px; border: none; border-radius: 20px; background: #fff; font-size: 36px; font-weight: 600; cursor: pointer; color: var(--tinte);
+  box-shadow: 0 4px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); transition: transform .06s;
+}
+.ziffernblock button:active { transform: translateY(4px); box-shadow: 0 0 0 #E3D8CC; }
+.ziffernblock .loeschen { background: var(--feld); font-size: 30px; }
+.ziffernblock .ok { background: var(--blau); color: #fff; box-shadow: 0 4px 0 var(--blau-d), 0 6px 14px rgba(59,111,147,.25); font-size: 30px; }
+.ziffernblock .ok:disabled { opacity: .35; box-shadow: none; transform: none; }
+
+.karten { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; width: min(100%, 520px); }
+.karten.elf { grid-template-columns: repeat(6, 1fr); }
+.karte {
+  aspect-ratio: 3 / 4; min-height: 72px; border: none; border-radius: 18px; background: #fff; cursor: pointer;
+  font-size: 40px; font-weight: 700; box-shadow: 0 4px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); color: var(--tinte);
+}
+.karte:active { transform: translateY(4px); box-shadow: 0 0 0 #E3D8CC; }
+.karte.weg { visibility: hidden; }
+
+.auswahl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: min(100%, 440px); }
+.auswahl.drei { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.auswahl.spalte { grid-template-columns: 1fr; }
+.kachel-wahl {
+  min-height: 100px; border: 3px solid transparent; border-radius: 24px; background: #fff; cursor: pointer;
+  font-size: 40px; font-weight: 600; display: flex; align-items: center; justify-content: center; padding: 8px;
+  box-shadow: 0 4px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); color: var(--tinte); text-align: center; line-height: 1.1;
+}
+.kachel-wahl.text { font-size: 28px; }
+.kachel-wahl svg { width: 100%; height: 100%; max-height: 150px; }
+.kachel-wahl:active { transform: translateY(4px); box-shadow: 0 0 0 #E3D8CC; }
+.kachel-wahl.richtig { border-color: var(--ok); background: var(--ok-z); }
+.kachel-wahl.loesung { border-color: var(--ok); background: var(--ok-z); animation: pulsieren 1s ease-in-out 2; }
+.kachel-wahl.falsch { animation: wackeln .4s ease; opacity: .45; }
+.kachel-wahl.aus { opacity: .35; pointer-events: none; }
+@keyframes pulsieren { 50% { transform: scale(1.06); } }
+
+.ok-zeile { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.eingabe .knopf { min-width: 200px; }
+.hinweis-knopf { font-size: 24px; min-height: 64px; }
+
+/* Schieber am Zahlenstrahl */
+.schieber-feld { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.feintasten { display: flex; gap: 18px; }
+.feintasten button { width: 84px; height: 72px; border: none; border-radius: 20px; background: #fff; font-size: 44px; font-weight: 700; box-shadow: 0 4px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); cursor: pointer; color: var(--tinte); }
+.feintasten button:active { transform: translateY(4px); box-shadow: 0 0 0 #E3D8CC; }
+
+/* Ziehen */
+.ziehbar { touch-action: none; cursor: grab; }
+.ziehbar.zieht { opacity: .9; z-index: 50; cursor: grabbing; }
+.ablage.ueber { outline: 4px dashed var(--gelb); outline-offset: 4px; }
+.geist { position: fixed; pointer-events: none; z-index: 100; transform: translate(-50%, -50%) scale(1.08); filter: drop-shadow(0 8px 10px rgba(0,0,0,.25)); }
+
+/* Overlay (Countdown, Reihenwahl) und Dialog */
+.overlay { position: absolute; inset: 0; z-index: 20; background: rgba(251,247,241,.72); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 24px; }
+.countdown { width: 260px; height: 260px; border-radius: 50%; background: #fff; box-shadow: var(--schatten); display: flex; align-items: center; justify-content: center; font-size: 150px; font-weight: 700; color: var(--blau); animation: punkt-plopp .4s ease-out; }
+.reihen { display: grid; grid-template-columns: repeat(4, 112px); gap: 16px; }
+.reihen button { height: 96px; border: none; border-radius: 24px; background: #fff; color: var(--blau-d); font-size: 34px; font-weight: 700; box-shadow: 0 4px 0 #E3D8CC, var(--schatten-k); cursor: pointer; }
+.reihen button:active { transform: translateY(4px); }
+.reihen button.mix { background: var(--gelb); color: var(--tinte); box-shadow: 0 4px 0 var(--gelb-d); grid-column: span 2; }
+.reihen-titel { font-size: 38px; font-weight: 700; }
+.overlay .info { font-size: 26px; color: var(--tinte-2); }
+
+.dialog { position: fixed; inset: 0; z-index: 60; background: rgba(53,26,18,.35); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; }
+.dialog-box { background: #fff; border-radius: 36px; padding: 26px 34px; display: flex; align-items: center; gap: 26px; box-shadow: 0 24px 60px rgba(0,0,0,.25); animation: blase-auf .2s ease-out; }
+.dialog-box img { height: 210px; }
+.dialog-mitte { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.dialog-frage { font-size: 30px; font-weight: 600; }
+.dialog-knoepfe { display: flex; gap: 22px; }
+.dialog-knoepfe button { width: 120px; height: 110px; border-radius: 28px; border: none; font-size: 60px; font-weight: 700; color: #fff; cursor: pointer; }
+.dialog-knoepfe .ja { background: var(--ok); box-shadow: 0 6px 0 #2D6A42; }
+.dialog-knoepfe .nein { background: var(--rot); box-shadow: 0 6px 0 #8E3A28; }
+
+/* Rundenstart, Rundenende, Abschluss */
+.bilanz { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: clamp(28px, 7cqmin, 54px); text-align: center; }
+.bilanz .gross { font-size: 1.3em; color: var(--blau-d); font-weight: 700; }
+.bilanz .klein { font-size: .6em; color: var(--tinte-2); }
+.bilanz .zeile { display: flex; gap: .6em; justify-content: space-between; min-width: 7.5em; }
+.bilanz .strich { border-top: 3px solid var(--linie); width: 8em; margin: 4px 0; }
+.bilanz .sterne { display: flex; gap: .2em; font-size: 1.6em; }
+.bilanz .sterne span { color: #E9E1D8; }
+.bilanz .sterne span.an { color: var(--gelb); text-shadow: 0 2px 0 #C98F17; animation: stern-auf .5s cubic-bezier(.3,1.6,.5,1) both; }
+.bilanz .sterne span.an:nth-child(2) { animation-delay: .15s; }
+.bilanz .sterne span.an:nth-child(3) { animation-delay: .3s; }
+@keyframes stern-auf { from { transform: scale(0) rotate(-40deg); } to { transform: scale(1) rotate(0); } }
+.rundenstart .symbol { width: 1.9em; height: 1.9em; border-radius: .5em; background: var(--blau-z); display: flex; align-items: center; justify-content: center; font-size: 1.4em; }
+.rundenstart .punkte3 { display: flex; gap: .3em; }
+.rundenstart .punkte3 span { width: .38em; height: .38em; border-radius: 50%; background: #E6DDD3; }
+.rundenstart .punkte3 span.an { background: var(--blau); }
+
+/* Kleinigkeiten */
+.versteckt { visibility: hidden; }
+.unsichtbar { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
+  .wolf-bild.spricht { animation: none; }
+}
+
+/* ---------------------------------------------------------------- Strukturen: Zahlenhaus, Zahlenmauer, Rechendreieck */
+.haus-box { display: flex; flex-direction: column; align-items: center; font-size: clamp(18px, min(calc(100cqh / (var(--stockwerke, 5) * 1.5 + 3)), 11cqw), 60px); font-weight: 600; }
+.haus-dach { width: 8.4em; height: 2.3em; position: relative; }
+.haus-dach svg { width: 100%; height: 100%; display: block; }
+.haus-dach .dachzahl { position: absolute; left: 0; right: 0; bottom: .22em; text-align: center; color: var(--kreide-gelb); font-size: 1.15em; }
+.haus-stock { display: flex; width: 7.2em; border: 3px solid var(--tinte); border-top: none; }
+.haus-stock:first-of-type { border-top: 3px solid var(--tinte); }
+.haus-zelle { flex: 1; height: 1.45em; display: flex; align-items: center; justify-content: center; }
+.haus-zelle + .haus-zelle { border-left: 3px solid var(--tinte); }
+.haus-zelle .luecke { height: 1.15em; min-width: 1.6em; font-size: .95em; }
+
+.mauer { display: flex; flex-direction: column-reverse; align-items: center; gap: .18em; font-size: clamp(18px, min(calc(100cqh / (var(--reihen, 3) * 1.9)), calc(100cqw / (var(--reihen, 3) * 3.25))), 64px); font-weight: 600; }
+.mauer-reihe { display: flex; gap: .18em; }
+.stein { width: 2.9em; height: 1.55em; border: 3px solid #C9926A; background: #FBF1E8; border-radius: .16em; display: flex; align-items: center; justify-content: center; }
+.stein .luecke { width: 2.5em; height: 1.2em; font-size: .9em; border-width: 3px; }
+
+.dreieck { position: relative; width: min(100%, 135cqh); aspect-ratio: 600 / 590; font-size: clamp(24px, 6.5cqmin, 50px); font-weight: 600; }
+.dreieck svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dreieck .d-feld { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; min-width: 2.2em; height: 1.4em; }
+.dreieck .d-feld.aussen { color: var(--blau-d); }
+.dreieck .d-feld .luecke { min-width: 2.2em; height: 1.25em; font-size: .95em; }
+
+/* ---------------------------------------------------------------- Legen (Geld, Zehner und Einer) */
+.legen-feld { flex: 1; width: 100%; min-height: 0; border: 3px dashed #D8CCBF; background: var(--papier); border-radius: 24px; display: flex; flex-wrap: wrap; align-content: flex-start; justify-content: center; gap: 10px; padding: 14px; overflow: hidden; }
+.legen-feld .gelegt { cursor: pointer; display: flex; }
+.legen-feld .gelegt svg { height: 100%; width: auto; }
+.legen-feld.richtig { border-color: var(--ok); border-style: solid; background: var(--ok-z); }
+.quellen { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 420px; }
+.quelle { background: #fff; border: none; border-radius: 18px; padding: 8px; box-shadow: 0 4px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.quelle:active { transform: translateY(4px); box-shadow: 0 0 0 #E3D8CC; }
+.quelle svg { display: block; }
+.legen-ziel { font-size: clamp(30px, 8cqmin, 56px); font-weight: 700; margin-bottom: 10px; color: var(--blau-d); }
+
+/* ---------------------------------------------------------------- Schriftliches Rechnen */
+.schrift { display: grid; font-size: clamp(20px, min(calc(100cqw / (var(--spalten, 6) * 1.32)), calc(100cqh / (var(--zeilen, 6) * 1.55))), 64px); font-weight: 600; font-variant-numeric: tabular-nums; }
+.tafel.schriftlich-modus .rechenbild { height: 24%; min-height: 96px; }
+.schrift .zelle { width: 1.25em; height: 1.35em; display: flex; align-items: center; justify-content: center; position: relative; }
+.schrift .zelle.klein { height: .9em; font-size: .55em; width: 2.27em; }
+.schrift .zelle .luecke { width: 1.05em; min-width: 0; height: 1.15em; padding: 0; border-width: 3px; border-radius: 9px; font-size: .95em; }
+.schrift .zelle.klein .luecke { width: 1.3em; height: 1.2em; font-size: .9em; border-style: dotted; }
+.schrift .linie { border-bottom: 4px solid var(--tinte); }
+.schrift .op { color: var(--blau); }
+.schrift .gestrichen { text-decoration: line-through; text-decoration-thickness: 3px; opacity: .6; }
+.schrift .stellenkopf { font-size: .55em; color: var(--blau-d); height: 1em; }
+
+/* ---------------------------------------------------------------- Raster (Spiegel, Umfang/Fläche) */
+.raster-svg rect.zelle-tipp { cursor: pointer; }
