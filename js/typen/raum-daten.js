@@ -35,7 +35,7 @@
       const s = el('div.szene'); s.appendChild(svg); b.tafel.appendChild(s);
       const ok = MW.knopf('OK', 'blau', () => b.antwort(0, Array.from(b.gewaehlt).sort()));
       ok.disabled = true; b.ok = ok;
-      b.eingabe.appendChild(el('div', { style: { fontSize: '24px', textAlign: 'center', maxWidth: '300px' }, text: 'Tippe die Kästchen rechts vom Spiegel an.' }));
+      b.eingabe.appendChild(el('div.hinweis-text', { style: { maxWidth: '300px' }, text: 'Tippe die Kästchen rechts vom Spiegel an.' }));
       b.eingabe.appendChild(ok);
     },
     pruefe: (a, i, wert) => MW.gleich(wert, a.loesung),
@@ -146,14 +146,14 @@
     const y = v => Bt - v / max * (Bt - T);
     for (let v = 0; v <= max; v += schritt) {
       svg.appendChild(S('line', { x1: L, y1: y(v), x2: R, y2: y(v), stroke: K, 'stroke-width': v === 0 ? 4 : 1.5, opacity: v === 0 ? 1 : 0.4 }));
-      svg.appendChild(B.text(L - 18, y(v), String(v), { groesse: 22, anker: 'end' }));
+      svg.appendChild(B.text(L - 14, y(v), String(v), { groesse: max / schritt > 8 ? 24 : 28, anker: 'end' }));
     }
     svg.appendChild(S('line', { x1: L, y1: T - 10, x2: L, y2: Bt, stroke: K, 'stroke-width': 4 }));
     const bw = (R - L) / n;
     s.werte.forEach((v, k) => {
       const x = L + k * bw + bw * 0.22, w = bw * 0.56;
       const hell = s.markiert && s.markiert.indexOf(k) >= 0;
-      svg.appendChild(S('rect', { x, y: y(v), width: w, height: Bt - y(v), fill: hell ? '#F5BC48' : ['#7FB2D6', '#EE9A8A', '#8FCB9F', '#F5BC48', '#C4A6E0'][k % 5], stroke: K, 'stroke-width': 3 }));
+      svg.appendChild(S('rect', { x, y: y(v), width: w, height: Bt - y(v), fill: hell ? '#F5BC48' : ['#7FB2D6', '#EE9A8A', '#8FCB9F', '#C4A6E0', '#8FD0C8'][k % 5], stroke: K, 'stroke-width': 3 }));
       if (hell) svg.appendChild(S('line', { x1: L, y1: y(v), x2: x, y2: y(v), stroke: '#F5BC48', 'stroke-width': 4, 'stroke-dasharray': '10 7' }));
       svg.appendChild(B.emoji(x + w / 2, Bt + 40, s.symbole[k], 44));
     });
@@ -180,7 +180,7 @@
       rad(svg, 200, 215, 150, s.links, s.markiert); rad(svg, 600, 215, 150, s.rechts, s.markiert);
       return svg;
     }
-    if (s.art === 'wuerfel') { const d = el('div', { style: { height: '100%', aspectRatio: '1' } }); d.appendChild(B.wuerfel(s.zeigt || 5)); return d; }
+    if (s.art === 'wuerfel') return B.wuerfel(s.zeigt || 5);   // quadratisches SVG, passt sich der Fläche an
     // Säckchen mit Kugeln
     const svg = B.box(420, 400);
     svg.appendChild(S('path', { d: 'M110 140 Q70 380 210 385 Q350 380 310 140 Z', fill: 'rgba(192,138,90,.55)', stroke: K, 'stroke-width': 4 }));

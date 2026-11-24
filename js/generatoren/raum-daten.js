@@ -50,6 +50,7 @@
         typ: 'auswahl', szene: { typ: 'szene', name: 'koerper', art }, optionen, spalten: 2, loesung: richtig, schluessel: frage + art,
         frage: 'Wie viele ' + (frage === 'ecken' ? 'Ecken' : 'Flächen') + ' hat ' + (art === 'pyramide' ? 'die ' : 'der ') + k.name + '?',
         ansage: [MW.satz(u, frage + '_' + art)], loesungAnsage: [richtig],
+        bildInSzene: frage === 'ecken',
         bild: frage === 'ecken' ? { typ: 'szene', name: 'koerper', art, ecken: true } : { typ: 'zeilen', zeilen: art === 'pyramide' ? ['eine Fläche unten', 'und rundherum die Seiten'] : ['oben, unten,', 'vorne, hinten,', 'links, rechts'], groesse: 38 },
         tipp: [MW.satz(u, frage === 'ecken' ? 'tipp_ecken' : 'tipp_flaechen')]
       };
@@ -85,7 +86,7 @@
         frage: frageUmfang ? 'Wie groß ist der Umfang?' : 'Wie groß ist die Fläche?',
         teile: [{ l: 0 }, { t: frageUmfang ? 'Kästchenlängen' : 'Kästchen' }], loesung: frageUmfang ? umfang : zellen.length,
         schluessel: (frageUmfang ? 'u' : 'f') + zellen.join('|'), ansage: [MW.satz(u, frageUmfang ? 'umfang' : 'flaeche')], groesse: 'klein',
-        bild: { typ: 'szene', name: 'figur', zeilen: Z, spalten: SP, zellen, zaehleUmfang: frageUmfang, reihen: !frageUmfang, zelle: 40 }, form
+        bildInSzene: true, bild: { typ: 'szene', name: 'figur', zeilen: Z, spalten: SP, zellen, zaehleUmfang: frageUmfang, reihen: !frageUmfang, zelle: 40 }, form
       };
     });
   };
@@ -106,23 +107,24 @@
       const frage = ['wert', 'mehr', 'meiste', 'summe'][i % 4];
       const name = k => s('n_' + T.namen[k]);
       const markiert = ks => Object.assign({}, szene, { markiert: ks });
+      // Tipp und Lösung markieren die Säulen bzw. Zeilen direkt im Diagramm der Aufgabe (bildInSzene)
       if (frage === 'wert') {
         const k = r.int(0, n - 1);
-        return { typ: 'term', szene, frage: (thema === 'obst' ? 'Wie viele Kinder mögen am liebsten ' : 'Wie viele Kinder wünschen sich ') + T.text[k] + '?', teile: [{ l: 0 }], loesung: werte[k], schluessel: 'w' + werte.join(), ansage: [s(thema + '_wert'), name(k)], bild: markiert([k]), groesse: 'klein' };
+        return { typ: 'term', szene, frage: (thema === 'obst' ? 'Wie viele Kinder mögen am liebsten ' : 'Wie viele Kinder wünschen sich ') + T.text[k] + '?', teile: [{ l: 0 }], loesung: werte[k], schluessel: 'w' + werte.join(), ansage: [s(thema + '_wert'), name(k)], bildInSzene: true, bild: markiert([k]), groesse: 'klein' };
       }
       if (frage === 'mehr') {
         const [a, b] = r.sample(Array.from({ length: n }, (_, k) => k), 2).sort((x, y) => werte[y] - werte[x]);
         if (werte[a] === werte[b]) return null;
-        return { typ: 'term', szene, frage: (thema === 'obst' ? 'Wie viele Kinder mehr mögen ' : 'Wie viele Kinder mehr wünschen sich ') + T.text[a] + ' als ' + T.text[b] + '?', teile: [{ l: 0 }], loesung: werte[a] - werte[b], schluessel: 'm' + werte.join(), ansage: [s(thema + '_mehr'), name(a), 'woerter/als', name(b)], bild: markiert([a, b]), groesse: 'klein' };
+        return { typ: 'term', szene, frage: (thema === 'obst' ? 'Wie viele Kinder mehr mögen ' : 'Wie viele Kinder mehr wünschen sich ') + T.text[a] + ' als ' + T.text[b] + '?', teile: [{ l: 0 }], loesung: werte[a] - werte[b], schluessel: 'm' + werte.join(), ansage: [s(thema + '_mehr'), name(a), 'woerter/als', name(b)], bildInSzene: true, bild: markiert([a, b]), groesse: 'klein' };
       }
       if (frage === 'meiste') {
         const max = Math.max.apply(null, werte), k = werte.indexOf(max);
         const optionen = T.symbole.slice(0, n).map((sy, j) => ({ wert: j, inhalt: sy })).slice(0, 4);
         if (k >= 4) return null;
-        return { typ: 'auswahl', szene, frage: thema === 'obst' ? 'Welches Obst mögen die meisten Kinder?' : 'Welches Haustier wünschen sich die meisten Kinder?', optionen, spalten: 2, loesung: k, schluessel: 'x' + werte.join(), ansage: [s(thema + '_meiste')], nachRichtig: [name(k)], loesungAnsage: [name(k)], bild: markiert([k]) };
+        return { typ: 'auswahl', szene, frage: thema === 'obst' ? 'Welches Obst mögen die meisten Kinder?' : 'Welches Haustier wünschen sich die meisten Kinder?', optionen, spalten: 2, loesung: k, schluessel: 'x' + werte.join(), ansage: [s(thema + '_meiste')], nachRichtig: [name(k)], loesungAnsage: [name(k)], bildInSzene: true, bild: markiert([k]) };
       }
       const summe = werte.reduce((x, y) => x + y, 0);
-      return { typ: 'term', szene, frage: 'Wie viele Kinder wurden insgesamt gefragt?', teile: [{ l: 0 }], loesung: summe, schluessel: 's' + werte.join(), ansage: [s('summe')], bild: markiert(werte.map((_, k) => k)), groesse: 'klein' };
+      return { typ: 'term', szene, frage: 'Wie viele Kinder wurden insgesamt gefragt?', teile: [{ l: 0 }], loesung: summe, schluessel: 's' + werte.join(), ansage: [s('summe')], bildInSzene: true, bild: markiert(werte.map((_, k) => k)), groesse: 'klein' };
     });
   };
 
@@ -148,7 +150,7 @@
         return {
           typ: 'auswahl', szene, frage: frage + ' Sicher, möglich oder unmöglich?', optionen: SMU, spalten: 1, loesung: ergebnis, schluessel: art + farbe + liste.join(''),
           ansage: [s('frage'), s((art === 'rad' ? 'rad_' : 'kugel_') + farbe)], nachRichtig: [s('ist_' + ergebnis)], loesungAnsage: [s('ist_' + ergebnis)],
-          bild: Object.assign({}, szene, { markiert: farbe })
+          bildInSzene: true, bild: Object.assign({}, szene, { markiert: farbe })
         };
       }
       if (art === 'wuerfel') {
@@ -173,7 +175,7 @@
         typ: 'auswahl', szene, frage: 'Wo ist die Chance auf ' + FTEXT[farbe] + ' größer?',
         optionen: [{ wert: 'links', inhalt: '◀ linkes Rad', text: true }, { wert: 'rechts', inhalt: 'rechtes Rad ▶', text: true }, { wert: 'gleich', inhalt: 'gleich groß', text: true }],
         spalten: 1, loesung, schluessel: 'v' + n1 + k1 + n2 + k2, ansage: [s('vergleich_' + farbe)],
-        bild: Object.assign({}, szene, { markiert: farbe }), tipp: [s('tipp_vergleich')]
+        bildInSzene: true, bild: Object.assign({}, szene, { markiert: farbe }), tipp: [s('tipp_vergleich')]
       };
     });
   };

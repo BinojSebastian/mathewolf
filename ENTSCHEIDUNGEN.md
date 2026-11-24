@@ -2,6 +2,17 @@
 
 Was in der Umsetzung festgelegt wurde, wo die Produktbeschreibung offen war, und wo bewusst abgewichen wurde.
 
+## Version 2.0.1 (23.11.2026): Handy hochkant und quer
+
+| Punkt | Entscheidung |
+| --- | --- |
+| Handy hochkant | Professor Wolf sitzt als kleines Bild in der Kopfzeile, die Sprechblase kommt von dort. Karte oben, Eingabe unten über die ganze Breite. Braucht die Aufgabe wenig Höhe (z. B. eine Rechnung), bekommt der Tipp den Rest; ein kleines Tipp-Bild steht neben dem Tipp-Satz. Auf sehr kleinen Handys gibt der Tipp Höhe ab, damit die Aufgabe ganz sichtbar bleibt. |
+| Handy quer | Die Kopfzeile wird zur schmalen Leiste links. Der Tipp steht rechts neben der Aufgabe, damit Zahlenhaus, Stifte, Geld oder Diagramm die volle Höhe behalten. Nur breite Tipp-Bilder (Zahlenstrahl, Rechenstrich) bleiben unten, solange die Aufgabe darüber ganz hineinpasst. |
+| Mitwachsen | Stifte und Türme (V-09) werden mit einem gemeinsamen Maßstab kleiner, damit die Längen vergleichbar bleiben. Geld (Münzen und Scheine) ist ein Bild und wird als Ganzes kleiner. Zahlenhaus, Rechendreieck, Stellentafel, schriftliche Rechnungen und Preise passen sich der Karte an. |
+| Tipp-Texte | Text im Tipp-Bild ist echter Text statt Grafik: Er bricht um, bleibt lesbar (mindestens 11 px) und wird nur so weit verkleinert, wie nötig. Viele kurze Zeilen (Einheiten) stehen auf dem Handy zweispaltig. Zahl und Einheit werden nie getrennt. |
+| Tipp im Bild der Aufgabe | Bei Diagrammen (K4-09), Glücksrädern und Kugeln (K4-10), Umfang und Fläche (K4-08) und den Ecken der Körper (K3-10) markiert der Tipp das Bild der Aufgabe selbst (Säule, Farbe, Kanten, Ecken), statt ein zweites, kleineres Bild zu zeigen. Im Diagramm ist Gelb nur noch die Markierung. |
+| Geprüft | Automatisch in Safari-Größe des iPhone 16 Pro hochkant (402 × 714) und quer (874 × 292), dazu 393 × 700, 852 × 287, 852 × 372, iPhone SE (375 × 553) und iPad quer und hoch: alle 50 Übungen mit mehreren Aufgaben, jeweils mit und ohne Tipp – nichts ragt heraus oder liegt unter dem Tipp. Nur auf dem iPhone SE ist das Zahlenhaus mit offenem Tipp etwas zu hoch. |
+
 ## Version 2.0 (22.11.2026): neue Aufmachung, echte Stimme, eigene Musik
 
 | Punkt | Entscheidung |

@@ -184,6 +184,13 @@
           geist = t.cloneNode(true); geist.classList.add('geist'); geist.classList.remove('ziehbar');
           const r = t.getBoundingClientRect();
           geist.style.width = r.width + 'px'; geist.style.height = r.height + 'px';
+          // Bilder im Geist in ihrer jetzigen Größe festhalten (sie können über den Platz skaliert sein)
+          const bilder = geist.querySelectorAll('svg');
+          t.querySelectorAll('svg').forEach((s, k) => {
+            if (!bilder[k] || s.ownerSVGElement) return;
+            const rs = s.getBoundingClientRect();
+            bilder[k].style.width = rs.width + 'px'; bilder[k].style.height = rs.height + 'px';
+          });
           document.body.appendChild(geist);
           t.classList.add('zieht'); t.style.opacity = '0.35';
         }

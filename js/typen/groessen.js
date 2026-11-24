@@ -4,23 +4,40 @@
   const el = MW.el, S = MW.svg, B = MW.bild;
 
   // ------------------------------------------------------------ Szenen
-  MW.szenen.geldReihe = function (s) {   // Münzen und Scheine nebeneinander
-    const box = el('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', padding: '8px' } });
-    s.werte.forEach(w => { const d = el('div', { style: { height: w >= 5 ? '86px' : '78px', display: 'flex' } }); const g = B.geldstueck(w); g.style.width = 'auto'; g.style.height = '100%'; d.appendChild(g); box.appendChild(d); });
-    return box;
+  // Münzen und Scheine als ein Bild (ab vier Stück in zwei Reihen). Wird der Platz knapp,
+  // wird das ganze Bild kleiner – Münzen und Scheine behalten ihre Größen zueinander.
+  MW.szenen.geldReihe = function (s) {
+    const werte = s.werte, reihen = s.reihen || (werte.length >= 4 ? 2 : 1);
+    const proReihe = Math.ceil(werte.length / reihen), LUECKE = 12, H = 86;
+    const mass = w => w >= 5 ? { b: 170 * H / 96, h: H } : { b: 78, h: 78 };
+    const zeilen = [];
+    for (let k = 0; k < werte.length; k += proReihe) zeilen.push(werte.slice(k, k + proReihe));
+    const breiten = zeilen.map(z => z.reduce((summe, w) => summe + mass(w).b, 0) + (z.length - 1) * LUECKE);
+    const W = Math.ceil(Math.max.apply(null, breiten)) + 8, HH = zeilen.length * H + (zeilen.length - 1) * LUECKE + 8;
+    const svg = MW.svg('svg', { viewBox: `0 0 ${W} ${HH}`, preserveAspectRatio: 'xMidYMid meet', style: `width:100%;height:100%;max-width:${W}px;max-height:${HH}px` });
+    zeilen.forEach((z, r) => {
+      let x = (W - breiten[r]) / 2;
+      z.forEach(w => {
+        const m = mass(w), stueck = B.geldstueck(w);
+        const vb = stueck.getAttribute('viewBox').split(' ').map(Number);
+        const g = MW.svg('g', { transform: `translate(${x.toFixed(1)} ${(4 + r * (H + LUECKE) + (H - m.h) / 2).toFixed(1)}) scale(${(m.h / vb[3]).toFixed(4)})` });
+        while (stueck.firstChild) g.appendChild(stueck.firstChild);
+        svg.appendChild(g);
+        x += m.b + LUECKE;
+      });
+    });
+    return svg;
   };
-  MW.szenen.preise = function (s) {     // Dinge mit Preisschild
-    const box = el('div', { style: { display: 'flex', gap: '28px', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' } });
-    s.dinge.forEach(d => box.appendChild(el('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' } },
-      el('div', { style: { fontSize: '76px', lineHeight: '1' }, text: d.symbol }),
-      el('div', { style: { background: '#F5BC48', color: '#351A12', borderRadius: '12px', padding: '2px 14px', fontSize: '32px', fontWeight: '600' }, text: MW.fmt(d.preis) + ' €' }))));
+  MW.szenen.preise = function (s) {     // Dinge mit Preisschild – Größen in app.css, sie passen sich der Karte an
+    const box = el('div.preise');
+    s.dinge.forEach(d => box.appendChild(el('div.preis-ding', el('div.p-symbol', { text: d.symbol }), el('div.p-schild', { text: MW.fmt(d.preis) + '\u00a0€' }))));
     if (s.bezahlt) {
-      const g = B.geldstueck(s.bezahlt); g.style.width = 'auto'; g.style.height = '86px';
-      box.appendChild(el('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' } }, el('div', { style: { fontSize: '24px' }, text: 'bezahlt:' }), g));
+      const g = B.geldstueck(s.bezahlt); g.removeAttribute('style'); g.classList.add('p-geld');
+      box.appendChild(el('div.preis-ding', el('div.p-bezahlt', { text: 'bezahlt:' }), g));
     }
     return box;
   };
-  MW.szenen.uhr = function (s) { const d = el('div', { style: { height: '100%', aspectRatio: '1', maxWidth: '100%' } }); d.appendChild(B.uhr(s.h, s.m)); return d; };
+  MW.szenen.uhr = s => B.uhr(s.h, s.m);
   MW.szenen.zehnerEiner = s => B.zehnerEiner(s.z, s.e);
 
   // ------------------------------------------------------------ Legen: Teile antippen oder hineinziehen, OK prüft die Summe
@@ -72,7 +89,7 @@
       const weg = MW.knopf('↺', 'grau', () => { if (!b.gesperrt) { b.gelegt = []; zeichne(); } });
       weg.setAttribute('aria-label', 'Alles zurücklegen'); weg.style.minWidth = '90px';
       b.ok = ok;
-      b.eingabe.appendChild(el('div', { style: { fontSize: '22px', textAlign: 'center' }, text: a.quellen[0].art === 'geld' ? 'Tippe auf das Geld oder zieh es in das Feld.' : 'Tippe auf Zehner und Einer oder zieh sie in das Feld.' }));
+      b.eingabe.appendChild(el('div.hinweis-text', { text: a.quellen[0].art === 'geld' ? 'Tippe auf das Geld oder zieh es in das Feld.' : 'Tippe auf Zehner und Einer oder zieh sie in das Feld.' }));
       b.eingabe.appendChild(quellen);
       b.eingabe.appendChild(el('div.ok-zeile', weg, ok));
       zeichne();
@@ -93,11 +110,11 @@
   MW.typen.stellenTafel = {
     aufbau(a, b) {
       const f = b.felder({ alleFelder: true });
-      if (a.wortText) b.tafel.appendChild(el('div.frage-text', { text: a.wortText, style: { fontSize: '26px', opacity: '.85' } }));
-      const tab = el('div', { style: { display: 'grid', gridTemplateColumns: `repeat(${a.spalten.length}, 1fr)`, border: '4px solid ' + MW.F.linie, borderRadius: '10px', fontSize: 'clamp(28px, 8cqmin, 56px)', fontWeight: '600' } });
-      a.spalten.forEach((s, k) => tab.appendChild(el('div', { text: s, style: { padding: '6px 18px', textAlign: 'center', borderBottom: '4px solid ' + MW.F.linie, borderLeft: k ? '3px solid ' + MW.F.linie : 'none', color: MW.F.blauText, fontSize: '.7em' } })));
+      if (a.wortText) b.tafel.appendChild(el('div.frage-text.wort', { text: a.wortText }));
+      const tab = el('div.stellen-tafel', { style: { gridTemplateColumns: `repeat(${a.spalten.length}, 1fr)` } });
+      a.spalten.forEach(s => tab.appendChild(el('div.st-kopf', { text: s })));
       a.spalten.forEach((s, k) => {
-        const z = el('div', { style: { padding: '10px 10px', display: 'flex', justifyContent: 'center', borderLeft: k ? '3px solid ' + MW.F.linie : 'none' } });
+        const z = el('div.st-feld');
         const e = el('span'); z.appendChild(e);
         f.feld(e, { item: 0, max: 1, auto: true, ordnung: k });
         tab.appendChild(z);

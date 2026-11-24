@@ -250,19 +250,47 @@
     return svg;
   };
 
-  // ------------------------------------------------------------ Kreide-Text (mehrere Zeilen)
+  // ------------------------------------------------------------ Text in mehreren Zeilen
+  // Echter Text statt SVG: Er bricht auf schmalen Handys um und bleibt lesbar.
+  // MW.passeZeilen() verkleinert ihn nur, wenn er sonst nicht in die Fläche passt.
   B.zeilen = function (zeilen, opt) {
     opt = opt || {};
-    const F = B.farben(opt.hell);
-    const gr = opt.groesse || 40, zh = opt.zeilenhoehe || Math.round(gr * 1.4);
-    const laengste = Math.max.apply(null, zeilen.map(z => String(typeof z === 'object' ? z.text : z).length));
-    const w = opt.breite || Math.max(160, Math.round(laengste * gr * 0.56) + 30);
-    const svg = B.box(w, zeilen.length * zh + 20);
-    zeilen.forEach((z, i) => {
-      const farbe = typeof z === 'object' ? (z.farbe === 'gelb' ? F.gelbText : z.farbe === 'blau' ? F.blau : F.text) : F.text;
-      svg.appendChild(B.text(w / 2, 10 + zh / 2 + i * zh, typeof z === 'object' ? z.text : z, { groesse: gr, farbe }));
+    const box = MW.el('div.zeilen-bild');
+    box.style.setProperty('--gr', ((opt.groesse || 40) / 40).toFixed(3));
+    // Zahl und Einheit sowie „=“ und Zahl nie trennen
+    const fest = t => String(t).replace(/(\d) (?=(?:€|ct|km|cm|mm|kg|m|g)(?![A-Za-zÄÖÜäöüß]))/g, '$1 ').replace(/= /g, '= ');
+    zeilen.forEach(z => {
+      const o = typeof z === 'object' ? z : { text: z };
+      box.appendChild(MW.el('div.zz' + (o.farbe ? '.' + o.farbe : ''), { text: fest(o.text) }));
     });
-    return svg;
+    return box;
+  };
+  MW.passeZeilen = function (wurzel) {
+    if (!wurzel) return;
+    const passe = z => {
+      z.style.fontSize = '';
+      let gr = parseFloat(getComputedStyle(z).fontSize);
+      for (let n = 0; n < 24 && gr > 11 && (z.scrollHeight > z.clientHeight + 1 || z.scrollWidth > z.clientWidth + 1); n++) {
+        gr = Math.max(11, gr * 0.9);
+        z.style.fontSize = gr.toFixed(1) + 'px';
+      }
+      return gr;
+    };
+    wurzel.querySelectorAll('.zeilen-bild').forEach(z => {
+      z.classList.remove('zwei');
+      [...z.children].forEach(c => { c.hidden = false; });
+      if (!z.clientHeight) return;
+      const voll = parseFloat(getComputedStyle(z).fontSize);
+      const gr = passe(z);
+      // Viele kurze Zeilen auf flacher Fläche (Handy): zweispaltig ist oft größer lesbar
+      if (gr < voll * 0.85 && z.children.length >= 4) {
+        z.classList.add('zwei');
+        if (passe(z) <= gr) { z.classList.remove('zwei'); passe(z); }
+      }
+      // Passt es selbst klein nicht (sehr kleines Handy), lieber hintere Zeilen weglassen als Text abschneiden
+      const zz = [...z.children];
+      for (let k = zz.length - 1; k > 0 && z.scrollHeight > z.clientHeight + 1; k--) zz[k].hidden = true;
+    });
   };
 
   // ------------------------------------------------------------ Würfelbild

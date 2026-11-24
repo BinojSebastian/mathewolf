@@ -144,7 +144,7 @@
         return {
           typ: 'stellenTafel', spalten: SP, loesung: ziffern, zahl: n, schluessel: 's' + n, wortText: MW.zahlWortTrenn(n),
           ansage: [MW.satz(u, 'trage'), n],
-          bild: { typ: 'zeilen', zeilen: ['erst die Tausender:', MW.zahlWort(t) + '-tausend', 'dann der Rest:', (rest ? MW.zahlWort(rest) : 'null'), { text: 'Fehlt eine Stelle? Dann schreib 0.', farbe: 'gelb' }], groesse: 30 }
+          bild: { typ: 'zeilen', zeilen: ['erst die Tausender: ' + MW.zahlWort(t) + '-tausend', 'dann der Rest: ' + (rest ? MW.zahlWort(rest) : 'null'), { text: 'Fehlt eine Stelle? Dann schreib 0.', farbe: 'gelb' }], groesse: 30 }
         };
       }
       return {

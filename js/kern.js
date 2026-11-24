@@ -3,7 +3,7 @@
 window.MW = window.MW || {};
 (function (MW) {
 
-  MW.VERSION = '2.0.0';
+  MW.VERSION = '2.0.1';
 
   // ---------------------------------------------------------------- Farben für Bilder auf der hellen Karte
   MW.F = {

@@ -83,14 +83,79 @@
   // ------------------------------------------------------------ Rechenbild
   function zeigeBild(inhalt, tippText) {
     const rb = $('#rechenbild'); MW.leeren(rb);
-    if (!inhalt && !tippText) { rb.hidden = true; return false; }
+    if (!inhalt && !tippText) { rb.hidden = true; tippLage(); return false; }
     if (tippText) rb.appendChild(el('div.rb-tipp', { text: tippText }));
     if (inhalt) rb.appendChild(el('div.rb-bild', inhalt));
+    rb.classList.toggle('nur-text', !inhalt);
     rb.hidden = false;
+    passeTipp();
+    requestAnimationFrame(passeTipp);
     return !!inhalt;
   }
+  // Handy quer (flache Karte): Der Tipp steht neben der Aufgabe. Nur ein breites Bild (Zahlenstrahl,
+  // Rechenstrich) bleibt unten – und auch das nur, wenn die Aufgabe darüber noch ganz hineinpasst.
+  // Handy hochkant (und quer mit Tipp unten): Braucht die Aufgabe weniger Höhe, als sie hat,
+  // bekommt der Tipp den Rest – so werden Bild und Text im Tipp größer.
+  const mq = q => (window.matchMedia ? window.matchMedia(q) : { matches: false });
+  const flachQuer = mq('(max-height: 500px) and (min-aspect-ratio: 1/1)');
+  const handyHoch = mq('(max-width: 600px) and (max-aspect-ratio: 1/1)');
+  function tippLage() {
+    const tafel = $('#tafel'), rb = $('#rechenbild'), ti = $('#tafel-inhalt');
+    tafel.classList.remove('tipp-seite');
+    rb.classList.remove('rb-neben');
+    rb.style.height = '';
+    if (rb.hidden || rb.classList.contains('nur-text')) return;   // nur ein Satz: schmaler Streifen unten
+    const seite = s => { const v = s.viewBox && s.viewBox.baseVal; return v && v.height ? v.width / v.height : 0; };
+    const bild = rb.querySelector('.rb-bild > svg');
+    if (flachQuer.matches) {
+      const breit = bild && seite(bild) >= 3.2;
+      // Ein Bild in der Aufgabe, das Höhe braucht (Geld, Diagramm, Würfel …), bekommt die volle Höhe
+      const hochBild = [...ti.querySelectorAll('svg')].some(s => {
+        if (s.ownerSVGElement) return false;
+        const r = s.getBoundingClientRect(), a = seite(s);
+        return a > 0 && a < 2.2 && r.width * r.height > 2500;
+      });
+      if (!breit || hochBild || ti.scrollHeight > ti.clientHeight + 2) { tafel.classList.add('tipp-seite'); return; }
+    } else if (handyHoch.matches) {
+      // kleines Bild neben den Tipp-Text – aber nur, wenn der Text daneben noch ganz hineinpasst
+      const t = rb.querySelector('.rb-tipp');
+      if (bild && t && seite(bild) < 1.9) {
+        rb.classList.add('rb-neben');
+        if (t.offsetHeight > rb.clientHeight - 14) rb.classList.remove('rb-neben');
+      }
+    } else return;   // iPad: genug Platz, alles bleibt wie es ist
+    // Platz, den die Aufgabe nicht braucht
+    const teile = [...ti.children].map(c => c.getBoundingClientRect()).filter(r => r.height > 0);
+    if (!teile.length) return;
+    const cs = getComputedStyle(ti);
+    const innenHoehe = ti.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const belegt = Math.max(...teile.map(r => r.bottom)) - Math.min(...teile.map(r => r.top));
+    const frei = innenHoehe - belegt;
+    if (frei > 16) { rb.style.height = Math.round(Math.min(rb.offsetHeight + frei - 8, tafel.clientHeight * 0.62)) + 'px'; return; }
+    // Umgekehrt: Ragt die Aufgabe heraus (kleines Handy), gibt der Tipp Höhe ab – die Aufgabe geht vor,
+    // aber der Tipp-Satz selbst bleibt ganz lesbar (das Bild darf dabei kleiner werden)
+    const tippText = rb.querySelector('.rb-tipp');
+    const minH = Math.max(76, (tippText ? tippText.offsetHeight : 0) + 20);
+    for (let h = rb.offsetHeight, n = 0; ti.scrollHeight > ti.clientHeight + 2 && h > minH && n < 12; n++) {
+      h = Math.max(minH, h - 12); rb.style.height = h + 'px';
+    }
+  }
+  function passeTipp() {
+    const rb = $('#rechenbild');
+    tippLage();
+    if (!rb.hidden) MW.passeZeilen(rb);
+  }
+  // Drehen des Handys oder ein anderes Fenster: Lage und Text des Tipps neu einpassen
+  const tafelEl = $('#tafel');
+  if (tafelEl && window.ResizeObserver) new ResizeObserver(passeTipp).observe(tafelEl);
+  else if (tafelEl) window.addEventListener('resize', passeTipp);
   function hilfeBild(i, tipp) {
     const a = akt.aufgabe, typ = akt.typ;
+    // Tipp direkt in der Aufgabe (z. B. markierte Säule im Diagramm) statt als zweites, kleineres Bild
+    if (a.bildInSzene && a.bild) {
+      const sz = $('#tafel-inhalt .szene'), text = tipp && tipp.length ? MW.audio.anzeige(tipp) : '';
+      if (sz) { MW.leeren(sz); sz.appendChild(MW.rechenbild(a.bild)); return zeigeBild(null, text) || !!text; }
+    }
     let inhalt = null;
     if (typ.hilfe) inhalt = typ.hilfe(a, i, akt.b);
     else if (a.bild) inhalt = MW.rechenbild(a.bild);

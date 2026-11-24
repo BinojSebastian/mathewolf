@@ -35,7 +35,7 @@
   MW.typen.blitzblick = {
     aufbau(a, b) {
       const buehne = el('div.szene');
-      const decke = el('div', { style: { fontSize: '90px', opacity: '.6' }, text: '👀' });
+      const decke = el('div.blitz-decke', { text: '👀' });
       buehne.appendChild(decke);
       b.tafel.appendChild(buehne);
       const zeige = async () => {
@@ -44,7 +44,7 @@
         buehne.appendChild(bild);
         await MW.warte(a.dauer || 2000);
         if (!aktuell(b) || b.dauerhaft) return;
-        MW.leeren(buehne); buehne.appendChild(el('div', { style: { fontSize: '90px', opacity: '.6' }, text: '❓' }));
+        MW.leeren(buehne); buehne.appendChild(el('div.blitz-decke', { text: '❓' }));
       };
       b.zeige = zeige;
       b.buehne = buehne;
@@ -115,7 +115,7 @@
         ok.disabled = false;
       }
       const s = el('div.szene'); s.appendChild(svg); b.tafel.appendChild(s);
-      b.eingabe.appendChild(el('div', { style: { fontSize: '24px', textAlign: 'center', maxWidth: '300px' }, text: 'Tippe eine Gruppe an oder das Gleich-Zeichen.' }));
+      b.eingabe.appendChild(el('div.hinweis-text', { style: { maxWidth: '300px' }, text: 'Tippe eine Gruppe an oder das Gleich-Zeichen.' }));
       b.eingabe.appendChild(ok);
     },
     falsch(a, i, w, b) { const r = b.rahmen[w]; if (r) { r.setAttribute('stroke', MW.F.linie); r.setAttribute('stroke-width', 4); } b.wahl = null; b.eingabe.querySelector('.knopf').disabled = true; },
@@ -225,14 +225,14 @@
       const s = el('div.szene'); s.appendChild(svg); b.tafel.appendChild(s);
       b.musterSvg = svg;
       // Teile zum Ziehen
-      const box = el('div', { style: { display: 'flex', gap: '18px', flexWrap: 'wrap', justifyContent: 'center' } });
+      const box = el('div.muster-teile');
       b.teile = a.optionen.map((o, k) => {
-        const t = el('div', { style: { width: '104px', height: '104px', background: '#fff', borderRadius: '22px', boxShadow: '0 5px 0 #9E9592', display: 'flex', alignItems: 'center', justifyContent: 'center' }, dataset: { k } });
+        const t = el('div.muster-teil', { dataset: { k } });
         const sv = B.box(100, 100); sv.appendChild(MW.formSVG(o.form, 50, 52, 66, o.farbe)); t.appendChild(sv);
         box.appendChild(t);
         return t;
       });
-      b.eingabe.appendChild(el('div', { style: { fontSize: '24px', textAlign: 'center' }, text: 'Zieh das passende Teil in die Lücke.' }));
+      b.eingabe.appendChild(el('div.hinweis-text', { text: 'Zieh das passende Teil in die Lücke.' }));
       b.eingabe.appendChild(box);
       // Ablage ist die Lücke auf der Tafel (als HTML-Element über dem SVG gemessen)
       const ablage = el('div', { style: { position: 'absolute', pointerEvents: 'none' } });
@@ -328,8 +328,17 @@
   MW.typen.ordnen = {
     aufbau(a, b) {
       b.ordnung = a.start.slice();   // Indizes der Dinge an den Plätzen
+      const stifte = a.art === 'stifte';
       const huelle = el('div.szene');
-      const box = el('div', { style: { display: 'flex', flexDirection: a.art === 'stifte' ? 'column' : 'row', gap: a.art === 'stifte' ? '14px' : '18px', alignItems: a.art === 'stifte' ? 'flex-start' : 'flex-end', justifyContent: 'center', padding: '6px 10px' } });
+      // Ein gemeinsamer Maßstab --u für alle Stifte bzw. Türme: Bei wenig Platz (Handy quer, Tipp offen)
+      // wird alles gleichmäßig kleiner, die Längen bleiben vergleichbar. Maße in px bei voller Größe.
+      const n = a.groessen.length, groesste = Math.max.apply(null, a.groessen);
+      const natH = stifte ? n * 60.8 + (n - 1) * 14 + 12 : (groesste * 44 + 8) * 0.95 + 8 + 12;
+      const natB = stifte ? (60 + groesste * 62 + 20) * 0.78 + 8 + 20 : n * 84 + (n - 1) * 18 + 20;
+      const box = el('div', { style: { display: 'flex', flexDirection: stifte ? 'column' : 'row', alignItems: stifte ? 'flex-start' : 'flex-end', justifyContent: 'center' } });
+      box.style.setProperty('--u', `min(1px, calc(100cqh / ${natH.toFixed(1)}), calc(100cqw / ${natB.toFixed(1)}))`);
+      box.style.gap = `calc(var(--u) * ${stifte ? 14 : 18})`;
+      box.style.padding = 'calc(var(--u) * 6) calc(var(--u) * 10)';
       huelle.appendChild(box);
       b.box = box;
       b.tafel.appendChild(huelle);
@@ -340,8 +349,8 @@
         MW.leeren(box);
         b.plaetze = b.ordnung.map((k, platz) => {
           const g = a.groessen[k];
-          const p = el('div', { dataset: { platz }, style: { display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '14px', padding: '4px' } });
-          p.appendChild(a.art === 'stifte' ? stift(g, a.farben[k]) : turm(g, a.farben[k]));
+          const p = el('div', { dataset: { platz }, style: { display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '14px', padding: 'calc(var(--u) * 4)' } });
+          p.appendChild(stifte ? stift(g, a.farben[k]) : turm(g, a.farben[k]));
           box.appendChild(p);
           return p;
         });
@@ -363,6 +372,7 @@
       b.zeichne = zeichne;
       function stift(laenge, farbe) {
         const w = 60 + laenge * 62, svg = MW.svg('svg', { viewBox: `0 0 ${w + 20} 60`, width: (w + 20) * 0.78, height: 60 * 0.78 + 6 });
+        svg.style.width = `calc(var(--u) * ${((w + 20) * 0.78).toFixed(1)})`; svg.style.height = 'calc(var(--u) * 52.8)';
         svg.appendChild(S('rect', { x: 4, y: 12, width: w - 40, height: 36, rx: 6, fill: farbe, stroke: '#351A12', 'stroke-width': 3 }));
         svg.appendChild(S('path', { d: `M${w - 36} 12 L${w + 8} 30 L${w - 36} 48 Z`, fill: '#F6D3B3', stroke: '#351A12', 'stroke-width': 3, 'stroke-linejoin': 'round' }));
         svg.appendChild(S('path', { d: `M${w - 6} 26 L${w + 8} 30 L${w - 6} 34 Z`, fill: farbe }));
@@ -370,10 +380,11 @@
       }
       function turm(hoehe, farbe) {
         const svg = MW.svg('svg', { viewBox: `0 0 80 ${hoehe * 44 + 8}`, width: 76, height: (hoehe * 44 + 8) * 0.95 });
+        svg.style.width = 'calc(var(--u) * 76)'; svg.style.height = `calc(var(--u) * ${((hoehe * 44 + 8) * 0.95).toFixed(1)})`;
         for (let k = 0; k < hoehe; k++) svg.appendChild(S('rect', { x: 4, y: 4 + k * 44, width: 72, height: 42, rx: 6, fill: farbe, stroke: '#351A12', 'stroke-width': 3 }));
         return svg;
       }
-      b.eingabe.appendChild(el('div', { style: { fontSize: '24px', textAlign: 'center', maxWidth: '320px' }, text: 'Zieh ein Teil auf ein anderes, dann tauschen sie die Plätze.' }));
+      b.eingabe.appendChild(el('div.hinweis-text', { style: { maxWidth: '320px' }, text: 'Zieh ein Teil auf ein anderes, dann tauschen sie die Plätze.' }));
       b.eingabe.appendChild(ok);
     },
     pruefe(a, i, wert) { return MW.gleich(wert, wert.slice().sort((x, y) => x - y)); },

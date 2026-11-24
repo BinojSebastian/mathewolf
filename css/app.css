@@ -296,7 +296,27 @@ img { -webkit-user-drag: none; user-select: none; }
 .rechenbild .rb-titel { position: absolute; left: 14px; top: 8px; font-size: 17px; color: var(--tinte-2); }
 .rechenbild .rb-tipp { flex: 0 0 auto; align-self: stretch; display: flex; gap: 8px; align-items: flex-start; font-size: 19px; line-height: 1.25; color: #7A4F06; font-weight: 500; }
 .rechenbild .rb-tipp::before { content: 'Tipp'; flex: 0 0 auto; background: var(--gelb); color: var(--tinte); font-size: 14px; font-weight: 700; padding: 3px 9px; border-radius: 999px; margin-top: 1px; }
+.rechenbild.nur-text, .tafel.schriftlich-modus .rechenbild.nur-text { height: auto; min-height: 0; }
 @keyframes einblenden { from { opacity: 0; } to { opacity: 1; } }
+.zeilen-bild {
+  --zb: 30px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2em;
+  max-width: 100%; max-height: 100%; overflow: hidden; text-align: center;
+  font-size: calc(var(--zb) * var(--gr, 1)); line-height: 1.18; font-weight: 600; color: var(--tinte);
+}
+.zeilen-bild .zz { max-width: 100%; }
+.zeilen-bild.zwei { display: grid; grid-template-columns: repeat(2, auto); column-gap: 1.1em; row-gap: .2em; justify-content: center; align-content: center; }
+.kombi { display: flex; gap: 18px; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.kombi-teil { height: 100%; min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.blitz-decke { font-size: min(90px, 32cqmin); line-height: 1; opacity: .6; }
+.preise { display: flex; gap: min(28px, 6cqmin); justify-content: center; align-items: center; width: 100%; height: 100%; }
+.preis-ding { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.p-symbol { font-size: min(76px, 24cqmin); line-height: 1; }
+.p-schild { background: #F5BC48; color: #351A12; border-radius: 12px; padding: 2px .45em; font-size: min(32px, 10cqmin); font-weight: 600; white-space: nowrap; }
+.p-bezahlt { font-size: clamp(11px, 7.5cqmin, 24px); }
+.preise .p-geld { height: min(86px, 27cqmin); width: auto; }
+.zeilen-bild .gelb { color: #B8770B; }
+.zeilen-bild .blau { color: #3B6F93; }
 
 .kreide { color: var(--kreide); }
 .kreide-g { color: var(--kreide-gelb); }
@@ -364,6 +384,15 @@ img { -webkit-user-drag: none; user-select: none; }
 @keyframes pulsieren { 50% { transform: scale(1.06); } }
 
 .ok-zeile { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hinweis-text { font-size: 23px; text-align: center; line-height: 1.25; }
+.frage-text.wort { font-size: clamp(16px, 4.8cqmin, 26px); opacity: .85; }
+.stellen-tafel { display: grid; border: 4px solid #4E3C34; border-radius: 10px; font-size: clamp(28px, 8cqmin, 56px); font-weight: 600; }
+.stellen-tafel .st-kopf { padding: 6px 18px; text-align: center; border-bottom: 4px solid #4E3C34; color: #3B6F93; font-size: .7em; }
+.stellen-tafel .st-feld { padding: 10px; display: flex; justify-content: center; }
+.stellen-tafel .st-kopf + .st-kopf, .stellen-tafel .st-feld + .st-feld { border-left: 3px solid #4E3C34; }
+.muster-teile { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+.muster-teil { width: 104px; height: 104px; background: #fff; border-radius: 22px; box-shadow: 0 5px 0 #E3D8CC, 0 6px 12px rgba(53,26,18,.06); display: flex; align-items: center; justify-content: center; }
+.muster-teil svg { width: 100%; height: 100%; }
 .eingabe .knopf { min-width: 200px; }
 .hinweis-knopf { font-size: 24px; min-height: 64px; }
 
@@ -425,7 +454,7 @@ img { -webkit-user-drag: none; user-select: none; }
 }
 
 /* ---------------------------------------------------------------- Strukturen: Zahlenhaus, Zahlenmauer, Rechendreieck */
-.haus-box { display: flex; flex-direction: column; align-items: center; font-size: clamp(18px, min(calc(100cqh / (var(--stockwerke, 5) * 1.5 + 3)), 11cqw), 60px); font-weight: 600; }
+.haus-box { display: flex; flex-direction: column; align-items: center; font-size: clamp(12px, min(calc((100cqh - 24px) / (var(--stockwerke, 5) * 1.5 + 3.2)), 11cqw), 60px); font-weight: 600; }
 .haus-dach { width: 8.4em; height: 2.3em; position: relative; }
 .haus-dach svg { width: 100%; height: 100%; display: block; }
 .haus-dach .dachzahl { position: absolute; left: 0; right: 0; bottom: .22em; text-align: center; color: var(--kreide-gelb); font-size: 1.15em; }
@@ -440,7 +469,7 @@ img { -webkit-user-drag: none; user-select: none; }
 .stein { width: 2.9em; height: 1.55em; border: 3px solid #C9926A; background: #FBF1E8; border-radius: .16em; display: flex; align-items: center; justify-content: center; }
 .stein .luecke { width: 2.5em; height: 1.2em; font-size: .9em; border-width: 3px; }
 
-.dreieck { position: relative; width: min(100%, 135cqh); aspect-ratio: 600 / 590; font-size: clamp(24px, 6.5cqmin, 50px); font-weight: 600; }
+.dreieck { position: relative; width: min(100%, 92cqh); aspect-ratio: 600 / 590; font-size: clamp(15px, 6.5cqmin, 50px); font-weight: 600; }
 .dreieck svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .dreieck .d-feld { position: absolute; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; min-width: 2.2em; height: 1.4em; }
 .dreieck .d-feld.aussen { color: var(--blau-d); }
@@ -471,3 +500,279 @@ img { -webkit-user-drag: none; user-select: none; }
 
 /* ---------------------------------------------------------------- Raster (Spiegel, Umfang/Fläche) */
 .raster-svg rect.zelle-tipp { cursor: pointer; }
+
+/* ================================================================ Handy
+   Auf dem iPad steht Professor Wolf neben der Karte. Auf dem Handy ist dafür kein Platz:
+   Er sitzt als kleines Bild in der Kopfzeile, die Sprechblase kommt von dort. */
+.kopf .avatar { display: none; width: 50px; height: 50px; border-radius: 50%; overflow: hidden; position: relative; flex: 0 0 auto; background: var(--blau-z); box-shadow: inset 0 0 0 2px #fff; }
+.kopf .avatar img { position: absolute; width: 118px; height: auto; left: -27px; top: -1px; filter: none; transform-origin: 50% 25%; }
+.kopf .avatar img[src$="lacht.webp"] { left: -17px; }   /* lacht schaut nach links */
+@container (max-height: 230px) { .rundenstart .symbol { display: none; } }
+
+/* ---------------------------------------------------------------- Handy hochkant */
+@media (max-width: 600px) and (max-aspect-ratio: 1/1) {
+  .rund { width: 46px; height: 46px; }
+  .kopf { margin: calc(6px + var(--sicher-oben)) 8px 0; height: 60px; border-radius: 20px; padding: 0 6px; gap: 8px; }
+  .kopf-titel { font-size: 20px; gap: 8px; }
+  .titel-neben { display: none; }
+  .kopf-rechts { gap: 6px; }
+  .punkte-chip { height: 36px; font-size: 18px; padding: 0 12px; gap: 6px; }
+  .kopf .avatar { display: block; }
+  #s-uebung .u-titel { display: none; }
+  .fortschritt { gap: 4px; }
+  .fortschritt .punkt { width: 9px; height: 9px; }
+  .fortschritt .punkt.jetzt { box-shadow: 0 0 0 2px var(--blau); }
+  .fortschritt .text { display: none; }
+  .stoppuhr { font-size: 20px; min-width: 70px; padding: 4px 10px; }
+
+  /* Übung: Karte oben, Eingabe unten über die ganze Breite */
+  .u-main { padding: 8px 8px calc(8px + var(--sicher-unten)); gap: 8px; }
+  .u-wolf { display: none; }
+  .eingabe { margin-left: 0; min-height: 0; min-width: 0; padding: 10px; border-radius: 24px; gap: 8px; align-self: stretch; }
+  .tafel { border-radius: 26px; }
+  .tafel-runde { left: 12px; top: 10px; height: 28px; font-size: 14px; padding: 0 10px; }
+  .tafel-punkte { right: 12px; top: 9px; height: 30px; font-size: 18px; padding: 0 12px; }
+  .tafel-inhalt { padding: 46px 10px 10px; }
+  .rechenbild { min-height: 84px; height: 36%; margin: 0 8px 8px; border-radius: 18px; padding: 8px 10px; }
+  .rechenbild .rb-tipp { font-size: 15px; }
+  .rechenbild .rb-tipp::before { font-size: 12px; }
+  .zeilen-bild { --zb: 20px; }
+  .rechenbild.rb-neben { flex-direction: row; align-items: stretch; gap: 10px; }
+  .rechenbild.rb-neben .rb-tipp { flex: 1.2 1 0; align-self: center; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .rechenbild.rb-neben .rb-bild { flex: 1 1 0; width: auto; min-width: 0; }
+  .tafel.schriftlich-modus .rechenbild { height: 30%; min-height: 116px; }
+  .schrift { font-size: clamp(14px, min(calc(100cqw / (var(--spalten, 6) * 1.32)), calc(100cqh / (var(--zeilen, 6) * 1.55))), 64px); }
+  .term { font-size: clamp(34px, 14cqmin, 112px); }
+  .term.mittel { font-size: clamp(30px, 11cqmin, 88px); }
+  .term.klein { font-size: clamp(24px, 8.5cqmin, 70px); }
+  .frage-text { font-size: clamp(18px, 5.5cqmin, 40px); }
+  .geschichte { font-size: clamp(17px, 5cqmin, 36px); }
+  .bilanz { font-size: clamp(20px, 7cqmin, 54px); }
+  .ziffernblock { gap: 8px; width: min(100%, 290px); }
+  .ziffernblock button { height: 50px; font-size: 28px; border-radius: 16px; }
+  .karten { gap: 8px; }
+  .karte { min-height: 0; font-size: 28px; border-radius: 14px; }
+  .auswahl { gap: 10px; }
+  .kachel-wahl { min-height: 72px; font-size: 30px; border-radius: 18px; }
+  .kachel-wahl.text { font-size: 20px; }
+  .kachel-wahl svg { max-height: 110px; }
+  .knopf { min-height: 56px; font-size: 24px; padding: 0 22px; border-radius: 20px; }
+  .knopf.gross { min-height: 62px; font-size: 27px; padding: 0 28px; border-radius: 22px; }
+  .eingabe .knopf { min-width: 140px; }
+  .hinweis-knopf { font-size: 19px; min-height: 50px; }
+  .feintasten { gap: 12px; }
+  .feintasten button { width: 64px; height: 54px; font-size: 34px; }
+  .quellen { gap: 8px; }
+  .quelle { padding: 5px; border-radius: 14px; }
+  .quelle svg { height: 46px !important; }
+  .quelle svg[viewBox="0 0 34 262"] { height: 72px !important; }
+  .quelle svg[viewBox="0 0 34 34"] { height: 32px !important; }
+  .legen-feld { padding: 8px; gap: 6px; border-radius: 18px; }
+  .legen-feld .gelegt svg { height: 48px !important; }
+  .legen-feld .gelegt svg[viewBox="0 0 34 262"] { height: 104px !important; }
+  .legen-feld .gelegt svg[viewBox="0 0 34 34"] { height: 28px !important; }
+  .legen-ziel { margin-bottom: 4px; }
+  .auswahl .kachel-wahl { min-height: 64px !important; }
+  .kachel-wahl svg { max-height: 78px; }
+  .hinweis-text { font-size: 18px; }
+  .stellen-tafel { font-size: clamp(22px, 8cqmin, 40px); border-width: 3px; }
+  .stellen-tafel .st-kopf { padding: 4px 4px; }
+  .stellen-tafel .st-feld { padding: 6px 3px; }
+  .muster-teile { gap: 12px; }
+  .muster-teil { width: 82px; height: 82px; border-radius: 18px; }
+  .u-main > .sprechblase { top: 2px; bottom: auto; left: 46px; max-width: calc(100% - 64px); font-size: 18px; padding: 10px 14px; border-radius: 18px; }
+  .u-main > .sprechblase::after { left: 20px; top: -8px; bottom: auto; width: 18px; height: 18px; }
+
+  /* Startbild und Stufenwahl */
+  .pult { height: 42%; }
+  .pult .sprechblase { right: 3%; top: calc(4% + var(--sicher-oben)); max-width: 40%; font-size: 14px; padding: 9px 12px; border-radius: 16px; }
+  .pult .sprechblase::after { width: 16px; height: 16px; top: 22px; left: -7px; }
+  .splash-karte { width: calc(100% - 24px); padding: 22px 18px; margin-bottom: calc(14px + var(--sicher-unten)); border-radius: 28px; gap: 10px; }
+  .logo { font-size: 44px; }
+  .unterzeile { font-size: 17px; }
+  .splash-karte .knopf { min-width: 220px; margin-top: 6px; }
+  .start-karte { left: 8px; right: 8px; bottom: calc(8px + var(--sicher-unten)); max-height: 66%; padding: 14px 12px 12px; border-radius: 26px; gap: 10px; }
+  .start-kopf { align-items: center; }
+  .logo-block { flex-direction: row; align-items: center; gap: 10px; }
+  .logo.klein { font-size: 30px; }
+  .start-kopf .rund { width: 42px; height: 42px; }
+  .start-kopf .schalter-gruppe { gap: 6px; }
+  .start-karte .punkte-chip .einheit { display: none; }
+  .start-frage { display: none; }
+  .stufen { grid-template-columns: 1fr; gap: 8px; }
+  .stufe { min-height: 62px; grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; padding: 6px 10px 6px 6px; border-radius: 18px; }
+  .s-abzeichen { width: 46px; height: 46px; border-radius: 14px; }
+  .s-abzeichen .zahl { font-size: 18px; }
+  .s-abzeichen .zahl.lang { font-size: 13px; }
+  .s-abzeichen .bis { font-size: 10px; }
+  .s-name { font-size: 19px; }
+  .s-raum { font-size: 13px; }
+  .s-stand { font-size: 13px; gap: 4px; }
+  .s-balken { width: 48px; height: 7px; }
+
+  /* Übungsauswahl: zwei Spalten */
+  .auswahl-wolf { display: none; }
+  .auswahl-main { padding: 10px 10px calc(16px + var(--sicher-unten)); }
+  .kacheln { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .kachel { min-height: 136px; padding: 12px 8px 10px; gap: 8px; border-radius: 22px; }
+  .kachel .k-symbol { width: 58px; height: 58px; border-radius: 18px; font-size: 32px; }
+  .kachel .k-name { font-size: 16px; }
+  .kachel .k-nr { font-size: 12px; left: 10px; top: 8px; }
+  .kachel .k-haken { width: 26px; height: 26px; font-size: 16px; right: 8px; top: 8px; }
+  .kachel .k-start { height: 46px; font-size: 20px; inset: auto 8px 8px 8px; border-radius: 16px; }
+  .kachel.blitz .k-best { font-size: 13px; }
+
+  /* Überlagerungen */
+  .countdown { width: 170px; height: 170px; font-size: 96px; }
+  .reihen { grid-template-columns: repeat(4, 68px); gap: 10px; }
+  .reihen button { height: 60px; font-size: 26px; border-radius: 18px; }
+  .reihen-titel { font-size: 26px; }
+  .dialog-box { flex-direction: column; padding: 18px 20px; gap: 10px; border-radius: 28px; max-width: calc(100% - 24px); }
+  .dialog-box img { height: 120px; }
+  .dialog-frage { font-size: 24px; }
+  .dialog-knoepfe button { width: 96px; height: 80px; font-size: 44px; border-radius: 22px; }
+}
+/* sehr kleine Handys (iPhone SE mit Safari-Leiste) */
+@media (max-width: 600px) and (max-aspect-ratio: 1/1) and (max-height: 640px) {
+  .ziffernblock button { height: 44px; font-size: 25px; }
+  .ziffernblock { gap: 6px; }
+  .rechenbild { min-height: 76px; }
+  .tafel.schriftlich-modus .rechenbild { min-height: 90px; }
+  .rechenbild .rb-tipp { font-size: 13.5px; }
+  .zeilen-bild { --zb: 18px; }
+  .schrift { font-size: clamp(11px, min(calc(100cqw / (var(--spalten, 6) * 1.32)), calc(100cqh / (var(--zeilen, 6) * 1.55))), 64px); }
+  .kachel-wahl svg { max-height: 56px; }
+  .auswahl .kachel-wahl { min-height: 52px !important; }
+  .stufe { min-height: 54px; }
+  .s-abzeichen { width: 42px; height: 42px; }
+  .pult { height: 36%; }
+  .start-karte { max-height: 72%; }
+}
+
+/* ---------------------------------------------------------------- Handy quer: Kopfzeile wird zur Leiste links */
+@media (max-height: 500px) and (min-aspect-ratio: 1/1) {
+  .rund { width: 44px; height: 44px; }
+  .kopf { margin: calc(6px + var(--sicher-oben)) calc(8px + env(safe-area-inset-right, 0px)) 0 calc(8px + env(safe-area-inset-left, 0px)); height: 54px; border-radius: 18px; padding: 0 6px; gap: 8px; }
+  .kopf-titel { font-size: 20px; }
+  .titel-neben { font-size: 16px; }
+  .punkte-chip { height: 34px; font-size: 17px; padding: 0 12px; gap: 6px; }
+
+  #s-uebung { flex-direction: row; }
+  #s-uebung .kopf { flex-direction: column; width: 62px; height: auto; margin: calc(8px + var(--sicher-oben)) 0 calc(8px + var(--sicher-unten)) calc(8px + env(safe-area-inset-left, 0px)); padding: 8px 0; border-radius: 22px; gap: 8px; justify-content: flex-start; }
+  #s-uebung .kopf-titel { flex: 0 0 auto; flex-direction: column; gap: 4px; }
+  #s-uebung .u-titel { display: none; }
+  #s-uebung .fortschritt .punkt { display: none; }
+  #s-uebung .fortschritt .text { margin: 0; font-size: 13px; text-align: center; white-space: normal; line-height: 1.1; width: 52px; }
+  #s-uebung .kopf-rechts { flex-direction: column; gap: 8px; margin-top: auto; }
+  #s-uebung .stoppuhr { font-size: 15px; min-width: 0; width: 54px; padding: 4px 2px; border-radius: 12px; }
+  .kopf .avatar { display: block; width: 48px; height: 48px; }
+
+  .u-main { flex: 1; min-width: 0; padding: calc(8px + var(--sicher-oben)) calc(8px + env(safe-area-inset-right, 0px)) calc(8px + var(--sicher-unten)) 8px; gap: 8px; grid-template-columns: minmax(0, 1fr) fit-content(48%); grid-template-areas: "tafel eingabe"; }
+  .u-wolf { display: none; }
+  .eingabe { min-width: 0; padding: 8px 10px; border-radius: 22px; gap: 6px; align-self: stretch; }
+  .tafel { border-radius: 22px; }
+  .tafel-runde { left: 10px; top: 8px; height: 26px; font-size: 13px; padding: 0 9px; }
+  .tafel-punkte { right: 10px; top: 7px; height: 28px; font-size: 16px; padding: 0 10px; }
+  .tafel-inhalt { padding: 38px 10px 8px; }
+  .rechenbild { min-height: 70px; height: 40%; margin: 0 6px 6px; padding: 6px 8px; border-radius: 16px; gap: 4px; }
+  /* Die Karte ist hier flach, aber breit: Meist steht der Tipp rechts neben der Aufgabe, so behält
+     die Aufgabe die volle Höhe (Zahlenhaus, Stifte, Stellentafel …). Breite Bilder wie Zahlenstrahl
+     oder Rechenstrich bleiben unten, solange die Aufgabe darüber Platz hat (runde.js: tippLage). */
+  .tafel.tipp-seite { flex-direction: row; }
+  .tafel.tipp-seite .rechenbild, .tafel.tipp-seite.schriftlich-modus .rechenbild { flex: 0 0 44%; width: 44%; height: auto; min-height: 0; margin: 42px 6px 6px 0; }
+  .tafel.tipp-seite .kombi { flex-direction: column; gap: 6px; }
+  .tafel.tipp-seite .kombi-teil { width: 100%; height: auto; }
+  .rechenbild .rb-tipp { font-size: 13px; }
+  .rechenbild .rb-tipp::before { font-size: 11px; padding: 2px 7px; }
+  .zeilen-bild { --zb: 18px; }
+  .term { font-size: clamp(28px, 14cqmin, 112px); }
+  .term.mittel { font-size: clamp(26px, 11cqmin, 88px); }
+  .term.klein { font-size: clamp(22px, 8.5cqmin, 70px); }
+  .frage-text { font-size: clamp(16px, 5.5cqmin, 40px); }
+  .geschichte { font-size: clamp(15px, 5cqmin, 36px); }
+  .bilanz { font-size: clamp(18px, 7cqmin, 54px); gap: 6px; }
+  .ziffernblock { gap: 6px; width: 234px; }
+  .ziffernblock button { height: 44px; font-size: 24px; border-radius: 14px; box-shadow: 0 3px 0 #E3D8CC; }
+  .karten { width: min(100%, 340px); gap: 6px; }
+  .karte { min-height: 0; aspect-ratio: 1; font-size: 24px; border-radius: 12px; }
+  .auswahl { gap: 8px; width: min(100%, 360px); }
+  .kachel-wahl { min-height: 52px; font-size: 24px; border-radius: 16px; padding: 4px; }
+  .kachel-wahl.text { font-size: 17px; }
+  .kachel-wahl svg { max-height: 78px; }
+  .knopf { min-height: 46px; font-size: 20px; padding: 0 16px; border-radius: 16px; box-shadow: 0 4px 0 var(--blau-d); }
+  .knopf.gelb { box-shadow: 0 4px 0 var(--gelb-d); }
+  .knopf.grau { box-shadow: 0 4px 0 #DDD2C7; }
+  .knopf.gross { min-height: 50px; font-size: 22px; padding: 0 20px; border-radius: 18px; }
+  .eingabe .knopf { min-width: 110px; }
+  .hinweis-knopf { font-size: 16px; min-height: 42px; }
+  .feintasten { gap: 10px; }
+  .feintasten button { width: 54px; height: 44px; font-size: 28px; border-radius: 14px; }
+  .quellen { gap: 6px; max-width: 340px; }
+  .quelle { padding: 4px; border-radius: 12px; }
+  .quelle svg { height: 36px !important; }
+  .quelle svg[viewBox="0 0 34 262"] { height: 56px !important; }
+  .quelle svg[viewBox="0 0 34 34"] { height: 26px !important; }
+  .legen-feld { padding: 6px; gap: 4px; border-radius: 14px; }
+  .legen-feld .gelegt svg { height: 38px !important; }
+  .legen-feld .gelegt svg[viewBox="0 0 34 262"] { height: 80px !important; }
+  .legen-feld .gelegt svg[viewBox="0 0 34 34"] { height: 22px !important; }
+  .legen-ziel { font-size: 22px; margin-bottom: 2px; }
+  .auswahl .kachel-wahl { min-height: 48px !important; }
+  .auswahl.spalte { grid-template-columns: repeat(3, minmax(0, 1fr)); width: min(100%, 420px); }
+  .auswahl.spalte .kachel-wahl svg { max-height: 64px; }
+  .hinweis-text { font-size: 15px; }
+  .stellen-tafel { font-size: clamp(18px, 8cqmin, 34px); border-width: 3px; }
+  .stellen-tafel .st-kopf { padding: 2px 4px; border-bottom-width: 3px; }
+  .stellen-tafel .st-feld { padding: 4px 3px; }
+  .frage-text.wort { font-size: 14px; margin-bottom: .25em; }
+  .muster-teile { gap: 8px; }
+  .muster-teil { width: 60px; height: 60px; border-radius: 14px; box-shadow: 0 3px 0 #E3D8CC; }
+  .u-main > .sprechblase { top: calc(8px + var(--sicher-oben)); bottom: auto; left: 12px; max-width: 46%; font-size: 16px; padding: 8px 12px; border-radius: 16px; }
+  .u-main > .sprechblase::after { left: -7px; top: 44px; bottom: auto; width: 16px; height: 16px; }
+
+  /* Startbild und Stufenwahl */
+  .pult .sprechblase { display: none; }
+  .splash-karte { padding: 18px 22px; gap: 8px; width: min(50vw, 420px); margin-left: calc(4vw + env(safe-area-inset-left, 0px)); border-radius: 26px; }
+  .logo { font-size: 40px; }
+  .unterzeile { font-size: 16px; }
+  .splash-karte .knopf { min-width: 200px; margin-top: 4px; }
+  .start-karte { left: calc(10px + env(safe-area-inset-left, 0px)); width: min(60vw, 560px); padding: 10px 12px; border-radius: 22px; gap: 8px; max-height: calc(100% - 16px); }
+  .start-kopf { align-items: center; }
+  .logo-block { flex-direction: row; align-items: center; gap: 10px; }
+  .logo.klein { font-size: 28px; }
+  .start-frage { display: none; }
+  .stufen { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .stufe { min-height: 54px; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 8px; padding: 4px 8px 4px 5px; border-radius: 16px; box-shadow: 0 2px 0 #EDE3D8; }
+  .s-abzeichen { width: 40px; height: 40px; border-radius: 12px; }
+  .s-abzeichen .zahl { font-size: 16px; }
+  .s-abzeichen .zahl.lang { font-size: 12px; }
+  .s-abzeichen .bis { font-size: 9px; }
+  .s-name { font-size: 17px; }
+  .s-raum { font-size: 12px; }
+  .s-stand { font-size: 12px; gap: 3px; }
+  .s-balken { width: 40px; height: 6px; }
+
+  /* Übungsauswahl */
+  .auswahl-wolf { display: none; }
+  .auswahl-main { padding: 8px calc(8px + env(safe-area-inset-right, 0px)) 12px calc(8px + env(safe-area-inset-left, 0px)); }
+  .kacheln { grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 8px; }
+  .kachel { min-height: 112px; padding: 10px 6px 8px; gap: 6px; border-radius: 18px; }
+  .kachel .k-symbol { width: 46px; height: 46px; border-radius: 14px; font-size: 26px; }
+  .kachel .k-name { font-size: 14px; }
+  .kachel .k-nr { font-size: 11px; left: 8px; top: 6px; }
+  .kachel .k-haken { width: 22px; height: 22px; font-size: 13px; right: 6px; top: 6px; }
+  .kachel .k-start { height: 40px; font-size: 18px; inset: auto 6px 6px 6px; border-radius: 14px; box-shadow: 0 3px 0 var(--blau-d); }
+  .kachel.blitz .k-best { font-size: 11px; }
+
+  /* Überlagerungen */
+  .overlay { gap: 10px; }
+  .countdown { width: 150px; height: 150px; font-size: 84px; }
+  .reihen { grid-template-columns: repeat(6, 62px); gap: 8px; }
+  .reihen button { height: 52px; font-size: 22px; border-radius: 16px; }
+  .reihen-titel { font-size: 22px; }
+  .overlay .info { font-size: 18px; }
+  .dialog-box { padding: 14px 18px; gap: 14px; border-radius: 24px; }
+  .dialog-box img { height: 110px; }
+  .dialog-frage { font-size: 20px; }
+  .dialog-knoepfe button { width: 84px; height: 64px; font-size: 36px; border-radius: 18px; }
+}

@@ -19,10 +19,10 @@
       case 'stellenwert': return B.stellenwerttafel(s.spalten, s.werte, s);
       case 'zeilen': return B.zeilen(s.zeilen, s);
       case 'mauerRegel': return B.regelMauer(s.a, s.b, s.c);
-      case 'uhr': { const d = el('div', { style: { height: '100%', aspectRatio: '1' } }); d.appendChild(B.uhr(s.h, s.m, { minuten: true, sektor: s.m > 0 })); return d; }
+      case 'uhr': return B.uhr(s.h, s.m, { minuten: true, sektor: s.m > 0 });
       case 'kombi': {
-        const d = el('div', { style: { display: 'flex', gap: '18px', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' } });
-        s.teile.forEach(t => { const w = el('div', { style: { flex: t.flex || '1', height: '100%', minWidth: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' } }); w.appendChild(MW.rechenbild(t)); d.appendChild(w); });
+        const d = el('div.kombi');   // nebeneinander; im schmalen Tipp-Kasten (Handy quer) untereinander
+        s.teile.forEach(t => { const w = el('div.kombi-teil', { style: { flex: t.flex || '1' } }); w.appendChild(MW.rechenbild(t)); d.appendChild(w); });
         return d;
       }
       case 'szene': return MW.szenen[s.name](s);
@@ -137,7 +137,7 @@
       b.tafel.appendChild(el('div.term.mittel', el('span.zahl.kreide-g', { text: MW.fmt(a.loesung) })));
       const s = MW.schieber({ min: a.min, max: a.max, raster: a.raster, lang: a.lang, mittel: a.mittel, beschriftung: a.beschriftung, start: a.start, schrift: a.schrift, onOK: v => b.antwort(0, v) });
       b.schieber = s;
-      const feld = el('div.szene', { style: { flex: '0 0 auto', height: '48%', width: '100%' } });
+      const feld = el('div.szene', { style: { maxHeight: '60%' } });
       feld.appendChild(s.svg);
       b.tafel.appendChild(feld);
       b.eingabe.appendChild(el('div.schieber-feld', s.fein, s.ok));

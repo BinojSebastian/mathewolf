@@ -1,6 +1,6 @@
 /* Mathewolf – Service Worker: App, Bilder, Schriften und Ton für den Offline-Betrieb speichern.
    Bei jeder Änderung an der App VERSION erhöhen, damit das iPad die neue Fassung lädt. */
-const VERSION = 'mathewolf-2.0.0';
+const VERSION = 'mathewolf-2.0.1';
 const DATEIEN = [
   './',
   'index.html',
